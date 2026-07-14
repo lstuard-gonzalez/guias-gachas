@@ -146,9 +146,25 @@
   .parcial { display: inline-block; margin-left: 8px; font-size: .7rem; font-weight: 800; color: var(--crit); border: 1px solid var(--crit); border-radius: 5px; padding: 2px 8px; text-transform: uppercase; letter-spacing: .5px; vertical-align: middle; font-family: var(--font-mono); }
   footer { margin-top: 34px; text-align: center; color: var(--fixed); font-size: .74rem; font-family: var(--font-mono); letter-spacing: 2px; text-transform: uppercase; }
 </style>
+<style>
+.site-nav{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px;padding:9px 12px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.13);border-radius:12px;font-family:"Segoe UI",system-ui,-apple-system,sans-serif;backdrop-filter:blur(4px);}
+.site-nav a{text-decoration:none;color:#d3dae8;font-weight:700;font-size:.82rem;padding:5px 11px;border-radius:8px;transition:background .15s,color .15s;white-space:nowrap;}
+.site-nav a:hover{background:rgba(255,255,255,.11);color:#fff;}
+.site-nav .nav-home{color:#fff;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);}
+.site-nav .nav-sep{width:1px;height:20px;background:rgba(255,255,255,.16);flex:0 0 auto;}
+.site-nav .nav-games{display:flex;gap:5px;flex-wrap:wrap;align-items:center;}
+.site-nav .current{background:rgba(255,255,255,.15);color:#fff;pointer-events:none;}
+@media(max-width:560px){.site-nav .nav-lbl{display:none;}}
+</style>
 </head>
 <body>
 <div class="wrap">
+<nav class="site-nav">
+  <a class="nav-home" href="../">◄ <span class="nav-lbl">Portal</span></a>
+  <span class="nav-sep"></span>
+  <div class="nav-games"><a href="../genshin/">Genshin</a><a href="../hsr/" class="current">HSR</a><a href="../zzz/">ZZZ</a><a href="../wuwa/">WuWa</a><a href="../nte/">NTE</a></div>
+</nav>
+
   <header>
     <div class="logo">HSR <span>Guía Astral</span><small>◆ EXPRESO ASTRAL · HONKAI: STAR RAIL · BUILDS ◆</small></div>
   </header>
