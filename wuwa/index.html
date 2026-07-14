@@ -121,6 +121,7 @@
 @media(max-width:560px){.site-nav .nav-lbl{display:none;}}
 </style>
 <style>.bg-art{position:fixed;inset:0;z-index:-1;pointer-events:none;background:url('https://static.wikia.nocookie.net/wutheringwaves/images/2/2f/Echoes_of_the_Stars_2nd_Anniversary.jpg/revision/latest?cb=20260426220643') center top/cover no-repeat;opacity:.15;}@media(max-width:700px){.bg-art{opacity:.09;}}</style>
+<style>header{display:flex!important;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;} .hdr-logo{height:48px;width:auto;max-width:230px;object-fit:contain;filter:drop-shadow(0 2px 10px rgba(0,0,0,.55));flex-shrink:0;} @media(max-width:560px){.hdr-logo{height:32px;max-width:140px;}}</style>
 </head>
 <body>
   <div class="bg-art"></div>
@@ -133,7 +134,8 @@
 
   <header>
     <div class="logo">WUWA <span>Guía</span><small>WUTHERING WAVES · SOLARIS-3 · BUILDS DE RESONADORES</small></div>
-  </header>
+    <img class="hdr-logo" src="https://static.wikia.nocookie.net/wutheringwaves/images/e/e6/Site-logo.png/revision/latest?cb=20240511194340" alt="logo" onerror="this.remove()">
+</header>
 
   <div class="filters">
     <input type="text" id="fSearch" placeholder="🔍 Buscar / ver Resonadores (toca aquí)..." oninput="applyFilters()">
