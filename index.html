@@ -5,139 +5,181 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Guías Gacha · Portal de builds</title>
 <style>
-  :root {
-    --bg: #0a0c12; --card: #151b28; --card2: #1c2434; --line: #29334a;
-    --text: #eaf0f6; --muted: #94a1b8; --accent: #7fe3d0;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: var(--bg);
-    background-image:
-      radial-gradient(ellipse 1100px 500px at 80% -15%, rgba(127,227,208,.10), transparent),
-      radial-gradient(ellipse 900px 460px at 5% 115%, rgba(200,150,255,.07), transparent),
-      radial-gradient(ellipse 700px 400px at 50% 50%, rgba(245,208,107,.03), transparent);
-    color: var(--text); font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
-    min-height: 100vh; padding: 40px 20px 70px;
-  }
-  .wrap { max-width: 1080px; margin: 0 auto; }
-  header { text-align: center; margin-bottom: 44px; }
-  .logo { font-size: 2.6rem; font-weight: 900; letter-spacing: 1px; font-style: italic; text-transform: uppercase; line-height: 1.05; }
-  .logo span { color: var(--accent); }
-  .sub { display: block; margin-top: 10px; font-size: .82rem; font-weight: 600; letter-spacing: 4px; color: var(--muted); text-transform: uppercase; }
-  .stats { margin-top: 16px; font-size: .9rem; color: var(--muted); }
-  .stats b { color: var(--text); }
+  :root { --bg:#06080e; --line:rgba(255,255,255,.09); --text:#eef2f8; --muted:#aab4c8; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { background:var(--bg); color:var(--text); font-family:"Segoe UI",system-ui,-apple-system,sans-serif; min-height:100vh; }
+  a { color:inherit; }
 
-  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-  .game {
-    display: block; text-decoration: none; color: inherit; position: relative; overflow: hidden;
-    background: linear-gradient(135deg, var(--card) 55%, var(--card2));
-    border: 1px solid var(--line); border-radius: 20px; padding: 26px 26px 22px;
-    transition: transform .18s, border-color .18s, box-shadow .18s;
-  }
-  .game:hover { transform: translateY(-5px); border-color: var(--gc); box-shadow: 0 14px 40px rgba(0,0,0,.4), 0 0 30px var(--gcT); }
-  .game::before { content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0; opacity: .55; transition: opacity .18s; }
-  .game:hover::before { opacity: .9; }
-  .g-top, .g-desc, .g-foot { position: relative; z-index: 1; }
-  /* Texturas por juego */
-  .g-genshin::before { background:
-    radial-gradient(1.6px 1.6px at 18% 26%, rgba(232,200,119,.75), transparent),
-    radial-gradient(1.4px 1.4px at 68% 18%, rgba(255,248,220,.6), transparent),
-    radial-gradient(1.2px 1.2px at 44% 62%, rgba(232,200,119,.6), transparent),
-    radial-gradient(1.5px 1.5px at 86% 48%, rgba(255,248,220,.5), transparent),
-    radial-gradient(1px 1px at 30% 84%, rgba(232,200,119,.5), transparent); }
-  .g-hsr::before { background:
-    radial-gradient(1.6px 1.6px at 24% 24%, rgba(184,166,255,.85), transparent),
-    radial-gradient(1.2px 1.2px at 62% 40%, rgba(232,200,119,.6), transparent),
-    radial-gradient(1.3px 1.3px at 80% 68%, rgba(184,166,255,.6), transparent),
-    radial-gradient(1px 1px at 40% 78%, rgba(255,255,255,.5), transparent),
-    radial-gradient(ellipse 320px 170px at 92% 8%, rgba(140,111,214,.16), transparent 70%); }
-  .g-zzz::before { background: repeating-linear-gradient(45deg, rgba(245,225,78,.12) 0 11px, transparent 11px 22px); opacity: .5; }
-  .g-zzz:hover::before { opacity: .8; }
-  .g-wuwa::before { background:
-    linear-gradient(rgba(87,230,162,.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(87,230,162,.07) 1px, transparent 1px);
-    background-size: 22px 22px; }
-  .g-nte::before { background:
-    radial-gradient(ellipse 260px 210px at 82% 18%, rgba(160,108,255,.18), transparent 70%),
-    radial-gradient(ellipse 230px 190px at 12% 92%, rgba(255,106,193,.13), transparent 70%); }
-  .game::after {
-    content: attr(data-abbr); position: absolute; right: 14px; bottom: -28px;
-    font-size: 6.5rem; font-weight: 900; font-style: italic; color: var(--gcT); pointer-events: none; line-height: 1;
-  }
-  .g-top { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
-  .g-dot { width: 40px; height: 40px; border-radius: 12px; background: var(--gc); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; box-shadow: 0 0 20px var(--gcT); }
-  .g-name { font-size: 1.35rem; font-weight: 800; }
-  .g-name small { display: block; font-size: .72rem; font-weight: 600; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-top: 2px; }
-  .g-desc { font-size: .9rem; line-height: 1.55; color: var(--muted); margin-bottom: 18px; position: relative; z-index: 1; }
-  .g-foot { display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
-  .g-count { font-size: .82rem; font-weight: 800; color: var(--gc); background: var(--gcT); border: 1px solid var(--gc); padding: 5px 13px; border-radius: 999px; }
-  .g-go { font-size: .85rem; font-weight: 700; color: var(--text); display: inline-flex; align-items: center; gap: 6px; }
-  .g-go .arrow { transition: transform .18s; }
-  .game:hover .g-go .arrow { transform: translateX(4px); }
+  /* ---------- Barra superior ---------- */
+  .topbar { position:fixed; top:0; left:0; right:0; height:58px; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:0 22px; background:rgba(8,10,16,.55); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
+  .brand { font-size:1.15rem; font-weight:900; letter-spacing:1px; text-transform:uppercase; font-style:italic; }
+  .brand span { color:#6fd3e6; }
+  .topnav { display:flex; gap:4px; align-items:center; }
+  .topnav a { text-decoration:none; color:#cdd6e6; font-weight:700; font-size:.85rem; padding:8px 13px; border-radius:9px; transition:background .15s,color .15s; white-space:nowrap; }
+  .topnav a:hover { background:rgba(255,255,255,.1); color:#fff; }
+  .topnav a.home { color:#fff; }
+  @media (max-width:680px){ .topnav a.lbl-inicio{ display:none; } .brand{ font-size:1rem; } .topnav a{ padding:8px 9px; font-size:.8rem; } }
 
-  footer { margin-top: 44px; text-align: center; color: #56607a; font-size: .8rem; line-height: 1.7; }
+  /* ---------- Hero ---------- */
+  .hero { position:relative; height:76vh; min-height:470px; overflow:hidden; margin-top:58px; }
+  .slide { position:absolute; inset:0; background-size:cover; background-position:center; opacity:0; transform:scale(1.06); transition:opacity 1.4s ease, transform 7s ease; }
+  .slide.on { opacity:1; transform:scale(1); }
+  .hero-veil { position:absolute; inset:0; background:linear-gradient(180deg, rgba(6,8,14,.30) 0%, rgba(6,8,14,.05) 38%, rgba(6,8,14,.75) 82%, var(--bg) 100%); }
+  .hero-content { position:relative; z-index:2; height:100%; max-width:1120px; margin:0 auto; display:flex; flex-direction:column; justify-content:flex-end; padding:0 26px 60px; }
+  .hero h1 { font-size:clamp(2.2rem,6vw,4rem); font-weight:900; font-style:italic; letter-spacing:.5px; line-height:1.02; text-shadow:0 4px 30px rgba(0,0,0,.6); }
+  .hero h1 span { color:#6fd3e6; }
+  .hero p { margin-top:14px; font-size:1.05rem; color:#dce3ef; max-width:620px; text-shadow:0 2px 12px rgba(0,0,0,.7); }
+  .hero p b { color:#fff; }
+  .hero-cta { display:inline-flex; align-items:center; gap:8px; margin-top:22px; width:fit-content; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25); backdrop-filter:blur(6px); color:#fff; text-decoration:none; font-weight:700; font-size:.92rem; padding:12px 22px; border-radius:999px; transition:background .18s,transform .18s; }
+  .hero-cta:hover { background:rgba(255,255,255,.22); transform:translateY(-2px); }
+  .hero-dots { position:absolute; z-index:2; bottom:24px; right:30px; display:flex; gap:8px; }
+  .hero-dots i { width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,.35); cursor:pointer; transition:background .2s,transform .2s; }
+  .hero-dots i.on { background:#fff; transform:scale(1.25); }
+
+  /* ---------- Sección juegos ---------- */
+  .games { max-width:1120px; margin:0 auto; padding:52px 22px 20px; }
+  .sec-title { font-size:.82rem; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:var(--muted); margin-bottom:20px; display:flex; align-items:center; gap:12px; }
+  .sec-title::after { content:""; flex:1; height:1px; background:var(--line); }
+  .band-list { display:flex; flex-direction:column; gap:18px; }
+
+  .band { position:relative; display:block; min-height:220px; border-radius:20px; overflow:hidden; text-decoration:none; color:#fff; border:1px solid var(--line); border-left:4px solid var(--gc); box-shadow:0 10px 30px rgba(0,0,0,.35); }
+  .band::before { content:""; position:absolute; inset:0; background:var(--art) center/cover no-repeat; transform:scale(1.03); transition:transform .6s ease, filter .3s; }
+  .band:hover::before { transform:scale(1.09); filter:saturate(1.1) brightness(1.05); }
+  .band::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg, rgba(6,8,14,.94) 0%, rgba(6,8,14,.78) 34%, rgba(6,8,14,.28) 66%, rgba(6,8,14,.55) 100%); }
+  .band-inner { position:relative; z-index:1; min-height:220px; padding:26px 30px; display:flex; flex-direction:column; justify-content:center; max-width:660px; }
+  .band-logo { height:52px; width:auto; max-width:300px; object-fit:contain; filter:drop-shadow(0 3px 12px rgba(0,0,0,.6)); margin-bottom:4px; }
+  .band-word { font-size:1.9rem; font-weight:900; font-style:italic; letter-spacing:.5px; text-shadow:0 3px 16px rgba(0,0,0,.7); }
+  .band-word small { display:block; font-size:.7rem; font-weight:700; letter-spacing:3px; color:var(--gc); font-style:normal; margin-top:2px; }
+  .band-meta { font-size:.76rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--gc); margin-top:10px; }
+  .band-desc { font-size:.94rem; line-height:1.55; color:#d6ddea; margin-top:8px; max-width:520px; text-shadow:0 1px 8px rgba(0,0,0,.6); }
+  .band-foot { display:flex; align-items:center; gap:16px; margin-top:16px; }
+  .band-count { font-size:.82rem; font-weight:800; color:#06121a; background:var(--gc); padding:6px 14px; border-radius:999px; }
+  .band-go { font-weight:800; font-size:.9rem; display:inline-flex; align-items:center; gap:7px; }
+  .band-go .ar { transition:transform .18s; }
+  .band:hover .band-go .ar { transform:translateX(5px); }
+
+  footer { max-width:1120px; margin:20px auto 0; padding:34px 22px 50px; text-align:center; color:#5b6580; font-size:.8rem; line-height:1.7; border-top:1px solid var(--line); }
 </style>
 </head>
-<body>
-<div class="wrap">
-  <header>
-    <div class="logo">Guías <span>Gacha</span><span class="sub">Portal de builds · Nombres en español del juego</span></div>
-    <div class="stats"><b>5</b> juegos · <b id="total">—</b> personajes · consulta rápida de artefactos, armas y equipos</div>
-  </header>
+<body id="top">
 
-  <div class="grid">
-    <a class="game g-genshin" href="./genshin/" style="--gc:#6fd3e6; --gcT:rgba(111,211,230,.14)" data-abbr="GI">
-      <div class="g-top"><div class="g-dot">⛰️</div><div class="g-name">Genshin Impact<small>HoYoverse · v6.7</small></div></div>
-      <div class="g-desc">Artefactos por ranura, sets, armas y equipos. Incluye al Viajero en sus 6 variantes elementales.</div>
-      <div class="g-foot"><span class="g-count" id="c-genshin">— personajes</span><span class="g-go">Abrir <span class="arrow">→</span></span></div>
-    </a>
-
-    <a class="game g-hsr" href="./hsr/" style="--gc:#c8a2ff; --gcT:rgba(200,162,255,.14)" data-abbr="HSR">
-      <div class="g-top"><div class="g-dot">🚂</div><div class="g-name">Honkai: Star Rail<small>HoYoverse · v4.3</small></div></div>
-      <div class="g-desc">Reliquias, Conos de Luz y equipos. El Trazacaminos en sus 5 vías, incluida Exultación.</div>
-      <div class="g-foot"><span class="g-count" id="c-hsr">— personajes</span><span class="g-go">Abrir <span class="arrow">→</span></span></div>
-    </a>
-
-    <a class="game g-zzz" href="./zzz/" style="--gc:#f5e14e; --gcT:rgba(245,225,78,.14)" data-abbr="ZZZ">
-      <div class="g-top"><div class="g-dot">📺</div><div class="g-name">Zenless Zone Zero<small>HoYoverse · v3.0</small></div></div>
-      <div class="g-desc">Discos de partición, motores W, sets y equipos de cada Agente de New Eridu.</div>
-      <div class="g-foot"><span class="g-count" id="c-zzz">— agentes</span><span class="g-go">Abrir <span class="arrow">→</span></span></div>
-    </a>
-
-    <a class="game g-wuwa" href="./wuwa/" style="--gc:#57e6a2; --gcT:rgba(87,230,162,.14)" data-abbr="WW">
-      <div class="g-top"><div class="g-dot">🌊</div><div class="g-name">Wuthering Waves<small>Kuro Games · v3.5</small></div></div>
-      <div class="g-desc">Ecos por costo, sets Sonata, armas y equipos. Incluye la colab de Cyberpunk: Edgerunners.</div>
-      <div class="g-foot"><span class="g-count" id="c-wuwa">— resonadores</span><span class="g-go">Abrir <span class="arrow">→</span></span></div>
-    </a>
-
-    <a class="game g-nte" href="./nte/" style="--gc:#ff8ad8; --gcT:rgba(255,138,216,.14)" data-abbr="NTE">
-      <div class="g-top"><div class="g-dot">🎴</div><div class="g-name">Neverness to Everness<small>Hotta Studio · v1.2</small></div></div>
-      <div class="g-desc">Discos, Consola con Cartuchos y Módulos, y equipos de cada Esper.</div>
-      <div class="g-foot"><span class="g-count" id="c-nte">— espers</span><span class="g-go">Abrir <span class="arrow">→</span></span></div>
-    </a>
+  <div class="topbar">
+    <div class="brand">Guías <span>Gacha</span></div>
+    <nav class="topnav">
+      <a class="home lbl-inicio" href="#top">Inicio</a>
+      <a href="./genshin/">Genshin</a>
+      <a href="./hsr/">HSR</a>
+      <a href="./zzz/">ZZZ</a>
+      <a href="./wuwa/">WuWa</a>
+      <a href="./nte/">NTE</a>
+    </nav>
   </div>
 
+  <section class="hero">
+    <div class="slide on" style="background-image:url('https://static.wikia.nocookie.net/gensin-impact/images/b/bb/Version_4.5_Wallpaper_1.jpg/revision/latest?cb=20240412170720')"></div>
+    <div class="slide" style="background-image:url('https://static.wikia.nocookie.net/houkai-star-rail/images/f/f4/Version_2.0_Wallpaper_1.jpg/revision/latest?cb=20240428001528')"></div>
+    <div class="slide" style="background-image:url('https://static.wikia.nocookie.net/wutheringwaves/images/1/1c/Thaw_of_Eons_Splashscreen.jpg/revision/latest?cb=20240627095643')"></div>
+    <div class="slide" style="background-image:url('https://static.wikia.nocookie.net/zenless-zone-zero/images/f/fb/Memories_of_Dreams_Bygone_-_Video_Archive_Sharing_UHD_Wallpaper_08.png/revision/latest?cb=20251112065326')"></div>
+    <div class="slide" style="background-image:url('https://static.wikia.nocookie.net/neverness-to-everness/images/3/33/1.1_Wallpaper.jpg/revision/latest?cb=20260702142351')"></div>
+    <div class="hero-veil"></div>
+    <div class="hero-content">
+      <h1>Guías de <span>Builds</span></h1>
+      <p><b id="total">—</b> personajes en <b>5</b> juegos · artefactos, armas y equipos, con los nombres oficiales en español.</p>
+      <a class="hero-cta" href="#juegos">Elige tu juego ↓</a>
+    </div>
+    <div class="hero-dots" id="dots"></div>
+  </section>
+
+  <section class="games" id="juegos">
+    <div class="sec-title">Los juegos</div>
+    <div class="band-list">
+
+      <a class="band" href="./genshin/" style="--gc:#6fd3e6; --art:url('https://static.wikia.nocookie.net/gensin-impact/images/b/b1/Version_1.4_Full_Wallpaper.jpg/revision/latest?cb=20240101135855')">
+        <div class="band-inner">
+          <img class="band-logo" src="https://static.wikia.nocookie.net/gensin-impact/images/2/2a/Genshin-Impact-Logo.png/revision/latest?cb=20230708061611" alt="Genshin Impact" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="band-word" style="display:none">Genshin Impact</span>
+          <div class="band-meta">HoYoverse · v6.7</div>
+          <div class="band-desc">Artefactos por ranura, sets, armas y equipos. Incluye al Viajero en sus 6 variantes elementales.</div>
+          <div class="band-foot"><span class="band-count" id="c-genshin">—</span><span class="band-go">Abrir guía <span class="ar">→</span></span></div>
+        </div>
+      </a>
+
+      <a class="band" href="./hsr/" style="--gc:#b8a6ff; --art:url('https://static.wikia.nocookie.net/houkai-star-rail/images/9/95/Version_1.6_Wallpaper.png/revision/latest?cb=20240127061250')">
+        <div class="band-inner">
+          <img class="band-logo" src="https://static.wikia.nocookie.net/houkai-star-rail/images/2/29/Honkai_Star_Rail.png/revision/latest?cb=20230707214654" alt="Honkai: Star Rail" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="band-word" style="display:none">Honkai: Star Rail</span>
+          <div class="band-meta">HoYoverse · v4.3</div>
+          <div class="band-desc">Reliquias, Conos de Luz y equipos. El Trazacaminos en sus 5 vías, incluida Exultación.</div>
+          <div class="band-foot"><span class="band-count" id="c-hsr">—</span><span class="band-go">Abrir guía <span class="ar">→</span></span></div>
+        </div>
+      </a>
+
+      <a class="band" href="./zzz/" style="--gc:#f5e14e; --art:url('https://static.wikia.nocookie.net/zenless-zone-zero/images/f/f4/Wallpaper_Sharing_-_Zhao_Themed_Wallpapers_UHD_Wallpaper_11.png/revision/latest?cb=20260110091006')">
+        <div class="band-inner">
+          <img class="band-logo" src="https://static.wikia.nocookie.net/zenless-zone-zero/images/1/15/Zenless_Zone_Zero_Logo.png/revision/latest?cb=20240923135326" alt="Zenless Zone Zero" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <span class="band-word" style="display:none">Zenless Zone Zero</span>
+          <div class="band-meta">HoYoverse · v3.0</div>
+          <div class="band-desc">Discos de partición, motores W, sets y equipos de cada Agente de New Eridu.</div>
+          <div class="band-foot"><span class="band-count" id="c-zzz">—</span><span class="band-go">Abrir guía <span class="ar">→</span></span></div>
+        </div>
+      </a>
+
+      <a class="band" href="./wuwa/" style="--gc:#57e6a2; --art:url('https://static.wikia.nocookie.net/wutheringwaves/images/6/64/Wuthering_Waves_-_Official_2026_New_Years_Art.jpg/revision/latest?cb=20251231114123')">
+        <div class="band-inner">
+          <span class="band-word">Wuthering Waves<small>KURO GAMES</small></span>
+          <div class="band-meta">Kuro Games · v3.5</div>
+          <div class="band-desc">Ecos por costo, sets Sonata, armas y equipos. Incluye la colab de Cyberpunk: Edgerunners.</div>
+          <div class="band-foot"><span class="band-count" id="c-wuwa">—</span><span class="band-go">Abrir guía <span class="ar">→</span></span></div>
+        </div>
+      </a>
+
+      <a class="band" href="./nte/" style="--gc:#c99bff; --art:url('https://static.wikia.nocookie.net/neverness-to-everness/images/d/d9/Nerverness-to-Everness_1.0_Promotional_Art.jpg/revision/latest?cb=20260625004432')">
+        <div class="band-inner">
+          <span class="band-word">Neverness to Everness<small>HOTTA STUDIO</small></span>
+          <div class="band-meta">Hotta Studio · v1.2</div>
+          <div class="band-desc">Discos, Consola con Cartuchos y Módulos, y equipos de cada Esper.</div>
+          <div class="band-foot"><span class="band-count" id="c-nte">—</span><span class="band-go">Abrir guía <span class="ar">→</span></span></div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
   <footer>
-    Portal local de consulta rápida · Datos verificados contra wikis oficiales.<br>
-    Todas las marcas y personajes pertenecen a sus respectivos estudios. Guías no oficiales, sin ánimo de lucro.
+    Portal de consulta rápida · Datos verificados contra wikis oficiales.<br>
+    Guías no oficiales, sin ánimo de lucro. Todas las marcas, personajes e imágenes pertenecen a sus respectivos estudios (HoYoverse, Kuro Games, Hotta Studio).
   </footer>
-</div>
 
 <script>
-// Cuenta personajes leyendo cada data.js (define CHARACTERS global; lo aislamos por juego)
-const JUEGOS = ["genshin", "hsr", "zzz", "wuwa", "nte"];
-let total = 0, pendientes = JUEGOS.length;
+// Conteo de personajes por juego
+const JUEGOS = ["genshin","hsr","zzz","wuwa","nte"];
+let total = 0, faltan = JUEGOS.length;
+const labels = { genshin:"personajes", hsr:"personajes", zzz:"agentes", wuwa:"resonadores", nte:"espers" };
 JUEGOS.forEach(j => {
   fetch(`./${j}/data.js`).then(r => r.text()).then(txt => {
     const m = txt.match(/const\s+CHARACTERS\s*=\s*(\[[\s\S]*\]);?\s*$/);
     let n = 0;
-    try { n = m ? JSON.parse(m[1]).length : 0; } catch (e) { n = (txt.match(/"id"\s*:/g) || []).length; }
-    const el = document.getElementById("c-" + j);
-    const label = el.textContent.split(" ").slice(1).join(" ");
-    el.textContent = n + " " + label;
+    try { n = m ? JSON.parse(m[1]).length : 0; } catch(e) { n = (txt.match(/"id"\s*:/g) || []).length; }
+    document.getElementById("c-" + j).textContent = n + " " + labels[j];
     total += n;
-  }).catch(() => {}).finally(() => { if (--pendientes === 0) document.getElementById("total").textContent = total; });
+  }).catch(()=>{}).finally(() => { if (--faltan === 0) document.getElementById("total").textContent = total; });
 });
+
+// Rotación del hero
+const slides = [...document.querySelectorAll(".slide")];
+const dotsWrap = document.getElementById("dots");
+slides.forEach((_, i) => { const d = document.createElement("i"); if (i===0) d.className="on"; d.onclick = () => go(i); dotsWrap.appendChild(d); });
+const dots = [...dotsWrap.children];
+let cur = 0, timer;
+function go(i) {
+  slides[cur].classList.remove("on"); dots[cur].classList.remove("on");
+  cur = i;
+  slides[cur].classList.add("on"); dots[cur].classList.add("on");
+  clearInterval(timer); timer = setInterval(next, 6000);
+}
+function next() { go((cur + 1) % slides.length); }
+timer = setInterval(next, 6000);
 </script>
 </body>
 </html>
