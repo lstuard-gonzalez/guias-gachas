@@ -156,30 +156,16 @@
 .site-nav .current{background:rgba(255,255,255,.15);color:#fff;pointer-events:none;}
 @media(max-width:560px){.site-nav .nav-lbl{display:none;}}
 </style>
-<style>
-.game-hero{position:relative;height:172px;border-radius:16px;overflow:hidden;margin-bottom:18px;background:#0a0d16 var(--gh-art) center 28%/cover no-repeat;border:1px solid rgba(255,255,255,.10);}
-.game-hero .gh-veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,8,14,.92),rgba(6,8,14,.5) 58%,rgba(6,8,14,.18));}
-.game-hero .gh-in{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;justify-content:center;gap:9px;padding:0 28px;}
-.game-hero .gh-logo{height:58px;width:auto;max-width:290px;object-fit:contain;filter:drop-shadow(0 3px 12px rgba(0,0,0,.65));}
-.game-hero .gh-word{font-size:1.85rem;font-weight:900;font-style:italic;color:#fff;letter-spacing:.5px;text-shadow:0 3px 16px rgba(0,0,0,.75);}
-.game-hero .gh-tag{font-size:.76rem;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#b8a6ff;}
-@media(max-width:560px){.game-hero{height:132px;} .game-hero .gh-logo{height:44px;} .game-hero .gh-word{font-size:1.3rem;}}
-</style>
+<style>.bg-art{position:fixed;inset:0;z-index:-1;pointer-events:none;background:url('https://static.wikia.nocookie.net/houkai-star-rail/images/6/60/First_Anniversary_Celebratory_Artwork.png/revision/latest?cb=20240427194300') center top/cover no-repeat;opacity:.15;}@media(max-width:700px){.bg-art{opacity:.09;}}</style>
 </head>
 <body>
+  <div class="bg-art"></div>
 <div class="wrap">
 <nav class="site-nav">
   <a class="nav-home" href="../">◄ <span class="nav-lbl">Portal</span></a>
   <span class="nav-sep"></span>
   <div class="nav-games"><a href="../genshin/">Genshin</a><a href="../hsr/" class="current">HSR</a><a href="../zzz/">ZZZ</a><a href="../wuwa/">WuWa</a><a href="../nte/">NTE</a></div>
 </nav>
-<div class="game-hero" style="--gh-art:url(&apos;https://static.wikia.nocookie.net/houkai-star-rail/images/6/60/First_Anniversary_Celebratory_Artwork.png/revision/latest?cb=20240427194300&apos;)">
-  <div class="gh-veil"></div>
-  <div class="gh-in">
-    <img class="gh-logo" src="https://static.wikia.nocookie.net/houkai-star-rail/images/2/29/Honkai_Star_Rail.png/revision/latest?cb=20230707214654" alt="Honkai: Star Rail" onerror="this.style.display=&apos;none&apos;;this.nextElementSibling.style.display=&apos;block&apos;"><span class="gh-word" style="display:none">Honkai: Star Rail</span>
-    <span class="gh-tag">Guía de builds · v4.3</span>
-  </div>
-</div>
 
   <header>
     <div class="logo">HSR <span>Guía Astral</span><small>◆ EXPRESO ASTRAL · HONKAI: STAR RAIL · BUILDS ◆</small></div>
