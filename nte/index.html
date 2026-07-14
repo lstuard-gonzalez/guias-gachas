@@ -188,6 +188,7 @@
 @media(max-width:560px){.site-nav .nav-lbl{display:none;}}
 </style>
 <style>.bg-art{position:fixed;inset:0;z-index:-1;pointer-events:none;background:url('https://static.wikia.nocookie.net/neverness-to-everness/images/3/33/1.1_Wallpaper.jpg/revision/latest?cb=20260702142351') center top/cover no-repeat;opacity:.15;}@media(max-width:700px){.bg-art{opacity:.09;}}</style>
+<style>header{display:flex!important;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;} .hdr-logo{height:56px;width:auto;max-width:150px;object-fit:contain;flex-shrink:0;filter:invert(1) brightness(1.5) drop-shadow(0 2px 8px rgba(0,0,0,.5));} @media(max-width:560px){.hdr-logo{height:40px;}}</style>
 </head>
 <body>
   <div class="bg-art"></div>
@@ -201,7 +202,8 @@
 
   <header>
     <div class="logo">NTE <span>Guía rápida</span><small>NEVERNESS TO EVERNESS · BUILDS DE ESPERS</small></div>
-  </header>
+    <img class="hdr-logo" src="https://static.wikia.nocookie.net/neverness-to-everness/images/e/e6/Site-logo.png/revision/latest?cb=20260322020459" alt="Neverness to Everness" onerror="this.remove()">
+</header>
 
   <div class="filters">
     <input type="text" id="fSearch" placeholder="🔍 Buscar / ver Espers (toca aquí)..." oninput="applyFilters()">
