@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guías Gacha · Portal de builds</title>
+<style>
+  :root {
+    --bg: #0a0c12; --card: #151b28; --card2: #1c2434; --line: #29334a;
+    --text: #eaf0f6; --muted: #94a1b8; --accent: #7fe3d0;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    background-image:
+      radial-gradient(ellipse 1100px 500px at 80% -15%, rgba(127,227,208,.10), transparent),
+      radial-gradient(ellipse 900px 460px at 5% 115%, rgba(200,150,255,.07), transparent),
+      radial-gradient(ellipse 700px 400px at 50% 50%, rgba(245,208,107,.03), transparent);
+    color: var(--text); font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    min-height: 100vh; padding: 40px 20px 70px;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 44px; }
+  .logo { font-size: 2.6rem; font-weight: 900; letter-spacing: 1px; font-style: italic; text-transform: uppercase; line-height: 1.05; }
+  .logo span { color: var(--accent); }
+  .sub { display: block; margin-top: 10px; font-size: .82rem; font-weight: 600; letter-spacing: 4px; color: var(--muted); text-transform: uppercase; }
+  .stats { margin-top: 16px; font-size: .9rem; color: var(--muted); }
+  .stats b { color: var(--text); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .game {
+    display: block; text-decoration: none; color: inherit; position: relative; overflow: hidden;
+    background: linear-gradient(135deg, var(--card) 55%, var(--card2));
+    border: 1px solid var(--line); border-radius: 20px; padding: 26px 26px 22px;
+    transition: transform .18s, border-color .18s, box-shadow .18s;
+  }
+  .game:hover { transform: translateY(-5px); border-color: var(--gc); box-shadow: 0 14px 40px rgba(0,0,0,.4), 0 0 30px var(--gcT); }
+  .game::after {
+    content: attr(data-abbr); position: absolute; right: 14px; bottom: -28px;
+    font-size: 6.5rem; font-weight: 900; font-style: italic; color: var(--gcT); pointer-events: none; line-height: 1;
+  }
+  .g-top { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .g-dot { width: 40px; height: 40px; border-radius: 12px; background: var(--gc); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; box-shadow: 0 0 20px var(--gcT); }
+  .g-name { font-size: 1.35rem; font-weight: 800; }
+  .g-name small { display: block; font-size: .72rem; font-weight: 600; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; margin-top: 2px; }
+  .g-desc { font-size: .9rem; line-height: 1.55; color: var(--muted); margin-bottom: 18px; position: relative; z-index: 1; }
+  .g-foot { display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+  .g-count { font-size: .82rem; font-weight: 800; color: var(--gc); background: var(--gcT); border: 1px solid var(--gc); padding: 5px 13px; border-radius: 999px; }
+  .g-go { font-size: .85rem; font-weight: 700; color: var(--text); display: inline-flex; align-items: center; gap: 6px; }
+  .g-go .arrow { transition: transform .18s; }
+  .game:hover .g-go .arrow { transform: translateX(4px); }
+
+  footer { margin-top: 44px; text-align: center; color: #56607a; font-size: .8rem; line-height: 1.7; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">Guías <span>Gacha</span><span class="sub">Portal de builds · Nombres en español del juego</span></div>
+    <div class="stats"><b>5</b> juegos · <b id="total">—</b> personajes · consulta rápida de artefactos, armas y equipos</div>
+  </header>
+
+  <div class="grid">
+    <a class="game" href="./genshin/" style="--gc:#6fd3e6; --gcT:rgba(111,211,230,.14)" data-abbr="GI">
+      <div class="g-top"><div class="g-dot">⛰️</div><div class="g-name">Genshin Impact<small>HoYoverse · v6.7</small></div></div>
+      <div class="g-desc">Artefactos por ranura, sets, armas y equipos. Incluye al Viajero en sus 6 variantes elementales.</div>
+      <div class="g-foot"><span class="g-count" id="c-genshin">— personajes</span><span class="g-go">Abrir <span class="arrow">→</span></span></div>
+    </a>
+
+    <a class="game" href="./hsr/" style="--gc:#c8a2ff; --gcT:rgba(200,162,255,.14)" data-abbr="HSR">
+      <div class="g-top"><div class="g-dot">🚂</div><div class="g-name">Honkai: Star Rail<small>HoYoverse · v4.3</small></div></div>
+      <div class="g-desc">Reliquias, Conos de Luz y equipos. El Trazacaminos en sus 5 vías, incluida Exultación.</div>
+      <div class="g-foot"><span class="g-count" id="c-hsr">— personajes</span><span class="g-go">Abrir <span class="arrow">→</span></span></div>
+    </a>
+
+    <a class="game" href="./zzz/" style="--gc:#f5e14e; --gcT:rgba(245,225,78,.14)" data-abbr="ZZZ">
+      <div class="g-top"><div class="g-dot">📺</div><div class="g-name">Zenless Zone Zero<small>HoYoverse · v3.0</small></div></div>
+      <div class="g-desc">Discos de partición, motores W, sets y equipos de cada Agente de New Eridu.</div>
+      <div class="g-foot"><span class="g-count" id="c-zzz">— agentes</span><span class="g-go">Abrir <span class="arrow">→</span></span></div>
+    </a>
+
+    <a class="game" href="./wuwa/" style="--gc:#57e6a2; --gcT:rgba(87,230,162,.14)" data-abbr="WW">
+      <div class="g-top"><div class="g-dot">🌊</div><div class="g-name">Wuthering Waves<small>Kuro Games · v3.5</small></div></div>
+      <div class="g-desc">Ecos por costo, sets Sonata, armas y equipos. Incluye la colab de Cyberpunk: Edgerunners.</div>
+      <div class="g-foot"><span class="g-count" id="c-wuwa">— resonadores</span><span class="g-go">Abrir <span class="arrow">→</span></span></div>
+    </a>
+
+    <a class="game" href="./nte/" style="--gc:#ff8ad8; --gcT:rgba(255,138,216,.14)" data-abbr="NTE">
+      <div class="g-top"><div class="g-dot">🎴</div><div class="g-name">Neverness to Everness<small>Hotta Studio · v1.2</small></div></div>
+      <div class="g-desc">Discos, Consola con Cartuchos y Módulos, y equipos de cada Esper.</div>
+      <div class="g-foot"><span class="g-count" id="c-nte">— espers</span><span class="g-go">Abrir <span class="arrow">→</span></span></div>
+    </a>
+  </div>
+
+  <footer>
+    Portal local de consulta rápida · Datos verificados contra wikis oficiales.<br>
+    Todas las marcas y personajes pertenecen a sus respectivos estudios. Guías no oficiales, sin ánimo de lucro.
+  </footer>
+</div>
+
+<script>
+// Cuenta personajes leyendo cada data.js (define CHARACTERS global; lo aislamos por juego)
+const JUEGOS = ["genshin", "hsr", "zzz", "wuwa", "nte"];
+let total = 0, pendientes = JUEGOS.length;
+JUEGOS.forEach(j => {
+  fetch(`./${j}/data.js`).then(r => r.text()).then(txt => {
+    const m = txt.match(/const\s+CHARACTERS\s*=\s*(\[[\s\S]*\]);?\s*$/);
+    let n = 0;
+    try { n = m ? JSON.parse(m[1]).length : 0; } catch (e) { n = (txt.match(/"id"\s*:/g) || []).length; }
+    const el = document.getElementById("c-" + j);
+    const label = el.textContent.split(" ").slice(1).join(" ");
+    el.textContent = n + " " + label;
+    total += n;
+  }).catch(() => {}).finally(() => { if (--pendientes === 0) document.getElementById("total").textContent = total; });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZZZ · Guía rápida de discos</title>
+<style>
+  :root {
+    --bg: #101014;
+    --bg2: #17171d;
+    --card: #1d1d25;
+    --card2: #23232d;
+    --lime: #d4ff00;
+    --orange: #ff7a1a;
+    --crit: #ffb020;
+    --anom: #c77dff;
+    --imp: #4dc3ff;
+    --def: #4fe3c1;
+    --text: #e8e8ec;
+    --muted: #9a9aa8;
+    --line: #32323e;
+    --fixed: #5a5a68;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    background-image:
+      radial-gradient(ellipse 900px 400px at 80% -10%, rgba(212,255,0,.07), transparent),
+      radial-gradient(ellipse 700px 350px at 10% 110%, rgba(255,122,26,.06), transparent);
+    color: var(--text);
+    font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    padding: 24px 16px 60px;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; }
+
+  /* ---------- Header ---------- */
+  header { margin-bottom: 18px; }
+  .logo {
+    font-size: 1.5rem; font-weight: 900; letter-spacing: 1px;
+    text-transform: uppercase; font-style: italic;
+  }
+  .logo span { color: var(--lime); }
+  .logo small { display: block; font-size: .72rem; font-weight: 600; color: var(--muted); letter-spacing: 3px; font-style: normal; }
+
+  /* ---------- Filtros ---------- */
+  .filters {
+    display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 14px; padding: 12px 14px; margin-bottom: 14px;
+  }
+  .filters input, .filters select {
+    background: var(--bg2); border: 1px solid var(--line); color: var(--text);
+    padding: 8px 12px; border-radius: 8px; font-size: .9rem; outline: none;
+  }
+  .filters input { flex: 1; min-width: 160px; }
+  .filters input:focus, .filters select:focus { border-color: var(--lime); }
+  .count { color: var(--muted); font-size: .8rem; white-space: nowrap; }
+
+  /* ---------- Selector de personaje ---------- */
+  .chars { display: none; gap: 8px; flex-wrap: wrap; margin-bottom: 22px; max-height: 48vh; overflow-y: auto; padding: 4px; scrollbar-width: thin; }
+  .chars.open { display: flex; }
+  .char-chip {
+    background: var(--card); border: 1px solid var(--line); color: var(--text);
+    padding: 7px 14px; border-radius: 999px; cursor: pointer;
+    font-weight: 700; font-size: .88rem; transition: all .15s;
+    display: inline-flex; align-items: center; gap: 7px;
+  }
+  .char-chip:hover { border-color: var(--lime); }
+  .char-chip.active {
+    background: var(--lime); color: #101014; border-color: var(--lime);
+    box-shadow: 0 0 18px rgba(212,255,0,.35);
+  }
+  .char-chip.active .dot { outline: 2px solid rgba(16,16,20,.4); }
+  .dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+  .char-chip .rk { font-size: .7rem; opacity: .65; font-weight: 800; }
+  .empty { color: var(--muted); padding: 20px; text-align: center; width: 100%; }
+
+  /* ---------- Hero del personaje ---------- */
+  .hero {
+    background: linear-gradient(120deg, var(--card) 60%, var(--card2));
+    border: 1px solid var(--line); border-radius: 18px;
+    padding: 22px 26px; margin-bottom: 8px;
+    display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+    position: relative; overflow: hidden;
+  }
+  .hero::after {
+    content: attr(data-rank);
+    position: absolute; right: 14px; top: -26px;
+    font-size: 7rem; font-weight: 900; font-style: italic;
+    color: rgba(212,255,0,.08); pointer-events: none;
+  }
+  .hero h1 { font-size: 2rem; font-weight: 900; font-style: italic; letter-spacing: .5px; }
+  .badges { display: flex; gap: 8px; flex-wrap: wrap; }
+  .badge {
+    padding: 5px 14px; border-radius: 8px; font-size: .8rem; font-weight: 800;
+    text-transform: uppercase; letter-spacing: .5px;
+  }
+  .b-rank { background: var(--orange); color: #14100a; }
+  .b-attr { color: #14100a; }
+  .b-spec { background: transparent; border: 1px solid var(--lime); color: var(--lime); }
+  .b-ver  { background: var(--card2); border: 1px solid var(--line); color: var(--muted); }
+
+  /* ---------- Ficha del personaje ---------- */
+  .ficha {
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 16px 20px; margin-top: 14px; display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start;
+  }
+  .ficha .art {
+    width: 140px; height: 180px; border-radius: 12px; flex-shrink: 0; position: relative; overflow: hidden;
+    background: var(--bg2); display: flex; align-items: center; justify-content: center; border: 1px solid var(--line);
+  }
+  .ficha .art img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+  .ficha .art .ph { font-size: 3rem; font-weight: 900; font-style: italic; color: var(--fixed); }
+  .ficha .fmeta { flex: 1; min-width: 240px; }
+  .ficha .fname { font-size: 1.1rem; font-weight: 800; }
+  .ficha .fname small { display: block; font-size: .78rem; color: var(--muted); font-weight: 600; margin-top: 2px; }
+  .ficha .frow { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+  .ficha .fchip { font-size: .76rem; font-weight: 700; padding: 4px 11px; border-radius: 7px; background: var(--bg2); border: 1px solid var(--line); color: var(--muted); }
+  .ficha .fdesc { font-size: .9rem; line-height: 1.6; color: var(--text); }
+  .ficha .fdesc.pend { color: var(--muted); font-style: italic; }
+
+  /* ---------- Secciones ---------- */
+  h2 {
+    font-size: 1.05rem; text-transform: uppercase; letter-spacing: 2px;
+    color: var(--lime); margin: 26px 0 12px; font-style: italic;
+    display: flex; align-items: center; gap: 10px;
+  }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+  /* ---------- Tabla principal ---------- */
+  .table-scroll { overflow-x: auto; border-radius: 14px; border: 1px solid var(--line); }
+  table { width: 100%; border-collapse: collapse; background: var(--card); min-width: 640px; }
+  thead th {
+    background: var(--bg2); color: var(--muted); font-size: .75rem;
+    text-transform: uppercase; letter-spacing: 1.5px; padding: 12px 16px; text-align: left;
+    border-bottom: 2px solid var(--lime);
+  }
+  tbody td { padding: 14px 16px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: rgba(212,255,0,.04); }
+  .slot-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px; border-radius: 10px;
+    font-weight: 900; font-size: 1.15rem; font-style: italic;
+  }
+  .slot-fixed  { background: var(--bg2); color: var(--fixed); border: 1px dashed var(--fixed); }
+  .slot-choice { background: var(--lime); color: #101014; box-shadow: 0 0 12px rgba(212,255,0,.3); }
+  .main-stat { font-weight: 800; font-size: 1.02rem; }
+  .main-stat.dim { color: var(--fixed); font-weight: 600; }
+  .alt { display: block; font-size: .8rem; color: var(--muted); font-weight: 500; margin-top: 3px; }
+  .tag {
+    display: inline-block; padding: 3px 10px; margin: 2px 3px 2px 0;
+    border-radius: 6px; font-size: .78rem; font-weight: 700;
+  }
+  .t-crit { background: rgba(255,176,32,.15); color: var(--crit); border: 1px solid rgba(255,176,32,.4); }
+  .t-atk  { background: rgba(212,255,0,.10); color: var(--lime); border: 1px solid rgba(212,255,0,.35); }
+  .t-pen  { background: rgba(255,122,26,.12); color: var(--orange); border: 1px solid rgba(255,122,26,.4); }
+  .t-anom { background: rgba(199,125,255,.12); color: var(--anom); border: 1px solid rgba(199,125,255,.4); }
+  .t-imp  { background: rgba(77,195,255,.12); color: var(--imp); border: 1px solid rgba(77,195,255,.4); }
+  .t-def  { background: rgba(79,227,193,.12); color: var(--def); border: 1px solid rgba(79,227,193,.4); }
+  .t-gen  { background: rgba(232,232,236,.08); color: var(--text); border: 1px solid var(--line); }
+  .pick { color: var(--muted); font-size: .78rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+  .pick.yes { color: var(--lime); }
+  .disc-badge { display: inline-block; padding: 5px 11px; border-radius: 8px; font-size: .82rem; font-weight: 700; background: rgba(199,125,255,.12); color: var(--anom); border: 1px solid rgba(199,125,255,.4); white-space: nowrap; }
+
+  /* ---------- Cards inferiores ---------- */
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 14px; padding: 18px 20px;
+  }
+  .card h3 {
+    font-size: .8rem; text-transform: uppercase; letter-spacing: 1.5px;
+    color: var(--muted); margin-bottom: 12px;
+  }
+  .card ol, .card ul { list-style: none; }
+  .card li {
+    padding: 8px 0; border-bottom: 1px dashed var(--line);
+    display: flex; justify-content: space-between; align-items: center; gap: 10px;
+    font-size: .93rem;
+  }
+  .card li:last-child { border-bottom: none; }
+  .card li b { font-weight: 800; }
+  .best { color: var(--lime); }
+  .en { color: var(--muted); font-size: .78rem; font-style: italic; text-align: right; white-space: nowrap; }
+  .note {
+    margin-top: 18px; background: rgba(255,122,26,.07);
+    border: 1px solid rgba(255,122,26,.35); border-radius: 12px;
+    padding: 14px 18px; font-size: .92rem; line-height: 1.5;
+  }
+  .note b { color: var(--orange); }
+  footer { margin-top: 34px; text-align: center; color: var(--fixed); font-size: .78rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo">ZZZ <span>Guía rápida</span><small>DISCOS DE CONDUCCIÓN</small></div>
+  </header>
+
+  <div class="filters">
+    <input type="text" id="fSearch" placeholder="🔍 Buscar / ver agentes (toca aquí)..." oninput="applyFilters()">
+    <select id="fRango" onchange="applyFilters()">
+      <option value="">Rango: todos</option>
+      <option value="S">Rango S</option>
+      <option value="A">Rango A</option>
+      <option value="I">Rango I</option>
+    </select>
+    <select id="fAttr" onchange="applyFilters()"><option value="">Atributo: todos</option></select>
+    <select id="fSpec" onchange="applyFilters()"><option value="">Especialidad: todas</option></select>
+    <span class="count" id="fCount"></span>
+  </div>
+
+  <nav class="chars" id="charNav"></nav>
+
+  <div id="content"></div>
+
+  <footer>Consulta rápida local · Datos versión 2.5 · Nombres según la localización oficial en español</footer>
+</div>
+
+<script src="fichas.js"></script>
+<script src="data.js"></script>
+<script>
+// ---------- Colores por atributo ----------
+const ATTR_COLORS = {
+  "Físico":       "#f5e6c8",
+  "Ígneo":        "#ff6a3c",
+  "Eléctrico":    "#66b8ff",
+  "Glacial":      "#8fe3ff",
+  "Gélido":       "#b9f4ff",
+  "Etéreo":       "#ff8ad8",
+  "Tinta áurica": "#ffd75e",
+  "Filo":         "#e8f5c8",
+  "Aéreo":        "#57e6a2",
+};
+const attrColor = a => ATTR_COLORS[a] || "#cccccc";
+
+// ---------- Clase de color para cada estadística ----------
+function statClass(s) {
+  const t = s.toLowerCase();
+  if (t.includes("crít") || t.includes("crit")) return "t-crit";
+  if (t.includes("anomal") || t.includes("dominio")) return "t-anom";
+  if (t.includes("impacto")) return "t-imp";
+  if (t.includes("pen") || t.includes("perforación")) return "t-pen";
+  if (t.includes("pv") || t.includes("def") || t.includes("escudo") || t.includes("regeneración") || t.includes("energía")) return "t-def";
+  if (t.includes("atq") || t.includes("ataque")) return "t-atk";
+  return "t-gen";
+}
+
+// ---------- Estado de filtros ----------
+let activeId = null;
+
+function fillFilterOptions() {
+  const attrs = [...new Set(CHARACTERS.map(c => c.atributo))].sort();
+  const specs = [...new Set(CHARACTERS.map(c => c.especialidad))].sort();
+  document.getElementById("fAttr").innerHTML =
+    '<option value="">Atributo: todos</option>' + attrs.map(a => `<option>${a}</option>`).join("");
+  document.getElementById("fSpec").innerHTML =
+    '<option value="">Especialidad: todas</option>' + specs.map(s => `<option>${s}</option>`).join("");
+}
+
+function filtered() {
+  const q = document.getElementById("fSearch").value.trim().toLowerCase();
+  const r = document.getElementById("fRango").value;
+  const a = document.getElementById("fAttr").value;
+  const s = document.getElementById("fSpec").value;
+  return CHARACTERS.filter(c =>
+    (!q || c.nombre.toLowerCase().includes(q)) &&
+    (!r || c.rango === r) &&
+    (!a || c.atributo === a) &&
+    (!s || c.especialidad === s)
+  );
+}
+
+function applyFilters() {
+  const list = filtered();
+  document.getElementById("fCount").textContent = `${list.length} agente${list.length !== 1 ? "s" : ""}`;
+  const nav = document.getElementById("charNav");
+  if (!list.length) {
+    nav.innerHTML = `<div class="empty">Sin resultados con esos filtros.</div>`;
+    return;
+  }
+  if (!list.some(c => c.id === activeId)) show(list[0].id, list);
+  else renderNav(list);
+}
+
+function renderNav(list) {
+  document.getElementById("charNav").innerHTML = list.map(c => `
+    <button class="char-chip ${c.id === activeId ? "active" : ""}" onclick="show('${c.id}')">
+      <span class="dot" style="background:${attrColor(c.atributo)}"></span>
+      ${c.nombre} <span class="rk">${c.rango}</span>
+    </button>`).join("");
+}
+
+// ---------- Render del detalle ----------
+function show(id, list) {
+  const c = CHARACTERS.find(x => x.id === id);
+  if (!c) return;
+  activeId = id;
+  renderNav(list || filtered());
+
+  const ROMAN = ["I", "II", "III", "IV", "V", "VI"];
+  const fixedSubs = c.substats.map(s => `<span class="tag ${statClass(s)}">${s}</span>`).join("");
+  // ---- Disco recomendado por ranura: I-IV = set de 4 piezas, V-VI = set de 2 piezas ----
+  const discos = c.discos || [];
+  const fourPc = discos.find(d => /×4/.test(d.es || "")) || discos.find(d => d.best) || discos[0] || {};
+  const twoPc = discos.find(d => /×2/.test(d.es || "")) || {};
+  const discCell = d => (d && d.es) ? `<span class="disc-badge">💿 ${d.es}</span>` : `<span class="alt">—</span>`;
+
+  const fixedRows = [["PV (fija)"], ["ATQ plano (fija)"], ["DEF (fija)"]].map((p, i) => `
+    <tr>
+      <td><span class="slot-num slot-fixed">${ROMAN[i]}</span></td>
+      <td><span class="main-stat dim">${p[0]}</span>
+          <span class="alt">No se elige: solo importan las subestadísticas.</span></td>
+      <td><span class="pick">Fija</span></td>
+      <td>${discCell(fourPc)}</td>
+      <td>${fixedSubs}</td>
+    </tr>`).join("");
+
+  const choiceRows = [c.ranura4, c.ranura5, c.ranura6].map((r, i) => `
+    <tr>
+      <td><span class="slot-num slot-choice">${ROMAN[i + 3]}</span></td>
+      <td><span class="main-stat">${r.principal}</span>
+          ${r.alt ? `<span class="alt">${r.alt}</span>` : ""}</td>
+      <td><span class="pick yes">★ Se elige</span></td>
+      <td>${discCell(i === 0 ? fourPc : twoPc)}</td>
+      <td>${fixedSubs}</td>
+    </tr>`).join("");
+
+  const lista = arr => (arr || []).map(i => `
+    <li>
+      <span><b class="${i.best ? "best" : ""}">${i.best ? "★ " : ""}${i.es || i.nombre}</b>
+      ${i.nota ? `<span class="alt">${i.nota}</span>` : ""}
+      ${i.agentes ? `<span class="alt">${i.agentes}</span>` : ""}</span>
+      ${i.en ? `<span class="en">${i.en}</span>` : ""}
+    </li>`).join("");
+
+  const f = (typeof FICHAS !== "undefined" && FICHAS[c.id]) || c.ficha || {};
+  const artInner = f.img
+    ? `<img src="${f.img}" alt="${c.nombre}" loading="lazy" onerror="this.remove()"><span class="ph">${c.nombre[0]}</span>`
+    : `<span class="ph">${c.nombre[0]}</span>`;
+  const fichaHtml = `
+    <div class="ficha">
+      <div class="art" style="background:linear-gradient(160deg, ${attrColor(c.atributo)}33, var(--bg2))">${artInner}</div>
+      <div class="fmeta">
+        <div class="fname">${f.nombreCompleto || c.nombre}${f.nombreCompleto && f.nombreCompleto !== c.nombre ? `<small>En el juego: ${c.nombre}</small>` : ""}</div>
+        <div class="frow">
+          <span class="fchip" style="border-color:${attrColor(c.atributo)};color:${attrColor(c.atributo)}">${c.atributo}</span>
+          <span class="fchip">${c.especialidad}</span>
+          <span class="fchip">Rango ${c.rango}</span>
+          ${f.faccion ? `<span class="fchip">🏳️ ${f.faccion}</span>` : ""}
+          ${f.rol ? `<span class="fchip">${f.rol}</span>` : ""}
+        </div>
+        <div class="fdesc ${f.desc ? "" : "pend"}">${f.desc || "Ficha del personaje en preparación…"}</div>
+      </div>
+    </div>`;
+
+  document.getElementById("content").innerHTML = `
+    <div class="hero" data-rank="${c.rango}">
+      <h1>${c.nombre}</h1>
+      <div class="badges">
+        <span class="badge b-rank">Rango ${c.rango}</span>
+        <span class="badge b-attr" style="background:${attrColor(c.atributo)}">${c.atributo}</span>
+        <span class="badge b-spec">${c.especialidad}</span>
+        <span class="badge b-ver">v${c.version}</span>
+      </div>
+    </div>
+
+    ${fichaHtml}
+
+    <h2>Particiones I – VI · qué buscar</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Ranura</th><th>Estadística principal</th><th>Principal</th><th>Disco (set)</th><th>Subestadísticas (en orden de prioridad)</th></tr>
+        </thead>
+        <tbody>${fixedRows}${choiceRows}</tbody>
+      </table>
+    </div>
+
+    ${c.consejo ? `<div class="note">💡 ${c.consejo}</div>` : ""}
+
+    <h2>Equipamiento y equipos</h2>
+    <div class="grid">
+      <div class="card"><h3>⚙️ Motor W (mejor → alternativas)</h3><ol>${lista(c.motoresW)}</ol></div>
+      <div class="card"><h3>💿 Sets de discos</h3><ol>${lista(c.discos)}</ol></div>
+      <div class="card"><h3>👥 Equipos recomendados</h3><ol>${lista(c.equipos)}</ol></div>
+    </div>
+  `;
+}
+
+// ---------- Mostrar/ocultar la lista de agentes según el buscador ----------
+function setupChipsToggle() {
+  const searchEl = document.getElementById("fSearch");
+  const navEl = document.getElementById("charNav");
+  let pinned = false;
+  const setOpen = o => navEl.classList.toggle("open", o);
+  searchEl.addEventListener("focus", () => setOpen(true));
+  searchEl.addEventListener("blur", () => { if (!pinned) setOpen(false); });
+  navEl.addEventListener("mouseenter", () => pinned = true);
+  navEl.addEventListener("mouseleave", () => { pinned = false; if (document.activeElement !== searchEl) setOpen(false); });
+  // al elegir un agente, cierra la lista y quita el foco
+  navEl.addEventListener("click", e => { if (e.target.closest(".char-chip")) { pinned = false; searchEl.blur(); setOpen(false); } });
+}
+
+// ---------- Init ----------
+CHARACTERS.sort((a, b) => a.nombre.localeCompare(b.nombre, "es"));
+fillFilterOptions();
+applyFilters();
+setupChipsToggle();
+</script>
+</body>
+</html>
