@@ -228,6 +228,13 @@ const FICHAS = {
     "desc": "Androide del Equipo de Respuesta Especial de Investigación Criminal, aturdidora eléctrica que combate con un bastón extensible.",
     "img": "https://static.wikia.nocookie.net/zenless-zone-zero/images/d/d3/Agent_Qingyi_Portrait.png"
   },
+  "remielle-dan": {
+    "nombreCompleto": "Remielle Dan",
+    "faccion": "Alianza de Dayat",
+    "rol": "Agonista de la vacuidad (1.ª generación)",
+    "desc": "Agonista de la vacuidad de la primera generación y exteniente coronel de la Guardia de Bastones, estrenada en la 3.1 junto al nuevo atributo Lumiflujo. Anómala de soporte: sincroniza su atributo con el del siguiente agente del equipo y amplifica las anomalías aliadas mediante la Refringencia.",
+    "img": "https://static.wikia.nocookie.net/zenless-zone-zero/images/b/b1/Agent_Remielle_Dan_Portrait.png"
+  },
   "rina": {
     "nombreCompleto": "Alexandrina Sebastiane",
     "faccion": "Casa Victoria",

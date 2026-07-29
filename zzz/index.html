@@ -239,6 +239,8 @@
   .card li:last-child { border-bottom: none; }
   .card li b { font-weight: 800; }
   .best { color: var(--lime); }
+  .bb-hint { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--line); font-size: .78rem; line-height: 1.5; color: var(--muted); }
+  .bb-hint b { color: var(--cyan); }
   .en { color: var(--muted); font-size: .78rem; font-style: italic; text-align: right; white-space: nowrap; }
   .note {
     margin-top: 18px; background: rgba(255,230,51,.07);
@@ -294,7 +296,7 @@
 
   <div id="content"></div>
 
-  <footer>★ Consulta rápida local · Datos versión 2.5 · Nombres según la localización oficial en español ★</footer>
+  <footer>★ Consulta rápida local · Datos versión 3.1 (29-jul-2026) · Nombres según la localización oficial en español ★</footer>
 </div>
 
 <script src="fichas.js"></script>
@@ -311,6 +313,7 @@ const ATTR_COLORS = {
   "Tinta áurica": "#ffd75e",
   "Filo":         "#e8f5c8",
   "Aéreo":        "#57e6a2",
+  "Lumiflujo":    "#fff0a6",
 };
 const attrColor = a => ATTR_COLORS[a] || "#cccccc";
 
@@ -464,6 +467,8 @@ function show(id, list) {
       <div class="card"><h3>⚙️ Motor W (mejor → alternativas)</h3><ol>${lista(c.motoresW)}</ol></div>
       <div class="card"><h3>💿 Sets de discos</h3><ol>${lista(c.discos)}</ol></div>
       <div class="card"><h3>👥 Equipos recomendados</h3><ol>${lista(c.equipos)}</ol></div>
+      <div class="card"><h3>🐰 Bangbú (mejor → alternativas)</h3><ol>${(c.bangbus && c.bangbus.length) ? lista(c.bangbus) : '<li><span class="alt">Pendiente de datos.</span></li>'}</ol>
+        <div class="bb-hint">La <b>habilidad adicional</b> del Bangbú solo se activa si cumples la condición de su nota (facción/atributo). Regla: facción (2+ agentes) → atributo → genérico. Si no cumples la condición o no lo tienes, usa el siguiente de la lista: un rango A activado rinde más que un S apagado.</div></div>
     </div>
   `;
 }

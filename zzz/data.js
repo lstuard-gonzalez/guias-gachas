@@ -1,6 +1,6 @@
 // ============================================================
-//  ZZZ Guía rápida — datos de agentes (Zenless Zone Zero 3.0)
-//  56 agentes. Auditado (jul 2026).
+//  ZZZ Guía rápida — datos de agentes (Zenless Zone Zero 3.1)
+//  57 agentes. Auditado (29-jul-2026, estreno 3.1). Bangbús por agente (jul 2026, v3.1).
 // ============================================================
 const CHARACTERS = [
   {
@@ -94,10 +94,23 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "Ye Shunguang · Anby · Nicole"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Pimpollo",
+        "en": "Sprout",
+        "nota": "Bangbú firma · requiere a Ye Shunguang en el equipo",
+        "best": true
       },
       {
-        "nombre": "Bangbú",
-        "agentes": "Pimpollo"
+        "es": "Rocaleón",
+        "en": "Belion",
+        "nota": "Con 2+ de la Cumbre Yunkui"
+      },
+      {
+        "es": "Snap",
+        "nota": "Buff de daño genérico vía asistencias rápidas"
       }
     ],
     "consejo": "Apunta a un balance de crítico <b>1 : 2</b> (ej. 70% / 140%) contando el bono del set. Su núcleo y <i>Balada de aguas blancas</i> ya regalan mucha probabilidad de crítico, por eso la ranura IV suele ir con <b>Daño crítico</b>. Habilidades: Núcleo &gt; Ataque básico &gt; Cadena ≈ Especial &gt; Esquiva/Asistencia."
@@ -189,6 +202,24 @@ const CHARACTERS = [
         "agentes": "Grace · Anby · Nicole"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Cablebú",
+        "en": "Plugboo",
+        "nota": "+100% acumulación de descarga con 2+ agentes eléctricos",
+        "best": true
+      },
+      {
+        "es": "Amparo",
+        "en": "Safety",
+        "nota": "Con 2+ agentes de Belobog"
+      },
+      {
+        "es": "Electrobú",
+        "en": "Electroboo",
+        "nota": "Opción A eléctrica (gratis)"
+      }
+    ],
     "consejo": "Acumula cargas de Zap con básicos y consúmelas con el especial EX para aplicar Electrochoque; prioriza Competencia de anomalía por encima del crítico (sus anomalías no critean). Sube primero núcleo y especial."
   },
   {
@@ -272,6 +303,24 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "Antón · Anby · Nicole"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Amparo",
+        "en": "Safety",
+        "nota": "Con 2+ agentes de Belobog",
+        "best": true
+      },
+      {
+        "es": "Cablebú",
+        "en": "Plugboo",
+        "nota": "+100% acumulación de descarga con 2+ agentes eléctricos"
+      },
+      {
+        "es": "Electrobú",
+        "en": "Electroboo",
+        "nota": "Opción A eléctrica (gratis)"
       }
     ],
     "consejo": "Usa el especial EX para entrar en modo ráfaga (taladro eléctrico) y encadena básicos, contraataques y asistencias mientras dure; brilla contra enemigos con Electrochoque. Prioridad: núcleo &gt; básico &gt; especial EX."
@@ -358,6 +407,24 @@ const CHARACTERS = [
         "agentes": "Billy · Nicole · Ben"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Amparo",
+        "en": "Safety",
+        "nota": "Con 2+ agentes de Belobog",
+        "best": true
+      },
+      {
+        "es": "Sonibú",
+        "en": "Rocketboo",
+        "nota": "+80% acumulación de quemadura con 2+ agentes ígneos"
+      },
+      {
+        "es": "Sumobú",
+        "en": "Sumoboo",
+        "nota": "Opción A · impacto/aturdimiento"
+      }
+    ],
     "consejo": "Sus escudos y ATQ escalan con la DEF (su núcleo convierte DEF en ATQ): apila DEF% y regeneración para mantener el escudo del EX siempre activo; bloquea y contraataca. Con Koleda gana sinergia Belobog."
   },
   {
@@ -442,6 +509,23 @@ const CHARACTERS = [
         "agentes": "Evelyn · Anby · Lucy"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Snap",
+        "nota": "Con las Estrellas de Lyra · buff de daño al equipo",
+        "best": true
+      },
+      {
+        "es": "Sonibú",
+        "en": "Rocketboo",
+        "nota": "+80% acumulación de quemadura con 2+ agentes ígneos"
+      },
+      {
+        "es": "Dianabú",
+        "en": "Boollseye",
+        "nota": "Opción A · prob. de crítico"
+      }
+    ],
     "consejo": "Atacante crítica ígnea: mantén balance de crítico ~1:2 y explota sus ataques encadenados y definitiva, donde su insignia perfora la RES ígnea. Prioriza especial EX y cadenas."
   },
   {
@@ -519,6 +603,23 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "Zhu Yuan · Qingyi · Astra Yao"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Snap",
+        "nota": "Con las Estrellas de Lyra · buff de daño al equipo",
+        "best": true
+      },
+      {
+        "es": "Mayordomo",
+        "en": "Butler",
+        "nota": "Regenera energía para su ulti"
+      },
+      {
+        "es": "Valvulabú",
+        "en": "Booressure",
+        "nota": "Opción A · regenera energía"
       }
     ],
     "consejo": "Apoyo universal y sanadora: acumula ATQ% al máximo porque sus buffs de ATQ/Daño crítico y su curación escalan con su ATQ. Mantén su Cadenza idílica y prioriza definitiva y habilidad de apoyo."
@@ -605,6 +706,24 @@ const CHARACTERS = [
         "agentes": "Billy · Koleda · Ben"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Amparo",
+        "en": "Safety",
+        "nota": "Con 2+ agentes de Belobog",
+        "best": true
+      },
+      {
+        "es": "Sonibú",
+        "en": "Rocketboo",
+        "nota": "+80% acumulación de quemadura con 2+ agentes ígneos"
+      },
+      {
+        "es": "Peleabú",
+        "en": "Brawlerboo",
+        "nota": "Opción A · impacto/aturdimiento"
+      }
+    ],
     "consejo": "Prioriza su especial EX (activa Fuego de fragua) y luego el básico; con Ben gana mejoras extra por sinergia Belobog. Maximiza Impacto y usa el crítico como bonus para las cadenas."
   },
   {
@@ -687,6 +806,24 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "N.º 11 · Lighter · Ben"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Moccus Tinto",
+        "en": "Red Moccus",
+        "nota": "Con 2+ Hijos de Calydon",
+        "best": true
+      },
+      {
+        "es": "Sonibú",
+        "en": "Rocketboo",
+        "nota": "+80% acumulación de quemadura con 2+ agentes ígneos"
+      },
+      {
+        "es": "Lloronbú",
+        "en": "Cryboo",
+        "nota": "Opción A ígnea (gratis)"
       }
     ],
     "consejo": "Acumula Moral con básicos cargados para potenciar Impacto y daño (escala con ATQ). Reduce la RES ígnea/glacial y amplifica ese daño, por lo que brilla junto a atacantes de fuego o hielo; prioriza núcleo y especial EX."
@@ -774,6 +911,24 @@ const CHARACTERS = [
         "agentes": "N.º 11 · Lucy · Ju Fufu"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Rocaleón",
+        "en": "Belion",
+        "nota": "Con 2+ de la Cumbre Yunkui",
+        "best": true
+      },
+      {
+        "es": "Sonibú",
+        "en": "Rocketboo",
+        "nota": "+80% acumulación de quemadura con 2+ agentes ígneos"
+      },
+      {
+        "es": "Peleabú",
+        "en": "Brawlerboo",
+        "nota": "Opción A · impacto/aturdimiento"
+      }
+    ],
     "consejo": "Aturdidora fuera de campo: invoca a Hu Wei y busca 3400 de ATQ y 50% de crítico para maximizar su buff de daño crítico, cadena y definitiva. Prioriza núcleo &gt; especial EX &gt; cadena."
   },
   {
@@ -847,6 +1002,19 @@ const CHARACTERS = [
       {
         "nombre": "Alternativo",
         "agentes": "Yixuan · Pan Yinhu · Ju Fufu"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Rocaleón",
+        "en": "Belion",
+        "nota": "Con 2+ de la Cumbre Yunkui",
+        "best": true
+      },
+      {
+        "es": "Aguacabú",
+        "en": "Avocaboo",
+        "nota": "Opción A · curación"
       }
     ],
     "consejo": "Soporte defensivo hecho para Yixuan: colócalo justo después de ella, spamea su EX de acupuntura para dar Fuerza pura, escudo y curación. Prioriza núcleo &gt; especial EX &gt; definitiva."
@@ -933,6 +1101,23 @@ const CHARACTERS = [
         "agentes": "Hugo · Pulchra · Gatillo"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Robin",
+        "nota": "Con 1+ agente de Ruiseñor",
+        "best": true
+      },
+      {
+        "es": "Tiburonbú",
+        "en": "Sharkboo",
+        "nota": "+80% acumulación de anomalía de hielo con 2+ agentes glaciales"
+      },
+      {
+        "es": "Pingubú",
+        "en": "Penguinboo",
+        "nota": "Opción A de hielo (gratis)"
+      }
+    ],
     "consejo": "Hugo necesita dos aturdidores: su Balance total solo se dispara contra enemigos aturdidos y consume el aturdimiento para un golpe masivo con EX y definitiva. Prioriza especial y definitiva; mantén al enemigo aturdido."
   },
   {
@@ -1015,6 +1200,23 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "Piper o Grace · Vivian · Nicole"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Robin",
+        "nota": "Con 1+ agente de Ruiseñor",
+        "best": true
+      },
+      {
+        "es": "Ecobú",
+        "en": "Resonaboo",
+        "nota": "Anomalía etérea + control de grupo"
+      },
+      {
+        "es": "Belcebú",
+        "en": "Devilboo",
+        "nota": "Opción A etérea · +15% daño éter con 2 agentes etéreos"
       }
     ],
     "consejo": "Anómala semi-fuera de campo: entra para acumular plumas en su estado de dama, actívalas y cambia al DPS para que sus plumas hagan daño etéreo y disparen anomalías. Prioriza habilidad principal y básico; la esquiva es lo último."
@@ -1102,6 +1304,24 @@ const CHARACTERS = [
         "agentes": "Billy · Qingyi · Nicole"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Cui",
+        "en": "Officer Cui",
+        "nota": "Con 2+ de Seguridad Pública",
+        "best": true
+      },
+      {
+        "es": "Cablebú",
+        "en": "Plugboo",
+        "nota": "+100% acumulación de descarga con 2+ agentes eléctricos"
+      },
+      {
+        "es": "Electrobú",
+        "en": "Electroboo",
+        "nota": "Opción A eléctrica (gratis)"
+      }
+    ],
     "consejo": "Encadena básicos para acumular Voltaje y aturdir rápido; su núcleo es prioridad máxima porque sube el multiplicador de aturdimiento, seguida del básico. Con ~50% de prob. crít aprovechas sus subs ofensivas sin sacrificar Impacto."
   },
   {
@@ -1187,6 +1407,24 @@ const CHARACTERS = [
         "agentes": "Zhu Yuan · Anby · Nicole"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Cui",
+        "en": "Officer Cui",
+        "nota": "Con 2+ de Seguridad Pública",
+        "best": true
+      },
+      {
+        "es": "Ecobú",
+        "en": "Resonaboo",
+        "nota": "Anomalía etérea + control de grupo"
+      },
+      {
+        "es": "Belcebú",
+        "en": "Devilboo",
+        "nota": "Opción A etérea · +15% daño éter con 2 agentes etéreos"
+      }
+    ],
     "consejo": "Guarda sus cartuchos reforzados para descargarlos sobre enemigos aturdidos, donde su núcleo multiplica el daño; Nicole activa su pasiva y baja la DEF. Prioriza básico/esquiva y núcleo; equilibra crítico con la prob. extra de su pasiva."
   },
   {
@@ -1260,6 +1498,23 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "Yixuan · Pan Yinhu · Lucy"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Rocaleón",
+        "en": "Belion",
+        "nota": "Con 2+ de la Cumbre Yunkui",
+        "best": true
+      },
+      {
+        "es": "Snap",
+        "nota": "Buff de daño genérico vía asistencias rápidas"
+      },
+      {
+        "es": "Excalibú",
+        "en": "Excaliboo",
+        "nota": "Exclusivo de evento · gran mejora con 1+ agente Disruptivo"
       }
     ],
     "consejo": "Su daño puro (Sheer) ignora la DEF y escala con el PV máximo, por eso usa PV% en vez de ATQ%. Canaliza la EX bloqueando para generar adrenalina, gasta puntos de técnica y remata con la definitiva; prioriza la habilidad principal."
@@ -1341,6 +1596,24 @@ const CHARACTERS = [
         "agentes": "Alice · Piper · Lucy"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Señorita Esme",
+        "en": "Miss Esme",
+        "nota": "Con 2+ de la Cabaña del Terror · cura y da energía",
+        "best": true
+      },
+      {
+        "es": "Revolverbú",
+        "en": "Bangvolver",
+        "nota": "Refuerza la anomalía física"
+      },
+      {
+        "es": "Manekibú",
+        "en": "Luckyboo",
+        "nota": "Opción A física (gratis)"
+      }
+    ],
     "consejo": "Acumula 300 de Etiqueta de la espada provocando Embestidas y libérala con el básico cargado; usa la definitiva bajo 100. Llega a 140 de Dominio de anomalía: su núcleo convierte el exceso en Competencia. Prioriza su habilidad principal."
   },
   {
@@ -1415,6 +1688,23 @@ const CHARACTERS = [
         "agentes": "Orfia y Magas · Anby · Nicole"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Mercury",
+        "nota": "Con 2+ de la Fuerza de Defensa · sinergia con réplicas",
+        "best": true
+      },
+      {
+        "es": "Sonibú",
+        "en": "Rocketboo",
+        "nota": "+80% acumulación de quemadura con 2+ agentes ígneos"
+      },
+      {
+        "es": "Lloronbú",
+        "en": "Cryboo",
+        "nota": "Opción A ígnea (gratis)"
+      }
+    ],
     "consejo": "DPS de secuela ígnea: prioriza Regeneración de energía (escala su buff de ATQ del núcleo) y luego crítico. Sube primero núcleo y Especial EX; júntala con otro agente de secuela (Anby/Gatillo) para que ambos ignoren DEF."
   },
   {
@@ -1486,6 +1776,22 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "Sporos · Anby · Nicole"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Mercury",
+        "nota": "Con 2+ de la Fuerza de Defensa · sinergia con réplicas",
+        "best": true
+      },
+      {
+        "es": "Snap",
+        "nota": "Buff de daño genérico vía asistencias rápidas"
+      },
+      {
+        "es": "Electrobú",
+        "en": "Electroboo",
+        "nota": "Opción A eléctrica (gratis)"
       }
     ],
     "consejo": "Diseñada para equipos de doble atacante: se empareja con el otro atacante (Vanguardia) y comparten ATQ, Daño crítico y % de daño. Apunta a ~50% Prob. de crítico y ~3000 de ataque; sube primero Especial EX y núcleo."
@@ -1563,6 +1869,22 @@ const CHARACTERS = [
         "agentes": "Anby · Gatillo · Nicole"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Mercury",
+        "nota": "Con 2+ de la Fuerza de Defensa · sinergia con réplicas",
+        "best": true
+      },
+      {
+        "es": "Snap",
+        "nota": "Buff de daño genérico vía asistencias rápidas"
+      },
+      {
+        "es": "Electrobú",
+        "en": "Electroboo",
+        "nota": "Opción A eléctrica (gratis)"
+      }
+    ],
     "consejo": "Aturdidora eléctrica: ranura 6 = Impacto, pero necesita ~90% Prob. de crítico para el bono completo de aturdimiento de su habilidad adicional. Aplica aturdimiento con secuelas fuera de campo mientras N.º 0: Anby mantiene el campo."
   },
   {
@@ -1635,6 +1957,22 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "N.º 0: Anby · Nicole · Pulchra"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Mercury",
+        "nota": "Con 2+ de la Fuerza de Defensa · sinergia con réplicas",
+        "best": true
+      },
+      {
+        "es": "Snap",
+        "nota": "Buff de daño genérico vía asistencias rápidas"
+      },
+      {
+        "es": "Electrobú",
+        "en": "Electroboo",
+        "nota": "Opción A eléctrica (gratis)"
       }
     ],
     "consejo": "DPS de secuela crítica: prioriza Prob. de crítico en subestadísticas (su núcleo ya aporta Daño crítico). Sube primero núcleo y Especial; permanece en campo con un aturdidor que lance secuelas fuera de campo (Pulchra/Gatillo)."
@@ -1710,6 +2048,23 @@ const CHARACTERS = [
         "agentes": "N.º 11 · Koleda · Ben"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Sonibú",
+        "en": "Rocketboo",
+        "nota": "La mejor en equipo mono-fuego",
+        "best": true
+      },
+      {
+        "es": "Mercury",
+        "nota": "Si llevas 2+ de la Fuerza de Defensa"
+      },
+      {
+        "es": "Lloronbú",
+        "en": "Cryboo",
+        "nota": "Opción A ígnea (gratis)"
+      }
+    ],
     "consejo": "Atacante ígnea sencilla: maximiza ATQ, Prob. de crítico y Daño crítico. Sube primero el pasivo de núcleo Ola de calor (hasta +70% con Supresión ígnea) y mantén los cargos para ignorar 25% de RES ígnea."
   },
   {
@@ -1782,6 +2137,24 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "Burnice · Piper · Lucy"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Sonibú",
+        "en": "Rocketboo",
+        "nota": "+80% acumulación de quemadura con 2+ agentes ígneos",
+        "best": true
+      },
+      {
+        "es": "Moccus Tinto",
+        "en": "Red Moccus",
+        "nota": "Con 2+ Hijos de Calydon"
+      },
+      {
+        "es": "Lloronbú",
+        "en": "Cryboo",
+        "nota": "Opción A ígnea (gratis)"
       }
     ],
     "consejo": "Anómala fuera de campo: aplica Abrasión con su poscombustión mientras el equipo golpea. Prioriza EX &gt; Asistencia ≥ Definitiva; sube regen. de energía para mantener el nitrocóctel. Se juega por anomalía, no por crítico."
@@ -1860,6 +2233,24 @@ const CHARACTERS = [
         "agentes": "Corin · Nicole · César"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Moccus Tinto",
+        "en": "Red Moccus",
+        "nota": "Con 2+ Hijos de Calydon",
+        "best": true
+      },
+      {
+        "es": "Revolverbú",
+        "en": "Bangvolver",
+        "nota": "Genérico de crítico/físico · sirve en cualquier equipo"
+      },
+      {
+        "es": "Peleabú",
+        "en": "Brawlerboo",
+        "nota": "Opción A · impacto/aturdimiento"
+      }
+    ],
     "consejo": "Defensora versátil de tercer puesto: da escudos resistentes (escalan con DEF/PV), buffea el ATQ del equipo y aturde por su alto Impacto. Sube primero su núcleo (escudo), luego Especial y Asistencia. Si buscas pura supervivencia usa DEF% en ranuras 4 y 6."
   },
   {
@@ -1933,6 +2324,23 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "Corin · Nicole · Pulchra"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Moccus Tinto",
+        "en": "Red Moccus",
+        "nota": "Con 2+ Hijos de Calydon",
+        "best": true
+      },
+      {
+        "es": "Snap",
+        "nota": "Buff de daño genérico vía asistencias rápidas"
+      },
+      {
+        "es": "Sumobú",
+        "en": "Sumoboo",
+        "nota": "Opción A · impacto/aturdimiento"
       }
     ],
     "consejo": "Aturdidora física fuera de campo con Poscarga: acumula aturdimiento sin estar activa. Necesita todo el Impacto posible y luego stats ofensivas. Sube antes núcleo y Especial; su Cadena da bonus al usar la Definitiva."
@@ -2011,6 +2419,24 @@ const CHARACTERS = [
         "agentes": "Piper · Burnice · Lucy"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Moccus Tinto",
+        "en": "Red Moccus",
+        "nota": "Con 2+ Hijos de Calydon",
+        "best": true
+      },
+      {
+        "es": "Sonibú",
+        "en": "Rocketboo",
+        "nota": "+80% acumulación de quemadura con 2+ agentes ígneos"
+      },
+      {
+        "es": "Lloronbú",
+        "en": "Cryboo",
+        "nota": "Opción A ígnea (gratis)"
+      }
+    ],
     "consejo": "Auxiliar ígnea de buffs: invoca jabalíes de la guardia que golpean fuera de campo y dan +ATQ al equipo. Sus jabalíes heredan su Impacto, así que algo de Impacto ayuda; el resto en ATQ y crítico. Sube Especial y Básico por igual, luego núcleo."
   },
   {
@@ -2083,6 +2509,24 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "Piper · Burnice · Lucy"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Revolverbú",
+        "en": "Bangvolver",
+        "nota": "Refuerza la anomalía física",
+        "best": true
+      },
+      {
+        "es": "Moccus Tinto",
+        "en": "Red Moccus",
+        "nota": "Con 2+ Hijos de Calydon"
+      },
+      {
+        "es": "Manekibú",
+        "en": "Luckyboo",
+        "nota": "Opción A física (gratis)"
       }
     ],
     "consejo": "Anómala física (Asalto) que gira sin parar generando acumulación; sirve como Sub-DPS o DPS principal, ideal para provocar Desorden con un anómalo de otro atributo (Yanagi/Burnice). Prioriza su Especial para acumular Poder; no busques crítico."
@@ -2159,6 +2603,23 @@ const CHARACTERS = [
         "agentes": "Nekomata · Nicole · Anby"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Amillion",
+        "nota": "Con 2+ Liebres Astutas",
+        "best": true
+      },
+      {
+        "es": "Revolverbú",
+        "en": "Bangvolver",
+        "nota": "Genérico de crítico/físico · sirve en cualquier equipo"
+      },
+      {
+        "es": "Manekibú",
+        "en": "Luckyboo",
+        "nota": "Opción A física (gratis)"
+      }
+    ],
     "consejo": "Build 100% crítico (ATQ/CRIT); posiciónate por la espalda para el +25% de las Almohadillas férreas y encadena Embestidas. Sube primero Núcleo, Definitiva y Especial EX."
   },
   {
@@ -2233,6 +2694,23 @@ const CHARACTERS = [
         "agentes": "Billy · Nicole · Anby"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Amillion",
+        "nota": "Con 2+ Liebres Astutas",
+        "best": true
+      },
+      {
+        "es": "Revolverbú",
+        "en": "Bangvolver",
+        "nota": "Genérico de crítico/físico · sirve en cualquier equipo"
+      },
+      {
+        "es": "Manekibú",
+        "en": "Luckyboo",
+        "nota": "Opción A física (gratis)"
+      }
+    ],
     "consejo": "Crítico ante todo; dispara a distancia con seguridad y suelta la Definitiva tras el Ataque Encadenado para el pico de daño. Prioriza Núcleo y Ataque Básico."
   },
   {
@@ -2305,6 +2783,23 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "Nekomata · Nicole · Anby"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Amillion",
+        "nota": "Con 2+ Liebres Astutas",
+        "best": true
+      },
+      {
+        "es": "Ecobú",
+        "en": "Resonaboo",
+        "nota": "Anomalía etérea + control de grupo"
+      },
+      {
+        "es": "Belcebú",
+        "en": "Devilboo",
+        "nota": "Opción A etérea · +15% daño éter con 2 agentes etéreos"
       }
     ],
     "consejo": "No busca daño propio: rompe defensa con el Básico mejorado y el EX (agujero negro) y aporta regen. Prioriza Regeneración de energía y Competencia de anomalía; sube Núcleo y Especial EX."
@@ -2382,6 +2877,23 @@ const CHARACTERS = [
         "agentes": "Ellen · Soukaku · Anby"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Amillion",
+        "nota": "Con 2+ Liebres Astutas",
+        "best": true
+      },
+      {
+        "es": "Cablebú",
+        "en": "Plugboo",
+        "nota": "+100% acumulación de descarga con 2+ agentes eléctricos"
+      },
+      {
+        "es": "Electrobú",
+        "en": "Electroboo",
+        "nota": "Opción A eléctrica (gratis)"
+      }
+    ],
     "consejo": "Ranura 6 = Impacto. Mantén cargado el Básico tras el 3.er golpe (o el Especial tras el 3.er básico) para máximo aturdimiento y usa la Definitiva a menudo. Sube Básico y Especial; algo de crítico para la Definitiva."
   },
   {
@@ -2456,6 +2968,24 @@ const CHARACTERS = [
         "agentes": "Ellen · Soukaku · Anby"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Tiburonbú",
+        "en": "Sharkboo",
+        "nota": "+80% acumulación de anomalía de hielo con 2+ agentes glaciales",
+        "best": true
+      },
+      {
+        "es": "Mayordomo",
+        "en": "Butler",
+        "nota": "Con 2+ de la Casa Victoria · regenera energía"
+      },
+      {
+        "es": "Pingubú",
+        "en": "Penguinboo",
+        "nota": "Opción A de hielo (gratis)"
+      }
+    ],
     "consejo": "Crítico puro; su daño sale de Básicos, Especiales y Ataques en carrera, así que súbelos primero. Soukaku le da ATQ y daño glacial, y Lycaon rompe la RES de hielo del enemigo aturdido."
   },
   {
@@ -2528,6 +3058,24 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "Corin · Soukaku · Lycaon"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Mayordomo",
+        "en": "Butler",
+        "nota": "Con 2+ de la Casa Victoria · regenera energía",
+        "best": true
+      },
+      {
+        "es": "Tiburonbú",
+        "en": "Sharkboo",
+        "nota": "+80% acumulación de anomalía de hielo con 2+ agentes glaciales"
+      },
+      {
+        "es": "Pingubú",
+        "en": "Penguinboo",
+        "nota": "Opción A de hielo (gratis)"
       }
     ],
     "consejo": "Ranura 6 = Impacto. Sube primero el Ataque Básico (su principal fuente de aturdimiento) y luego el Núcleo; prioriza Impacto y Regeneración de energía. Brilla en equipos de hielo (Ellen) rompiendo RES."
@@ -2605,6 +3153,24 @@ const CHARACTERS = [
         "agentes": "Antón · Rina · Anby"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Cablebú",
+        "en": "Plugboo",
+        "nota": "+100% acumulación de descarga con 2+ agentes eléctricos",
+        "best": true
+      },
+      {
+        "es": "Mayordomo",
+        "en": "Butler",
+        "nota": "Con 2+ de la Casa Victoria · regenera energía"
+      },
+      {
+        "es": "Electrobú",
+        "en": "Electroboo",
+        "nota": "Opción A eléctrica (gratis)"
+      }
+    ],
     "consejo": "Auxiliar de perforación: sus marionetas mantienen en cancha el buff de Tasa de perforación para todo el equipo. Sube Núcleo y Especial; construye Regeneración de energía con algo de anomalía. Cuanta más PEN tenga ella, mayor el buff."
   },
   {
@@ -2678,6 +3244,24 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "Corin · Soukaku · Lycaon"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Mayordomo",
+        "en": "Butler",
+        "nota": "Con 2+ de la Casa Victoria · regenera energía",
+        "best": true
+      },
+      {
+        "es": "Revolverbú",
+        "en": "Bangvolver",
+        "nota": "Genérico de crítico/físico · sirve en cualquier equipo"
+      },
+      {
+        "es": "Manekibú",
+        "en": "Luckyboo",
+        "nota": "Opción A física (gratis)"
       }
     ],
     "consejo": "Crítico y ATQ; mantén pulsado el Básico para alargar el corte de motosierra y golpea a enemigos aturdidos (su Núcleo pega más con un aliado Físico o de Victoria, como Lycaon). Sube Básico y Especial EX."
@@ -2755,6 +3339,23 @@ const CHARACTERS = [
         "agentes": "Miyabi · Soukaku · Anby"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Tiburonbú",
+        "en": "Sharkboo",
+        "nota": "Acelera la acumulación de escarcha",
+        "best": true
+      },
+      {
+        "es": "Snap",
+        "nota": "Buff de daño genérico vía asistencias rápidas"
+      },
+      {
+        "es": "Pingubú",
+        "en": "Penguinboo",
+        "nota": "Opción A de hielo (gratis)"
+      }
+    ],
     "consejo": "Anómala híbrida que escala con crítico: apunta a ~80% de Prob. de crítico sin descuidar la Competencia de anomalía para maximizar la Escarcha y la Perturbación. Sube primero Básico = Especial &gt; Cadena &gt; Esquiva &gt; Asistencia."
   },
   {
@@ -2827,6 +3428,24 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "Harumasa · Anby · Nicole"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Agente Gulliver",
+        "en": "Agent Gulliver",
+        "nota": "Con 2+ de la Sección 6 · +daño a enemigos con descarga",
+        "best": true
+      },
+      {
+        "es": "Cablebú",
+        "en": "Plugboo",
+        "nota": "+100% acumulación de descarga con 2+ agentes eléctricos"
+      },
+      {
+        "es": "Electrobú",
+        "en": "Electroboo",
+        "nota": "Opción A eléctrica (gratis)"
       }
     ],
     "consejo": "Atacante técnico: casi todo su daño sale del Ataque de carrera (dash), así que prioriza Habilidad esencial (crítico) y luego el dash. Equipo 100% crítico con aturdidor eléctrico (Qingyi) para maximizar ventanas de aturdimiento."
@@ -2903,6 +3522,24 @@ const CHARACTERS = [
         "agentes": "Yanagi · Piper · Lucy"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Cablebú",
+        "en": "Plugboo",
+        "nota": "+100% acumulación de descarga con 2+ agentes eléctricos",
+        "best": true
+      },
+      {
+        "es": "Agente Gulliver",
+        "en": "Agent Gulliver",
+        "nota": "Con 2+ de la Sección 6 · +daño a enemigos con descarga"
+      },
+      {
+        "es": "Electrobú",
+        "en": "Electroboo",
+        "nota": "Opción A eléctrica (gratis)"
+      }
+    ],
     "consejo": "Anómala de acumulación pura: alterna posturas con su Especial para lanzar el EX y disparar Perturbación junto a un anómalo de otro atributo (Ígneo/Gélido). Sube Habilidad esencial y luego Especial; balancea hacia Comp. de anomalía y ATQ, el crítico es secundario."
   },
   {
@@ -2975,6 +3612,24 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "Ellen · Soukaku · Anby"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Tiburonbú",
+        "en": "Sharkboo",
+        "nota": "Acompaña al DPS de hielo que buffea",
+        "best": true
+      },
+      {
+        "es": "Agente Gulliver",
+        "en": "Agent Gulliver",
+        "nota": "Con 2+ de la Sección 6 · +daño a enemigos con descarga"
+      },
+      {
+        "es": "Pingubú",
+        "en": "Penguinboo",
+        "nota": "Opción A de hielo (gratis)"
       }
     ],
     "consejo": "Auxiliar de motor: acumula sus cargas de Vórtice con el Especial ('Iza la bandera') antes de pasar al DPS, transfiriendo un gran % de su ATQ y dando bonus de daño Glacial. Prioriza Especial y Habilidad esencial; mucho ATQ y suficiente regeneración."
@@ -3051,6 +3706,24 @@ const CHARACTERS = [
         "agentes": "Jane Doe · Seth · Nicole"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Revolverbú",
+        "en": "Bangvolver",
+        "nota": "Refuerza la anomalía física",
+        "best": true
+      },
+      {
+        "es": "Ecobú",
+        "en": "Resonaboo",
+        "nota": "Para composiciones de desorden"
+      },
+      {
+        "es": "Manekibú",
+        "en": "Luckyboo",
+        "nota": "Opción A física (gratis)"
+      }
+    ],
     "consejo": "Anómala de Asalto: en estado Pasión su daño puede critear, por eso a diferencia de otros anómalos sí valora la Prob. de crítico además de la Competencia de anomalía. Acumula Físico para disparar Asalto; sube Especial y Habilidad esencial. Seth le da −20% RES de anomalía."
   },
   {
@@ -3123,6 +3796,24 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "Yanagi · Seth · Nicole"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Cui",
+        "en": "Officer Cui",
+        "nota": "Con 2+ de Seguridad Pública",
+        "best": true
+      },
+      {
+        "es": "Valvulabú",
+        "en": "Booressure",
+        "nota": "Opción A · regenera energía"
+      },
+      {
+        "es": "Aguacabú",
+        "en": "Avocaboo",
+        "nota": "Opción A · curación"
       }
     ],
     "consejo": "Aunque es Defensivo, se construye con ATQ (no DEF%): tanto su escudo como su aporte de acumulación de anomalía escalan con ATQ. Batería/soporte anómalo: mantén el escudo activo y usa el EX para aplicar Descarga y su −20% RES de anomalía; regeneración suficiente para reciclar el EX."
@@ -3200,6 +3891,23 @@ const CHARACTERS = [
         "agentes": "Yidhari · Soukaku · Anby"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Señorita Esme",
+        "en": "Miss Esme",
+        "nota": "Con 2+ de la Cabaña del Terror · cura y da energía",
+        "best": true
+      },
+      {
+        "es": "Snap",
+        "nota": "Buff de daño genérico vía asistencias rápidas"
+      },
+      {
+        "es": "Excalibú",
+        "en": "Excaliboo",
+        "nota": "Exclusivo de evento · gran mejora con 1+ agente Disruptivo"
+      }
+    ],
     "consejo": "Escala con daño puro (Sheer) desde PV, no con ATQ; su Daño glacial es puro, así que prioriza PV% en ranuras 5 y 6 y Prob./Daño crítico en la 4."
   },
   {
@@ -3274,6 +3982,19 @@ const CHARACTERS = [
         "agentes": "Komano Manato · Lucía · Anby"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Señorita Esme",
+        "en": "Miss Esme",
+        "nota": "Su pareja natural: la activa ella sola a nivel 3+",
+        "best": true
+      },
+      {
+        "es": "Valvulabú",
+        "en": "Booressure",
+        "nota": "Opción A · regenera energía"
+      }
+    ],
     "consejo": "Auxiliar de equipos disruptivos: escala con PV (busca ~24.000 PV) y luego Regeneración de energía; no necesita ATQ. Sus buffs de Fuerza pura potencian a Yidhari/Manato."
   },
   {
@@ -3346,6 +4067,23 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "Piper · Ukinami Yuzuha · Burnice"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Señorita Esme",
+        "en": "Miss Esme",
+        "nota": "Con 2+ de la Cabaña del Terror · cura y da energía",
+        "best": true
+      },
+      {
+        "es": "Snap",
+        "nota": "Buff de daño genérico vía asistencias rápidas"
+      },
+      {
+        "es": "Manekibú",
+        "en": "Luckyboo",
+        "nota": "Opción A física (gratis)"
       }
     ],
     "consejo": "Auxiliar de anomalía: escala con ATQ (mínimo ~3000) y luego Competencia/Dominio de anomalía; NO con Regeneración. Brilla con dos unidades anómalas para maximizar el Daño de desorden."
@@ -3423,6 +4161,24 @@ const CHARACTERS = [
         "agentes": "Komano Manato · Soukaku · Anby"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Señorita Esme",
+        "en": "Miss Esme",
+        "nota": "Con 2+ de la Cabaña del Terror · cura y da energía",
+        "best": true
+      },
+      {
+        "es": "Sonibú",
+        "en": "Rocketboo",
+        "nota": "+80% acumulación de quemadura con 2+ agentes ígneos"
+      },
+      {
+        "es": "Excalibú",
+        "en": "Excaliboo",
+        "nota": "Exclusivo de evento · gran mejora con 1+ agente Disruptivo"
+      }
+    ],
     "consejo": "Disruptivo ígneo A-rank: todo su Daño ígneo es puro (Sheer) y escala con PV, no con ATQ; prioriza PV% + doble crítico. Empareja con otra unidad de Fuego/Ruptura para activar su habilidad extra."
   },
   {
@@ -3495,6 +4251,23 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "Ye Shunguang · Anby · Zhao"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Birkblick",
+        "nota": "Con 2+ de Krampus · +aturdimiento y +daño",
+        "best": true
+      },
+      {
+        "es": "Tiburonbú",
+        "en": "Sharkboo",
+        "nota": "+80% acumulación de anomalía de hielo con 2+ agentes glaciales"
+      },
+      {
+        "es": "Bloquebú",
+        "en": "Bild N. Boolok",
+        "nota": "Opción A · requiere 1+ agente de apoyo"
       }
     ],
     "consejo": "Apila PV% en las tres ranuras; su objetivo es ~27.000 de PV máx. para maximizar el buff de daño (+40%) y la curación. Suma algo de Regeneración de energía para acumular Puntos de escarcha."
@@ -3572,6 +4345,22 @@ const CHARACTERS = [
         "agentes": "Antón · Dialyn · Nicole"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Birkblick",
+        "nota": "Con 2+ de Krampus · +aturdimiento y +daño",
+        "best": true
+      },
+      {
+        "es": "Snap",
+        "nota": "Buff de daño genérico vía asistencias rápidas"
+      },
+      {
+        "es": "Bloquebú",
+        "en": "Bild N. Boolok",
+        "nota": "Opción A · requiere 1+ agente de apoyo"
+      }
+    ],
     "consejo": "Busca ~50-65% Prob. de crítico e Impacto 400+. Su EX sigue Piedra→Tijera→Papel; el golpe Papel aplica Queja maliciosa para extender el aturdimiento."
   },
   {
@@ -3646,6 +4435,23 @@ const CHARACTERS = [
         "agentes": "Billy · Anby · Sunna"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Megafán",
+        "en": "Biggest Fan",
+        "nota": "Con 2+ Ángeles del Delirio · +ATQ y +anomalía",
+        "best": true
+      },
+      {
+        "es": "Snap",
+        "nota": "Buff de daño genérico vía asistencias rápidas"
+      },
+      {
+        "es": "Manekibú",
+        "en": "Luckyboo",
+        "nota": "Opción A física (gratis)"
+      }
+    ],
     "consejo": "Alcanza ~3.500 de ATQ para activar sus buffs y la regeneración; luego prioriza Regeneración de energía para repetir el EX. Da ATQ, mult. de desequilibrio y Daño crítico (a atacantes) o Dominio de anomalía (a anómalos)."
   },
   {
@@ -3718,6 +4524,23 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "Promeia · Nangong Yu · Soukaku"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Birkblick",
+        "nota": "Con 2+ de Krampus · +aturdimiento y +daño",
+        "best": true
+      },
+      {
+        "es": "Tiburonbú",
+        "en": "Sharkboo",
+        "nota": "+80% acumulación de anomalía de hielo con 2+ agentes glaciales"
+      },
+      {
+        "es": "Pingubú",
+        "en": "Penguinboo",
+        "nota": "Opción A de hielo (gratis)"
       }
     ],
     "consejo": "DPS principal de anomalía glacial: acumula Congelación corrosiva → Prueba de frío para detonar Abloom. Con Dominio de anomalía inicial &gt;150, cada punto extra da +1,5 Competencia y +0,35% Daño Abloom al escuadrón."
@@ -3795,6 +4618,23 @@ const CHARACTERS = [
         "agentes": "Banyue · Gatillo · Ben"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Birkblick",
+        "nota": "Con 2+ de Krampus · +aturdimiento y +daño",
+        "best": true
+      },
+      {
+        "es": "Excalibú",
+        "en": "Excaliboo",
+        "nota": "Exclusivo de evento · gran mejora con 1+ agente Disruptivo"
+      },
+      {
+        "es": "Bloquebú",
+        "en": "Bild N. Boolok",
+        "nota": "Opción A · requiere 1+ agente de apoyo"
+      }
+    ],
     "consejo": "Convierte PV máx. en Fuerza penetrante, así que PV es su estadística nº1 junto a Prob. de crítico (apunta a ~100% en combate). Permanece en campo para acumular Fuegos de ira y entrar en Semblante de furia."
   },
   {
@@ -3867,6 +4707,24 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "Nangong Yu · Piper · Lucy"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Megafán",
+        "en": "Biggest Fan",
+        "nota": "Con 2+ Ángeles del Delirio · +ATQ y +anomalía",
+        "best": true
+      },
+      {
+        "es": "Ecobú",
+        "en": "Resonaboo",
+        "nota": "Anomalía etérea + control de grupo"
+      },
+      {
+        "es": "Belcebú",
+        "en": "Devilboo",
+        "nota": "Opción A etérea · +15% daño éter con 2 agentes etéreos"
       }
     ],
     "consejo": "Aturdidora atípica: se construye con anomalía, NO con Impacto (ranura 6 = Dominio de anomalía). Con Dominio de anomalía &gt;100, cada punto extra da +0,8 Impacto. Convierte Competencia en Impacto para habilitar DPS anómalos."
@@ -3943,6 +4801,24 @@ const CHARACTERS = [
         "agentes": "Aria · Anby · Soukaku"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Megafán",
+        "en": "Biggest Fan",
+        "nota": "Con 2+ Ángeles del Delirio · +ATQ y +anomalía",
+        "best": true
+      },
+      {
+        "es": "Ecobú",
+        "en": "Resonaboo",
+        "nota": "Anomalía etérea + control de grupo"
+      },
+      {
+        "es": "Belcebú",
+        "en": "Devilboo",
+        "nota": "Opción A etérea · +15% daño éter con 2 agentes etéreos"
+      }
+    ],
     "consejo": "Especialista en anomalía etérea con Ataques cargados que detonan Abloom; escala con Competencia y Dominio de anomalía, no con crítico. Máximo rendimiento en el equipo Ángeles del Engaño."
   },
   {
@@ -4015,6 +4891,23 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "Cissia · Harumasa · Anby"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Snap",
+        "nota": "Sin bangbú de facción: el mejor genérico",
+        "best": true
+      },
+      {
+        "es": "Cablebú",
+        "en": "Plugboo",
+        "nota": "+100% acumulación de descarga con 2+ agentes eléctricos"
+      },
+      {
+        "es": "Electrobú",
+        "en": "Electroboo",
+        "nota": "Opción A eléctrica (gratis)"
       }
     ],
     "consejo": "Sub-DPS eléctrica: apunta a ~76% Prob. de crítico y algo de Regeneración de energía. Su Beso de serpiente y Corroe hueso cuentan como Ataque básico; reduce DEF eléctrica y da Daño crítico al escuadrón eléctrico."
@@ -4102,6 +4995,22 @@ const CHARACTERS = [
         "agentes": "Billy Estelar · Pulchra · Pan Yinhu"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Amillion",
+        "nota": "Con 2+ Liebres Astutas",
+        "best": true
+      },
+      {
+        "es": "Excalibú",
+        "en": "Excaliboo",
+        "nota": "Exclusivo de evento · gran mejora con 1+ agente Disruptivo"
+      },
+      {
+        "es": "Snap",
+        "nota": "Buff de daño genérico vía asistencias rápidas"
+      }
+    ],
     "consejo": "Disruptivo como Yixuan: su <b>daño bruto</b> ignora la DEF y escala con los PV máx. (1 PV = 0,1 de Fuerza bruta), así que apila <b>PV%</b> y crítico, nada de ATQ%. Cicla su Especial (consume un 16% de PV, solo usable sobre el 25%) y recupérate con su robo de vida; los buffs genéricos de ATQ no le sirven, por eso quiere apoyos de Fuerza bruta como <i>Lucía</i> o <i>Pan Yinhu</i>, y Dialyn convierte su Fuerza bruta en daño extra. Prioridad: Núcleo &gt; Especial &gt; Cadena &gt; Definitiva &gt; Básico."
   },
   {
@@ -4185,6 +5094,23 @@ const CHARACTERS = [
       {
         "nombre": "F2P",
         "agentes": "Pyrois · Anby · Nicole"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Snap",
+        "nota": "Sin bangbú de facción: el mejor genérico",
+        "best": true
+      },
+      {
+        "es": "Ecobú",
+        "en": "Resonaboo",
+        "nota": "Anomalía etérea + control de grupo"
+      },
+      {
+        "es": "Belcebú",
+        "en": "Devilboo",
+        "nota": "Opción A etérea · +15% daño éter con 2 agentes etéreos"
       }
     ],
     "consejo": "Agente <b>gratuito</b> de rango especial <b>I</b>: se obtiene con su motor avanzando la historia de 3.0 en Roscaelifer. Atacante etéreo de definitivas: acumula decibelios y encadena hasta cuatro definitivas distintas en la ventana de aturdimiento; su técnica adicional <i>Legión gloriosa</i> da +40% de Daño crít con un aturdidor o auxiliar en el equipo. Apunta a ~72% de Prob. de crítico en ficha (Sol exuvia suma +20% solo en combate). Prioriza el núcleo por encima de todo."
@@ -4271,6 +5197,22 @@ const CHARACTERS = [
         "agentes": "Piper · Velina · Lucy"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Ultra Jake",
+        "nota": "Con 1+ agente de su facción · da energía al equipo",
+        "best": true
+      },
+      {
+        "es": "Snap",
+        "nota": "Buff de daño genérico vía asistencias rápidas"
+      },
+      {
+        "es": "Aguacabú",
+        "en": "Avocaboo",
+        "nota": "Opción A · curación"
+      }
+    ],
     "consejo": "Primera agente de <b>Aéreo</b> (Viento): sub-DPS anómala fuera de campo y pseudoaturdidora. Aplica la anomalía aérea, deja que otro atributo la contamine y en vez de Desorden provoca <b>Vórtice</b>, un ciclón que agrupa enemigos y remata con su Floración. Su núcleo convierte cada 0,01 de Regeneración de energía sobre 1,2 en +0,21% de daño (tope 35%) y +0,5 de Dominio: la ranura VI de regen. es casi obligatoria incluso con motor de regen. Prioridad: Núcleo &gt; Especial EX &gt; Básico."
   },
   {
@@ -4355,6 +5297,130 @@ const CHARACTERS = [
         "agentes": "Pyrois · Norma · Nicole"
       }
     ],
+    "bangbus": [
+      {
+        "es": "Ultra Jake",
+        "nota": "Con 1+ agente de su facción · da energía al equipo",
+        "best": true
+      },
+      {
+        "es": "Sonibú",
+        "en": "Rocketboo",
+        "nota": "+80% acumulación de quemadura con 2+ agentes ígneos"
+      },
+      {
+        "es": "Peleabú",
+        "en": "Brawlerboo",
+        "nota": "Opción A · impacto/aturdimiento"
+      }
+    ],
     "consejo": "Aturdidora ígnea fuera de campo: su núcleo convierte cada 1% de Prob. crít en +0,9% de Daño crít y +0,6% de aturdimiento (topes +81%/+54%), por eso la Prob. de crítico manda sobre todo. Lanza su <i>sombrero de copa acompañante</i> para seguir acumulando <b>precalentamiento de cámara</b> fuera de campo y, tras un aturdimiento, sus torretas Ehn Na bombardean con misiles durante 6 s. Es una Ju Fufu mejorada: encaja en casi cualquier equipo de Atacante o Disruptivo (alarga el aturdimiento y buffea al equipo). Prioridad: Núcleo &gt; Especial EX &gt; Cadena."
+  },
+  {
+    "id": "remielle-dan",
+    "nombre": "Remielle",
+    "rango": "S",
+    "atributo": "Lumiflujo",
+    "especialidad": "Anómalo",
+    "version": "3.1",
+    "estado": "ok",
+    "ranura4": {
+      "principal": "Competencia de anomalía",
+      "alt": "ATQ% si ya rondas los ~4000 de ATQ totales."
+    },
+    "ranura5": {
+      "principal": "ATQ %",
+      "alt": "El daño de atributo le aporta poco: prioriza llegar a ~4000 de ATQ."
+    },
+    "ranura6": {
+      "principal": "Regeneración de energía",
+      "alt": "ATQ% si vas por debajo de ~4000 de ATQ."
+    },
+    "substats": [
+      "ATQ% (hasta ~4000)",
+      "Competencia de anomalía",
+      "PEN",
+      "ATQ fijo"
+    ],
+    "motoresW": [
+      {
+        "es": "Oda de alas renacidas",
+        "en": "Ode of Resurrected Wings",
+        "nota": "Insignia · la mejor",
+        "best": true
+      },
+      {
+        "es": "Urdidor del tiempo",
+        "en": "Timeweaver"
+      },
+      {
+        "es": "Llanto mielgo",
+        "en": "Weeping Gemini",
+        "nota": "Opción A / F2P · rinde casi como las S"
+      },
+      {
+        "es": "Coctelera incandescente",
+        "en": "Flamemaker Shaker"
+      },
+      {
+        "es": "Excelencia disciplinada",
+        "en": "Practiced Perfection"
+      }
+    ],
+    "discos": [
+      {
+        "es": "Hado emplumado ×4",
+        "en": "Feathered Fate",
+        "nota": "Set nuevo de la 3.1 hecho para ella · +50 Competencia de anomalía al entrar · +15% daño de anomalía de atributo por ser Lumiflujo",
+        "best": true
+      },
+      {
+        "es": "Jazz caótico ×2",
+        "en": "Chaos Jazz",
+        "nota": "+30 Competencia de anomalía"
+      },
+      {
+        "es": "Blues libre ×2",
+        "en": "Freedom Blues",
+        "nota": "+30 Competencia de anomalía (equivalente)"
+      },
+      {
+        "es": "Voz astral ×2",
+        "en": "Astral Voice",
+        "nota": "Si prefieres ATQ%"
+      }
+    ],
+    "equipos": [
+      {
+        "nombre": "Premium",
+        "agentes": "Remielle · Velina · Promeia",
+        "best": true
+      },
+      {
+        "nombre": "Alternativa",
+        "agentes": "Remielle · Velina · Alice (o Aria)"
+      },
+      {
+        "nombre": "Con roster veterano",
+        "agentes": "Remielle · Burnice · Miyabi"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Ariel",
+        "nota": "Su bangbú firma (nuevo en 3.1) · con Remielle activa su habilidad adicional",
+        "best": true
+      },
+      {
+        "es": "Booltergeist",
+        "nota": "Exclusivo de evento · pide 1+ agente de Ataque o Anomalía"
+      },
+      {
+        "es": "Caballerobú",
+        "en": "Knightboo",
+        "nota": "Opción A física (gratis)"
+      }
+    ],
+    "consejo": "Primera agente de <b>Lumiflujo</b> (atributo nuevo de la 3.1): no acumula anomalía normal, sino <b>acumulación de Lumen</b>; cuando un compañero detona una anomalía sobre ese enemigo se produce la <b>Refringencia</b>, que amplifica el daño de esa anomalía (escala con su Competencia de anomalía y su ATQ, objetivo ~4000). Fuera de campo mantiene su estado de flujo aplicando Lumen y buffeando al equipo, así que rótala con frecuencia; además su atributo puede adoptar el tipo de daño del siguiente agente (flexible contra resistencias). Prioridad: Núcleo &gt; Asistencia &gt; Básico &gt; Definitiva &gt; Cadena &gt; Especial."
   }
 ];
