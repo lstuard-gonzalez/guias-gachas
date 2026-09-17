@@ -1,6 +1,6 @@
 // ============================================================
-//  ZZZ Guía rápida — datos de agentes (Zenless Zone Zero 3.1)
-//  57 agentes. Auditado (29-jul-2026, estreno 3.1). Bangbús por agente (jul 2026, v3.1).
+//  ZZZ Guía rápida — datos de agentes (Zenless Zone Zero 3.2)
+//  59 agentes. Auditado (17-sep-2026, v3.2: Claret; Roxy preliminar, fase 2 30-sep). Bangbús por agente.
 // ============================================================
 const CHARACTERS = [
   {
@@ -5422,5 +5422,221 @@ const CHARACTERS = [
       }
     ],
     "consejo": "Primera agente de <b>Lumiflujo</b> (atributo nuevo de la 3.1): no acumula anomalía normal, sino <b>acumulación de Lumen</b>; cuando un compañero detona una anomalía sobre ese enemigo se produce la <b>Refringencia</b>, que amplifica el daño de esa anomalía (escala con su Competencia de anomalía y su ATQ, objetivo ~4000). Fuera de campo mantiene su estado de flujo aplicando Lumen y buffeando al equipo, así que rótala con frecuencia; además su atributo puede adoptar el tipo de daño del siguiente agente (flexible contra resistencias). Prioridad: Núcleo &gt; Asistencia &gt; Básico &gt; Definitiva &gt; Cadena &gt; Especial."
+  },
+  {
+    "id": "claret-flint",
+    "nombre": "Claret",
+    "rango": "S",
+    "atributo": "Eléctrico",
+    "especialidad": "Armero",
+    "version": "3.2",
+    "estado": "ok",
+    "ranura4": {
+      "principal": "Prob. de crítico",
+      "alt": "Sin alternativa: el Daño crít no le sirve (cada 1% se convierte en 0,35% de Prob. crít). Objetivo: acercarse al 200% sumando núcleo, motor y buffs."
+    },
+    "ranura5": {
+      "principal": "Tasa de perforación",
+      "alt": "Daño eléctrico % si tu soporte ya aporta PEN (Rina); el daño % se satura en equipos de Armero."
+    },
+    "ranura6": {
+      "principal": "DEF %",
+      "alt": "Sin alternativa: todo su daño escala con DEF, no con ATQ (objetivo 2300-2600 de DEF y 9500+ PV)."
+    },
+    "substats": [
+      "Prob. de crítico",
+      "DEF %",
+      "Daño crítico (se convierte en Prob. crít)",
+      "PEN",
+      "DEF fija"
+    ],
+    "motoresW": [
+      {
+        "es": "Sed escarlata",
+        "en": "Crimson Thirst",
+        "nota": "Insignia · la mejor con diferencia: DEF% de stat secundaria, +25% Prob. crít y +15% daño eléctrico incondicionales, y +10% de daño eléctrico de Filo (multiplicador aparte) 40 s tras un EX o un Maim",
+        "best": true
+      },
+      {
+        "es": "Arca de médula ósea",
+        "en": "Bloodmarrow Coffer",
+        "nota": "Rango A · recompensa del Fondo Urbano de Nueva Eridu (Certificado del Gran Constructor): Prob. crít en stat secundaria y +0,48-0,8% de daño por cada 1% de Prob. crít sobre 100% (tope 24-40%) · ~80% de la insignia a P5"
+      },
+      {
+        "es": "Fortuna felina",
+        "en": "Catty Luck",
+        "nota": "Rango A · gachapón estándar (gratis): DEF% en stat secundaria, +8-12% DEF y otro tanto durante 40 s tras un EX · la alternativa recomendada; sin Prob. crít, cuesta más llegar al tope"
+      },
+      {
+        "es": "Fase lunar - Semiluna",
+        "en": "[Lunar] Semiluna",
+        "nota": "Rango B · solo como relleno: es el único otro motor de Armero que existe (+daño de básico tras un EX). No hay motores S alternativos para la especialidad"
+      }
+    ],
+    "discos": [
+      {
+        "es": "Rosa espinosa ×4",
+        "en": "Thorned Rose",
+        "nota": "Set hecho para Armeros (llegó en la 3.1): +16% DEF con 2 piezas; +15% de daño y +8/16% Prob. crít si la DEF inicial supera 1000/1800 (ella lo cumple de sobra)",
+        "best": true
+      },
+      {
+        "es": "Tecno tetraodóntido ×2",
+        "en": "Puffer Electro",
+        "nota": "+8% Tasa de perforación · la recomendada, sobre todo con Rina; algo peor si tu equipo ya reduce DEF"
+      },
+      {
+        "es": "Tecno pícido ×2",
+        "en": "Woodpecker Electro",
+        "nota": "+8% Prob. de crítico"
+      },
+      {
+        "es": "Rock espiritual ×2",
+        "en": "Soul Rock",
+        "nota": "+16% DEF (también valen Metal eléctrico +10% daño eléctrico o Balada de la rama y la espada +16% Daño crít)"
+      }
+    ],
+    "equipos": [
+      {
+        "nombre": "Premium",
+        "agentes": "Claret · Norma · Rina",
+        "best": true
+      },
+      {
+        "nombre": "Alternativo",
+        "agentes": "Claret · Lycaon · Rina"
+      },
+      {
+        "nombre": "F2P",
+        "agentes": "Claret · Gatillo · Nicole"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Snap",
+        "nota": "Buff de daño genérico vía asistencias rápidas; Norma y Lycaon las generan a demanda",
+        "best": true
+      },
+      {
+        "es": "Ultra Jake",
+        "nota": "Con 1+ agente de Roscaelifer (Claret cuenta): energía al equipo con cada Ataque en cadena o Vórtice · a ella no le sirve (usa Filo, no energía), pero sí a Norma y Rina"
+      },
+      {
+        "es": "Cablebú",
+        "en": "Plugboo",
+        "nota": "Opción A eléctrica (gratis) · con Rina ya suma los 2 eléctricos que pide"
+      }
+    ],
+    "consejo": "Primera agente <b>Armero</b> (especialidad nueva de la 3.2, disponible desde el 9-sep-2026 en el canal «Bloodmoon Rising», fase 1): todo su daño es <b>daño de Filo</b> y escala con <b>DEF</b>, no con ATQ; carga el EX con <b>Filo</b> (Sharpness) en vez de energía, y en lugar de Daño crít usa el <b>bono de Laceración</b>, que puede aplicarse dos veces si la Prob. crít supera el 100% (el doble crítico es multiplicativo: por eso se apunta al 200%). Con el EX entra en <b>Inscripción carmesí</b> (16 s; el contador se pausa fuera de campo, en Cadena, Definitiva y Contraasistencia, y cada Cadena la alarga 2 s): sus básicos potenciados acumulan <b>Gash</b> (hasta 3 cargas; el 3.º golpe se prolonga manteniendo pulsado y admite Esquiva perfecta para encadenarse en bucle) y los Especiales en ese estado consumen Gash para provocar <b>Maim</b>, un estallido en área que es la mayor parte de su daño: pulsación = 1 Maim (fuera de aturdimiento), mantener = hasta 3 (en aturdimiento). Combo de aturdimiento: Especial mantenido (3 Maim) → Cadena → Básico 3 → Cadena → Básico 3 → Definitiva (rellena la 3.ª carga y da 10 de Filo) → Especial mantenido (3 Maim). Su <b>Contraasistencia</b> corta las habilidades de control enemigas y aporta 2,5 cargas de Gash. Habilidad adicional (con Aturdidor, Armero o eléctrico): 300 decibelios al provocar Contaminación (útil con agentes Aéreos como Roxy) y +25% daño de Laceración a todos los Armeros 40 s tras cada Maim. El nivel de Núcleo da Prob. crít en vez de ATQ. Prioridad: Especial &gt; Cadena &gt; Básico &gt; Asistencia &gt; Esquiva."
+  },
+  {
+    "id": "roxy-ifrita-pryce",
+    "nombre": "Roxy",
+    "rango": "S",
+    "atributo": "Aéreo",
+    "especialidad": "Aturdidor",
+    "version": "3.2",
+    "estado": "parcial",
+    "ranura4": {
+      "principal": "Prob. de crítico",
+      "alt": "Su buff de equipo escala con su Prob. crít (+0,4% Daño crít por cada 1%, tope 25% ≈ 62,5% de Prob. crít). Datos de prelanzamiento: pendiente de confirmar con las calculadoras"
+    },
+    "ranura5": {
+      "principal": "Daño aéreo %",
+      "alt": "ATQ% con mejores substats (su núcleo ya le suma hasta +560 de ATQ)"
+    },
+    "ranura6": {
+      "principal": "Regeneración de energía",
+      "alt": "Impacto si ya superas con creces 1,2 de regen.: su núcleo convierte cada 0,01 sobre 1,2 en +5 ATQ (tope 560) y +0,4 Impacto (tope 46)"
+    },
+    "substats": [
+      "Prob. de crítico",
+      "ATQ%",
+      "Daño crítico",
+      "PEN"
+    ],
+    "motoresW": [
+      {
+        "es": "Crimson Moon Casket (nombre ES por confirmar)",
+        "en": "Crimson Moon Casket",
+        "nota": "Insignia · efecto y stats aún sin publicar en la wiki (canal propio desde el 30-sep-2026)",
+        "best": true
+      },
+      {
+        "es": "Engranaje infernal",
+        "en": "Hellfire Gears",
+        "nota": "Alternativa S: regen. de energía fuera de campo (alimenta su núcleo) e Impacto acumulable con el EX"
+      },
+      {
+        "es": "Subalterno jefe",
+        "en": "Chief Sidekick",
+        "nota": "Alternativa S (insignia de Norma): Prob. crít en stat secundaria, +Impacto y regen. fuera de campo; su buff de daño al equipo exige daño ígneo, así que no lo aprovecha"
+      },
+      {
+        "es": "Tetera esmeraldina",
+        "en": "Ice-Jade Teapot",
+        "nota": "Alternativa S: Impacto acumulable con básicos y +daño al equipo con 15 cargas"
+      },
+      {
+        "es": "Última cena",
+        "en": "Steam Oven",
+        "nota": "Rango A · F2P: Regeneración de energía en stat secundaria (+Impacto según la energía acumulada)"
+      }
+    ],
+    "discos": [
+      {
+        "es": "Disco sacudestrellas ×4",
+        "en": "Shockstar Disco",
+        "nota": "+6% Impacto y +20% de aturdimiento con básicos, ataques de carrera y contraataques",
+        "best": true
+      },
+      {
+        "es": "Salón huracanado ×2",
+        "en": "Wuthering Salon",
+        "nota": "+10% de daño aéreo (único set con daño aéreo)"
+      },
+      {
+        "es": "Jazz oscilante ×2",
+        "en": "Swing Jazz",
+        "nota": "+20% Regeneración de energía: alimenta su núcleo"
+      },
+      {
+        "es": "Nana a la luz cenicienta ×2",
+        "en": "Moonlight Lullaby",
+        "nota": "+20% regen. de energía (equivalente)"
+      }
+    ],
+    "equipos": [
+      {
+        "nombre": "Premium",
+        "agentes": "Claret · Roxy · Rina",
+        "best": true
+      },
+      {
+        "nombre": "Alternativo",
+        "agentes": "Evelyn · Roxy · Astra Yao"
+      },
+      {
+        "nombre": "F2P",
+        "agentes": "Pyrois · Roxy · Nicole"
+      }
+    ],
+    "bangbus": [
+      {
+        "es": "Ultra Jake",
+        "nota": "Con 1+ agente de Roscaelifer (Roxy cuenta): energía al equipo al provocar Vórtice o usar un Ataque en cadena, justo lo que escala su núcleo",
+        "best": true
+      },
+      {
+        "es": "Snap",
+        "nota": "Buff de daño genérico vía asistencias rápidas"
+      },
+      {
+        "es": "Sumobú",
+        "en": "Sumoboo",
+        "nota": "Opción A (gratis) · con 1+ Aturdidor: más aturdimiento sobre enemigos que ya superan el 50%"
+      }
+    ],
+    "consejo": "<b>Entrada preliminar</b> (datos de la wiki previos al lanzamiento; sale el 30-sep-2026 en el canal «Cindernite Respite», fase 2 de la 3.2, junto a la repetición de Promeia). Aturdidora <b>Aérea</b> de la familia Flint, la segunda agente de Viento tras Velina. Manteniendo el EX entra en <b>Torbellino</b>: un tornado dirigible que consume energía continuamente y le da 1 <b>energía de viento</b> por cada 25 de energía gastada (máx. 3); al soltar dispara el cañón de viento y deja tantos <b>Ojos del huracán</b> como energía de viento tenía. Con 3 Ojos en el campo lanza automáticamente el Especial que los detona y genera una gran tormenta; si golpea a un enemigo con anomalía aérea provoca <b>Purificación</b> (Cleanse), que devuelve la Contaminación a su estado original. Cada Contaminación, Purificación o reaplicación de Ventisca (Windswept) en el equipo da a todos +Daño crít del atributo contaminante y de Viento (escala con su Prob. crít, tope 25%; a los Armeros +11,5% de Laceración) durante 50 s. Habilidad adicional (con Atacante, Disruptivo o Armero): +30% multiplicador de daño de aturdimiento, +2 s de aturdimiento, +8% de daño a enemigos bajo Ventisca, 40 de energía al entrar y Ventisca 20 s más larga. Su núcleo convierte la Regeneración de energía sobre 1,2 en ATQ e Impacto, así que ranura VI de regen. y motores con regen. son la base. Encaja de maravilla con <b>Claret</b> (cada una activa la habilidad adicional de la otra y la Contaminación eléctrica le da 300 decibelios). Prioridad por confirmar; previsiblemente Especial EX &gt; Núcleo &gt; Cadena."
   }
 ];

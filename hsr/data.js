@@ -1,6 +1,6 @@
 // ============================================================
-//  HSR Guía rápida — datos de personajes (Honkai: Star Rail 4.3)
-//  87 personajes. Auditado; terminología ES oficial.
+//  HSR Guía rápida — datos de personajes (Honkai: Star Rail 4.5 · preliminar 4.6)
+//  93 personajes. Auditado; terminología ES oficial. Actualizado 17-sep-2026 (v4.4: Himeko Nova, Rin Tohsaka, Gilgamesh; v4.5: Robin Estival, Aventurino Oleaje; v4.6 preliminar: Perla).
 // ============================================================
 const CHARACTERS = [
   {
@@ -5114,7 +5114,7 @@ const CHARACTERS = [
       "nombreCompleto": "Topaz y Conti",
       "faccion": "IPC",
       "desc": "Cobradora de deudas del Departamento de Conservación de la IPC, acompañada de Conti, su adorable warp trotter mascota. Eficiente, ambiciosa y leal a la corporación.",
-      "img": "https://static.wikia.nocookie.net/houkai-star-rail/images/9/9d/Character_Topaz_and_Conti_Splash_Art.png"
+      "img": "https://static.wikia.nocookie.net/houkai-star-rail/images/9/9d/Character_Topaz_and_Numby_Splash_Art.png"
     }
   },
   {
@@ -5230,7 +5230,7 @@ const CHARACTERS = [
       "nombreCompleto": "Aventurino (Kakavasha)",
       "faccion": "IPC",
       "desc": "Único superviviente del clan Avgin, ahora estratega del Departamento de Estrategias de la IPC. Jugador nato que apuesta con su propia vida ocultando un pasado trágico tras su sonrisa.",
-      "img": "https://static.wikia.nocookie.net/houkai-star-rail/images/a/a9/Character_Aventurino_Splash_Art.png"
+      "img": "https://static.wikia.nocookie.net/houkai-star-rail/images/a/a9/Character_Aventurine_Splash_Art.png"
     }
   },
   {
@@ -8582,7 +8582,7 @@ const CHARACTERS = [
     ],
     "reliquias": [
       {
-        "es": "Divine-Querying Master Smith (4pz, aún sin nombre oficial en ES)",
+        "es": "Gran forja del interrogante divino (4pz)",
         "en": "Divine-Querying Master Smith",
         "nota": "Set nuevo de la v4.3: PV y Daño Crítico, y +15% de daño al equipo; el mejor en todos sus estilos de juego",
         "best": true
@@ -8625,6 +8625,588 @@ const CHARACTERS = [
       "faccion": "Cazadores de Estelarones",
       "desc": "La 'Esencia templada' (v4.3): nueva encarnación de Blade como Nihilidad de Fuego que escala con PV; sub-DPS y debuffer de ataques de seguimiento, socio ideal de Acheron, Ashveil y Castorice.",
       "img": "https://static.wikia.nocookie.net/houkai-star-rail/images/c/c9/Character_Mortenax_Blade_Portrait.png"
+    }
+  },
+  {
+    "id": "himeko-nova",
+    "nombre": "Himeko Nova",
+    "rareza": "5",
+    "elemento": "Fuego",
+    "camino": "Erudición",
+    "version": "4.4",
+    "estado": "completo",
+    "cuerpo": {
+      "principal": "Prob. Crítico",
+      "alt": "Daño Crítico"
+    },
+    "pies": {
+      "principal": "ATQ%",
+      "alt": "Velocidad (134+ solo con Sunday a 135/134; la base es muy preferible)"
+    },
+    "esfera": {
+      "principal": "ATQ%",
+      "alt": "Daño de Fuego"
+    },
+    "cuerda": {
+      "principal": "ATQ%",
+      "alt": "—"
+    },
+    "substats": [
+      "Prob. Crítico (100% en combate)",
+      "Daño Crítico",
+      "ATQ%",
+      "Velocidad"
+    ],
+    "conos": [
+      {
+        "es": "Cuando una estrella ilumina la noche",
+        "en": "A Star That Lights the Night",
+        "nota": "Cono de firma: ATQ base alto, ignora 32% de DEF, +60% de daño a Habilidad de asistencia y Definitivo y +6 de energía por cada asistencia; BiS con mucha diferencia (con Welt llega al 100% de DEF ignorada)",
+        "best": true
+      },
+      {
+        "es": "Hacia lo inescrutable",
+        "en": "Into the Unreachable Veil",
+        "nota": "Alt 5★ (firma de La Herta): segunda mejor opción, Prob. Crítico, daño de Habilidad/Definitivo y recupera puntos de habilidad con el Definitivo"
+      },
+      {
+        "es": "Noche en la Vía Láctea",
+        "en": "Night on the Milky Way",
+        "nota": "Alt 5★ estándar: escala con el número de enemigos, ideal en Ficción Pura y flojo contra un solo objetivo; aprovecha que ella rompe cualquier debilidad"
+      },
+      {
+        "es": "Hoy es otro día tranquilo",
+        "en": "Today Is Another Peaceful Day",
+        "nota": "Pase de batalla: +60% de daño permanente a todos sus ataques"
+      },
+      {
+        "es": "Día del colapso cósmico",
+        "en": "The Day The Cosmos Fell",
+        "nota": "F2P: necesita al menos 2 enemigos débiles al Fuego en campo; último recurso La solemnidad del desayuno (tarda 3 eliminaciones en activarse)"
+      }
+    ],
+    "reliquias": [
+      {
+        "es": "Piloto estelar como Yoveo (4pz)",
+        "en": "As Navigator Isee Sees It",
+        "nota": "BiS: su spam de Habilidad de asistencia acumula el set al máximo sin esfuerzo, +54% de daño a Asistencia y Definitivo",
+        "best": true
+      },
+      {
+        "es": "Capitán del mar maldito (4pz)",
+        "en": "Wavestrider Captain",
+        "nota": "Alt fuerte si la apuntan a menudo (Sunday, Sparkle, Cerydra); el buff dura 1 turno, así que lanza el Definitivo en su propio turno. Eruditos perdidos en el mar del conocimiento (4pz) es pasable"
+      },
+      {
+        "es": "Punto de partida de la estrella caída (2pz)",
+        "en": "Fallen Star Anchorage",
+        "nota": "Planar BiS: ella misma es Compañera Trailblaze, con otro compañero en el equipo se activa solo y da crítico",
+        "best": true
+      },
+      {
+        "es": "Parque de Platanolandia (2pz)",
+        "en": "The Wondrous BananAmusement Park",
+        "nota": "Planar alt: mismo crítico que Estrella caída pero exige a Dan Heng • Permansor Terrae en el equipo; Arena rutilante (2pz) es la opción genérica"
+      }
+    ],
+    "equipos": [
+      {
+        "nombre": "Nihilidad / Aniquilación",
+        "agentes": "Himeko Nova · Welt · Mortenax Blade · Dan Heng • Permansor Terrae",
+        "best": true
+      },
+      {
+        "nombre": "Veredicto (Definitivos aliados)",
+        "agentes": "Himeko Nova · Sunday · Cerydra · Dan Heng • Permansor Terrae"
+      },
+      {
+        "nombre": "Doble avance accesible",
+        "agentes": "Himeko Nova · Welt · Trazacaminos (Reminiscencia) · Gallagher"
+      }
+    ],
+    "consejo": "DPS de Erudición de Fuego (v4.4, 15-jul-2026): despliega el territorio Visioscopio Starblazer y da a todo el equipo una Habilidad de asistencia (cuenta como su Habilidad y le regenera energía). Necesita al menos un aliado con la etiqueta Compañero Trailblaze para activar un Protocolo: Veredicto (los Definitivos aliados recargan asistencias; Sunday, Cerydra, Permansor Terrae, Trazacaminos) o Aniquilación (golpes en área; hoy solo Welt lo habilita). Prioridad Talento > Definitivo > Habilidad; rasgo A2 primero. Objetivo 3500-4000 de ATQ, 100% de Prob. Crítico en combate y Velocidad base con botas de ATQ%; ignora tipos de debilidad al reducir Firmeza.",
+    "ficha": {
+      "nombreCompleto": "Himeko Nova",
+      "faccion": "Expreso Astral",
+      "desc": "La 'Navegante cazaestrellas' del Expreso Astral (v4.4): nueva forma de Himeko como Erudición de Fuego, DPS T0 en AoE y muy buena en objetivo único; estrena la mecánica de Habilidad de asistencia y el Definitivo con el cañón Starblazer.",
+      "img": "https://static.wikia.nocookie.net/houkai-star-rail/images/4/4c/Character_Himeko_%E2%80%A2_Nova_Portrait.png"
+    }
+  },
+  {
+    "id": "rin-tohsaka",
+    "nombre": "Rin Tohsaka",
+    "rareza": "5",
+    "elemento": "Cuántico",
+    "camino": "Erudición",
+    "version": "4.4",
+    "estado": "completo",
+    "cuerpo": {
+      "principal": "Prob. Crítico",
+      "alt": "Daño Crítico"
+    },
+    "pies": {
+      "principal": "Velocidad (135-160 como sub-DPS)",
+      "alt": "ATQ% (Velocidad base como DPS principal)"
+    },
+    "esfera": {
+      "principal": "Daño Cuántico",
+      "alt": "ATQ%"
+    },
+    "cuerda": {
+      "principal": "Regeneración de Energía (119-124% como sub-DPS)",
+      "alt": "ATQ% (DPS principal)"
+    },
+    "substats": [
+      "Velocidad (hasta el objetivo)",
+      "Prob. Crítico",
+      "Daño Crítico",
+      "ATQ%"
+    ],
+    "conos": [
+      {
+        "es": "Destelleos silentes",
+        "en": "Flickering Stars",
+        "nota": "Cono de firma: ATQ base alto, +18% de Prob. Crítico y +72% de daño de Habilidad, y los aliados ignoran 20% de DEF; el mejor tanto como DPS principal como sub-DPS",
+        "best": true
+      },
+      {
+        "es": "La vida en llamas",
+        "en": "Life Should Be Cast to Flames",
+        "nota": "Alt 5★ (firma de Anaxa) para soporte: −12% de DEF a los enemigos, energía al inicio del turno y habilita el set Gran forja del interrogante divino (4pz)"
+      },
+      {
+        "es": "Hacia lo inescrutable",
+        "en": "Into the Unreachable Veil",
+        "nota": "Alt 5★ (firma de La Herta): buenas estadísticas para su daño personal; la recuperación de PH sobra con Archer + Sparkle"
+      },
+      {
+        "es": "Cálculo interminable",
+        "en": "Eternal Calculus",
+        "nota": "F2P: ATQ% por número de enemigos y Velocidad contra 3+ objetivos; no hay conos gratuitos de Erudición realmente buenos. Pase de batalla: Hoy es otro día tranquilo (+64% de daño)"
+      }
+    ],
+    "reliquias": [
+      {
+        "es": "Genio de las estrellas relucientes (4pz)",
+        "en": "Genius of Brilliant Stars",
+        "nota": "BiS contra enemigos débiles al Cuántico: los 20% de DEF ignorada no tienen rival",
+        "best": true
+      },
+      {
+        "es": "Gran duque incinerador (4pz)",
+        "en": "The Ashblazing Grand Duke",
+        "nota": "Con Archer: su ataque de seguimiento conjunto de 5 golpes acumula 30-48% de ATQ y potencia ese mismo ataque. Gran forja del interrogante divino (4pz) solo con La vida en llamas equipado"
+      },
+      {
+        "es": "Colonipenal, la tierra de los sueños (2pz)",
+        "en": "Penacony, Land of the Dreams",
+        "nota": "Planar sub-DPS/soporte: Regeneración de Energía para ella y Daño Cuántico para Archer y ella",
+        "best": true
+      },
+      {
+        "es": "Ciudad de las mil estrellas (2pz)",
+        "en": "City of Converging Stars",
+        "nota": "Planar alt con Archer: el seguimiento conjunto activa el buff de ATQ y +12% de Daño Crítico al equipo tras rematar; Tengoku@sala de chat (2pz) como DPS principal"
+      }
+    ],
+    "equipos": [
+      {
+        "nombre": "Dúo Fate",
+        "agentes": "Archer · Rin Tohsaka · Sparkle · Huohuo",
+        "best": true
+      },
+      {
+        "nombre": "Mono Cuántico",
+        "agentes": "Archer · Rin Tohsaka · Silver Wolf · Fu Xuan"
+      },
+      {
+        "nombre": "DPS principal con Cerydra",
+        "agentes": "Rin Tohsaka · Cerydra · Sparkle · Aventurino"
+      }
+    ],
+    "consejo": "Sub-DPS y soporte de Archer (colab Fate/stay night [UBW], v4.4, 24-jul-2026): su kit gira en torno a los puntos de habilidad (cada PH gastado o recuperado da Energía de gema y +Daño Crítico a quien lo mueve), da a Archer +150% de ATQ, +70% de Daño Crítico y 15% de PEN de RES Cuántica, y lanzan juntos un seguimiento conjunto en área que recupera 4 PH. Como DPS principal usa la Habilidad mejorada (rebote) a Velocidad base; como sub-DPS ajusta 135-160 de Velocidad para que el seguimiento salga cada turno. Prioridad Talento > Definitivo > Habilidad; a E0 casi no tiene uso fuera de equipos con Archer.",
+    "ficha": {
+      "nombreCompleto": "Rin Tohsaka",
+      "faccion": "Colaboración Fate/stay night [UBW]",
+      "desc": "La 'Promedio única' (v4.4): maga de la familia Tohsaka, Erudición Cuántica que llega con el rerun de Archer y es su compañera definitiva; buffs de crítico por puntos de habilidad, seguimiento conjunto y daño propio sorprendentemente bueno.",
+      "img": "https://static.wikia.nocookie.net/houkai-star-rail/images/4/43/Character_Rin_Tohsaka_Portrait.png"
+    }
+  },
+  {
+    "id": "gilgamesh",
+    "nombre": "Gilgamesh",
+    "rareza": "5",
+    "elemento": "Rayo",
+    "camino": "Destrucción",
+    "version": "4.4",
+    "estado": "completo",
+    "cuerpo": {
+      "principal": "Prob. Crítico",
+      "alt": "Daño Crítico"
+    },
+    "pies": {
+      "principal": "ATQ%",
+      "alt": "— (su Velocidad sube sola con Interés)"
+    },
+    "esfera": {
+      "principal": "Daño de Rayo",
+      "alt": "ATQ%"
+    },
+    "cuerda": {
+      "principal": "ATQ%",
+      "alt": "Regeneración de Energía"
+    },
+    "substats": [
+      "Prob. Crítico (hasta 100% en combate)",
+      "Daño Crítico",
+      "ATQ%",
+      "Velocidad"
+    ],
+    "conos": [
+      {
+        "es": "Soy lo que ves",
+        "en": "I Am As You Behold",
+        "nota": "Cono de firma: +18% ATQ, +10% Regeneración de Energía, +72% de daño de Definitivo y +24% de Daño Crítico a todo el equipo; BiS",
+        "best": true
+      },
+      {
+        "es": "Coronación sin agradecimiento",
+        "en": "A Thankless Coronation",
+        "nota": "Alt 5★ (firma de Saber): recupera 10% de energía con el Definitivo (su coste es de 360) y +80% ATQ / +36% Daño Crítico"
+      },
+      {
+        "es": "Que arda el alba",
+        "en": "Thus Burns the Dawn",
+        "nota": "Alt 5★ (firma de Phainon): ATQ base 687, 18% de DEF ignorada permanente y Velocidad base; cuidado con pasarse de reducción de DEF"
+      },
+      {
+        "es": "Sobre la caída de un Eón",
+        "en": "On the Fall of an Aeon",
+        "nota": "Mejor F2P (tienda de Herta): hasta +64% de ATQ y daño extra al romper debilidad; Sangre del pasado (pase de batalla) da la Prob. Crítico que le falta"
+      }
+    ],
+    "reliquias": [
+      {
+        "es": "Genio de las estrellas relucientes (4pz)",
+        "en": "Genius of Brilliant Stars",
+        "nota": "BiS contra débiles al Cuántico: la DEF ignorada se suma al 30% de su Habilidad; evítalo si el equipo ya satura la reducción de DEF (seguimientos)",
+        "best": true
+      },
+      {
+        "es": "Gran duque incinerador (4pz)",
+        "en": "The Ashblazing Grand Duke",
+        "nota": "SOLO con Saber o Mortenax Blade E2: su seguimiento conjunto de 4 golpes (400% de ATQ) da los 48% de ATQ contra 2+ enemigos. Eruditos perdidos en el mar del conocimiento (4pz) como opción genérica"
+      },
+      {
+        "es": "Instituto de Ciencias de la Vida Cósmica (2pz)",
+        "en": "Cosmic Life Sciences Institute",
+        "nota": "Planar BiS para su daño personal: +32% de daño a todos sus ataques",
+        "best": true
+      },
+      {
+        "es": "Ciudad de las mil estrellas (2pz)",
+        "en": "City of Converging Stars",
+        "nota": "Planar alt con Saber: el seguimiento conjunto activa el ATQ y +12% de Daño Crítico al equipo; Izumo gensei y reino divino de Takama (2pz) si falta Prob. Crítico"
+      }
+    ],
+    "equipos": [
+      {
+        "nombre": "Doble DPS con Saber",
+        "agentes": "Saber · Gilgamesh · Sunday · Huohuo",
+        "best": true
+      },
+      {
+        "nombre": "Seguimiento con Mortenax",
+        "agentes": "Gilgamesh · Mortenax Blade · Trazacaminos (Reminiscencia) · Hyacine"
+      },
+      {
+        "nombre": "Accesible",
+        "agentes": "Saber · Gilgamesh · Trazacaminos (Reminiscencia) · Gallagher"
+      }
+    ],
+    "consejo": "DPS doble y soporte de Saber (colab Fate/stay night [UBW], v4.4, 24-jul-2026, gratuito en el evento Fate Contract: Renewal): al inicio solo usa Básico y acumula Interés (+10% de Velocidad por punto) con cada acción aliada; al llegar a 10 pasa a usar solo la Habilidad (30% de DEF ignorada). Cada 8 ataques lanza con Saber un seguimiento conjunto que le regenera 120 de energía y duplica su siguiente Definitivo. Su rasgo A6 da +20% de ATQ y Daño Crítico al equipo y hasta +100% extra a aliados con energía máxima superior a 140. Prioridad de rasgos A6 > A2 > A4; 3000-3500 de ATQ y Velocidad base. Sin eidolones no es un DPS principal competitivo.",
+    "ficha": {
+      "nombreCompleto": "Gilgamesh",
+      "faccion": "Colaboración Fate/stay night [UBW]",
+      "desc": "El 'Rey de los Héroes' (v4.4): Destrucción de Rayo gratuito de la colaboración Fate/stay night [UBW]; escala con las acciones y Definitivos de sus aliados, y forma con Saber un seguimiento conjunto de 1000% de multiplicador.",
+      "img": "https://static.wikia.nocookie.net/houkai-star-rail/images/6/66/Character_Gilgamesh_Portrait.png"
+    }
+  },
+  {
+    "id": "robin-summeretto",
+    "nombre": "Robin Estival",
+    "rareza": "5",
+    "elemento": "Viento",
+    "camino": "Reminiscencia",
+    "version": "4.5",
+    "estado": "completo",
+    "cuerpo": {
+      "principal": "PV%",
+      "alt": "Daño Crítico (equipos con buffs a memosprites)"
+    },
+    "pies": {
+      "principal": "Velocidad",
+      "alt": "PV% (equipos que escalan de ATQ: mayor buff a cambio de energía)"
+    },
+    "esfera": {
+      "principal": "PV%",
+      "alt": "—"
+    },
+    "cuerda": {
+      "principal": "Regeneración de Energía",
+      "alt": "PV% (con Phainon, cuádruple PV%)"
+    },
+    "substats": [
+      "Velocidad (160+)",
+      "PV% (6000-8000 PV)",
+      "Prob. Crítico (50%)",
+      "Daño Crítico"
+    ],
+    "conos": [
+      {
+        "es": "Levántate y canta",
+        "en": "Rise and Sing",
+        "nota": "Cono de firma: +30% de PV propios (más ATQ para el equipo), 1 PH con el Definitivo, 30% de avance al entrar y +20% de Velocidad al equipo; brilla en equipos que escalan de Velocidad",
+        "best": true
+      },
+      {
+        "es": "Que el arcoíris siempre esté en el cielo",
+        "en": "Long May Rainbows Adorn the Sky",
+        "nota": "Alt 5★ (firma de Hyacine): Velocidad, y sus veloces Pájaros cantores de verano aplican la vulnerabilidad del cono"
+      },
+      {
+        "es": "Sobre los recuerdos nunca cae el telón",
+        "en": "Memory's Curtain Never Falls",
+        "nota": "F2P: sirve sobre todo para llegar al umbral de Velocidad; no puede reactivar su buff porque en estado Fiebre no usa la Habilidad"
+      },
+      {
+        "es": "La siguiente página de la historia",
+        "en": "The Story's Next Page",
+        "nota": "4★ de gachapón: sube sus PV máximos, útil en equipos que escalan de ATQ (vale cualquier cono de 1375/1270 de PV base)"
+      }
+    ],
+    "reliquias": [
+      {
+        "es": "Salvador que reforja el mundo (4pz)",
+        "en": "World-Remaking Deliverer",
+        "nota": "BiS general: mucho PV máximo (mejora su buff de ATQ) y +15% de daño al equipo",
+        "best": true
+      },
+      {
+        "es": "Mensajero del espacio hackeado (4pz)",
+        "en": "Messenger Traversing Hackerspace",
+        "nota": "Alt para equipos de Velocidad; el buff dura 1 turno y su Definitivo (avance del 100%) lo consume, así que no lo uses sobre el DPS principal"
+      },
+      {
+        "es": "Amphoreus, la tierra eterna (2pz)",
+        "en": "Amphoreus, The Eternal Land",
+        "nota": "Planar preferido en casi todos sus equipos: el buff de Velocidad ayuda a los aliados a alcanzar umbrales",
+        "best": true
+      },
+      {
+        "es": "Lushaka, sumergido bajo el mar (2pz)",
+        "en": "Lushaka, the Sunken Seas",
+        "nota": "Planar alt: algo de energía y ATQ al primer aliado de la formación; Vonwacq el vivaz (2pz) si necesita actuar primero, Flota de los eternos (2pz) con varios DPS"
+      }
+    ],
+    "equipos": [
+      {
+        "nombre": "Reminiscencia completa",
+        "agentes": "Evernight · Cyrene · Robin Estival · Hyacine",
+        "best": true
+      },
+      {
+        "nombre": "Doble seguimiento",
+        "agentes": "Ashveil · Mortenax Blade · Robin Estival · Hyacine"
+      },
+      {
+        "nombre": "Invocación Castorice",
+        "agentes": "Castorice · Robin Estival · Tribbie · Hyacine"
+      }
+    ],
+    "consejo": "Soporte universal de Reminiscencia (v4.5, 26-ago-2026): invoca a los Pájaros cantores de verano y acumula Vibras con cada ataque, curación o escudo aliado; con los tres pájaros entra en Fiebre (inmune a control) y despliega una zona donde el equipo ignora 40%+ de DEF y los enemigos reciben más daño. Su A2 da ATQ (escalado de sus PV) o Daño Crítico según el aliado, y su Definitivo avanza 100% a un aliado y le regenera energía porcentual: úsalo sobre el DPS dependiente de energía o sobre Hyacine. Prioridad Definitivo > Talento > Talento de memosprite; 160+ de Velocidad, 119% de Regeneración de Energía y un sanador en el equipo para su A4. Libera al Trazacaminos (Reminiscencia) para otros equipos.",
+    "ficha": {
+      "nombreCompleto": "Robin Estival",
+      "faccion": "Penacony (La Familia)",
+      "desc": "'Nueva melodía de olas brillantes' (v4.5): versión veraniega de Robin como Reminiscencia de Viento; soporte universal de buffs de ATQ/Daño Crítico, DEF ignorada, avance de acción y energía, con daño propio decente vía memosprite.",
+      "img": "https://static.wikia.nocookie.net/houkai-star-rail/images/c/c9/Character_Robin_%E2%80%A2_Summeretto_Portrait.png"
+    }
+  },
+  {
+    "id": "aventurino-waveflair",
+    "nombre": "Aventurino Oleaje",
+    "rareza": "5",
+    "elemento": "Cuántico",
+    "camino": "Exultación",
+    "version": "4.5",
+    "estado": "completo",
+    "cuerpo": {
+      "principal": "Prob. Crítico",
+      "alt": "Daño Crítico"
+    },
+    "pies": {
+      "principal": "Velocidad",
+      "alt": "—"
+    },
+    "esfera": {
+      "principal": "Cualquiera",
+      "alt": "PV% / DEF% (ATQ% y Daño Cuántico solo afectan a su escaso daño no-Exultación)"
+    },
+    "cuerda": {
+      "principal": "Regeneración de Energía",
+      "alt": "—"
+    },
+    "substats": [
+      "Velocidad (lo más alta posible, 160-200)",
+      "Prob. Crítico (100% en combate)",
+      "Daño Crítico (120% antes del combate)"
+    ],
+    "conos": [
+      {
+        "es": "Verano entre olas",
+        "en": "Summer Rides the Surf",
+        "nota": "Cono de firma: +18% Prob. Crítico, +24% Velocidad y +40% de Exultación, más PH por oleada y cada 3 Habilidades de Exultación; BiS y le alivia mucho la construcción",
+        "best": true
+      },
+      {
+        "es": "La buena suerte de hoy",
+        "en": "Today's Good Luck",
+        "nota": "Pase de batalla: la Prob. Crítico que necesita para llegar al tope; segunda opción"
+      },
+      {
+        "es": "Bienvenidos a la ciudad cósmica",
+        "en": "Welcome to the Cosmic City",
+        "nota": "Alt 5★: +18% Velocidad y 20% de DEF ignorada; puede pasarse de reducción de DEF en equipos de seguimiento (cambia entonces el set de 4pz). Encuentro en la próxima primavera (firma de Evanescia) también funciona"
+      },
+      {
+        "es": "Las aventuras de Champigaga",
+        "en": "Mushy Shroomy's Adventures",
+        "nota": "F2P: acumulable con varios portadores en equipos de Exultación"
+      }
+    ],
+    "reliquias": [
+      {
+        "es": "Chica mágica de hazañas gloriosas (4pz)",
+        "en": "Ever-Glorious Magical Girl",
+        "nota": "BiS general: Daño Crítico y su Daño de Exultación ignora DEF, sinergia con sus compañeros de seguimiento",
+        "best": true
+      },
+      {
+        "es": "Genio de las estrellas relucientes (4pz)",
+        "en": "Genius of Brilliant Stars",
+        "nota": "Alt contra débiles al Cuántico (el Daño Cuántico del 2pz no afecta a su Exultación); Adivino de alcance remoto (4pz) si ya satura la DEF ignorada"
+      },
+      {
+        "es": "Etapa cero de Punklorde (2pz)",
+        "en": "Punklorde Stage Zero",
+        "nota": "Planar BiS",
+        "best": true
+      },
+      {
+        "es": "Duran, dinastía de lobos raudos (2pz)",
+        "en": "Duran, Dynasty of Running Wolves",
+        "nota": "Planar alt: necesita un aliado de ataque de seguimiento y aun así queda por detrás de Punklorde"
+      }
+    ],
+    "equipos": [
+      {
+        "nombre": "Seguimiento (Exultación en solitario)",
+        "agentes": "Aventurino Oleaje · Ashveil · Mortenax Blade · Hyacine",
+        "best": true
+      },
+      {
+        "nombre": "Exultación con Yao Guang",
+        "agentes": "Aventurino Oleaje · Yao Guang · Trazacaminos (Exultación) · Huohuo"
+      },
+      {
+        "nombre": "Seguimiento con Tribbie",
+        "agentes": "Aventurino Oleaje · Ashveil · Tribbie · Hyacine"
+      }
+    ],
+    "consejo": "DPS Cuántico de Exultación (v4.5, 12-sep-2026): genera Fervor y Punchlines con cada ataque aliado y, al llenarlo, dispara Habilidades de Exultación en área con rebotes (la versión mejorada consume todo el Fervor en rebotes). Si es el único de Exultación en el equipo, sus Habilidades de Exultación cuentan como ataques de seguimiento (equipo Ashveil + Mortenax Blade); con otros de Exultación reparte +20% de Exultación al equipo. Su A2 convierte la Velocidad por encima de 140 en Exultación, así que apila toda la Velocidad posible. Es SP-negativo (siempre quiere usar la Habilidad) y exige mucha inversión en estadísticas; prioridad Habilidad de Exultación > Talento > Definitivo, rasgo A4 primero.",
+    "ficha": {
+      "nombreCompleto": "Aventurino Oleaje",
+      "faccion": "IPC",
+      "desc": "'Regocijo entre mareas bravas' (v4.5): versión veraniega de Aventurino como DPS Cuántico de Exultación; funciona en solitario como atacante de seguimiento o como núcleo de equipos de Exultación, y escala con la Velocidad.",
+      "img": "https://static.wikia.nocookie.net/houkai-star-rail/images/a/a9/Character_Aventurine_%E2%80%A2_Waveflair_Portrait.png"
+    }
+  },
+  {
+    "id": "pearl",
+    "nombre": "Perla",
+    "rareza": "5",
+    "elemento": "Hielo",
+    "camino": "Exultación",
+    "version": "4.6",
+    "estado": "parcial",
+    "cuerpo": {
+      "principal": "Por confirmar",
+      "alt": "Prob. Crítico / Daño Crítico (patrón de los DPS de Exultación)"
+    },
+    "pies": {
+      "principal": "Por confirmar",
+      "alt": "Velocidad (patrón de Exultación)"
+    },
+    "esfera": {
+      "principal": "Por confirmar",
+      "alt": "—"
+    },
+    "cuerda": {
+      "principal": "Por confirmar",
+      "alt": "Regeneración de Energía (patrón de Exultación)"
+    },
+    "substats": [
+      "Por confirmar (kit no publicado)"
+    ],
+    "conos": [
+      {
+        "es": "Cono de firma por confirmar",
+        "en": "Signature Light Cone (TBA)",
+        "nota": "La wiki (Version/4.6) aún no lista el nombre de su cono de firma; se actualizará al publicarse el kit",
+        "best": true
+      },
+      {
+        "es": "La buena suerte de hoy",
+        "en": "Today's Good Luck",
+        "nota": "Provisional: cono de Exultación del pase de batalla, alternativa habitual de los DPS de Exultación"
+      },
+      {
+        "es": "Las aventuras de Champigaga",
+        "en": "Mushy Shroomy's Adventures",
+        "nota": "Provisional: cono F2P de Exultación, acumulable con varios portadores"
+      }
+    ],
+    "reliquias": [
+      {
+        "es": "Chica mágica de hazañas gloriosas (4pz)",
+        "en": "Ever-Glorious Magical Girl",
+        "nota": "Provisional: set estándar de los DPS de Exultación (Daño Crítico y DEF ignorada al Daño de Exultación); por confirmar con su kit",
+        "best": true
+      },
+      {
+        "es": "Etapa cero de Punklorde (2pz)",
+        "en": "Punklorde Stage Zero",
+        "nota": "Provisional: planar estándar de Exultación (requiere 80% de Exultación); por confirmar con su kit",
+        "best": true
+      }
+    ],
+    "equipos": [
+      {
+        "nombre": "Exultación (provisional)",
+        "agentes": "Perla · Yao Guang · Trazacaminos (Exultación) · Huohuo",
+        "best": true
+      },
+      {
+        "nombre": "Con Aventurino Oleaje (provisional)",
+        "agentes": "Perla · Aventurino Oleaje · Yao Guang · Hyacine"
+      }
+    ],
+    "consejo": "Entrada preliminar (v4.6, 28-sep-2026): 5★ de Hielo y Exultación confirmada por la wiki (Intellitron del Departamento de Inversión Estratégica de la IPC, Diez Corazones de Piedra, actual CEO de Planarcadia; su Vía de trasfondo es la Conservación). Prydwen aún no publica kit, rasgos ni build; todo lo anterior es una plantilla genérica de Exultación por confirmar cuando se libere el kit.",
+    "ficha": {
+      "nombreCompleto": "Perla",
+      "faccion": "IPC",
+      "desc": "La 'Perla de la tasación' (v4.6): Intellitron especialista en inversión artística del Departamento de Inversión Estratégica de la IPC y CEO de Planarcadia; próxima 5★ de Hielo de la Vía de la Exultación. Kit y build por confirmar.",
+      "img": "https://static.wikia.nocookie.net/houkai-star-rail/images/9/96/Character_Pearl_Splash_Art.png"
     }
   }
 ];

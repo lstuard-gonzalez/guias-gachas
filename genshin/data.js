@@ -1,6 +1,6 @@
 // ============================================================
-//  Genshin Guía rápida — datos de personajes (Genshin Impact 6.7)
-//  122 personajes (Viajero ×6 variantes). Auditado: nombres ES oficiales.
+//  Genshin Guía rápida — datos de personajes (Genshin Impact 7.0 · preliminar 7.1)
+//  127 personajes (Viajero ×7 variantes). Auditado: nombres ES oficiales. Actualizado 17-sep-2026 (v7.0: Odette, Aliosha, Viajero (Cryo); v7.1 preliminar: Vesna, Vodyanitsa).
 // ============================================================
 const CHARACTERS = [
   {
@@ -542,6 +542,103 @@ const CHARACTERS = [
       "nombreCompleto": "Viajero — Pyro (Aether / Lumine)",
       "faccion": "Protagonista",
       "desc": "Resonancia obtenida en Natlan durante el Capítulo V, Acto V (versión 5.3): las líneas ley corruptas retrasaron su desbloqueo respecto a la llegada a la región. Usa la Bendición de Alma Nocturna con ataques de llamas en habilidad y Definitivo. Última variante elemental del Viajero hasta la 6.7, ya que Nod-Krai no otorgó elemento nuevo.",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Aether_Icon.png"
+    }
+  },
+  {
+    "id": "viajero-cryo",
+    "nombre": "Viajero (Cryo)",
+    "rareza": "5",
+    "elemento": "Cryo",
+    "arma": "Espada",
+    "version": "7.0",
+    "estado": "completo",
+    "arena": {
+      "principal": "ATQ%",
+      "alt": "Recarga de Energía"
+    },
+    "caliz": {
+      "principal": "ATQ%",
+      "alt": "Bono de Daño Cryo"
+    },
+    "tiara": {
+      "principal": "Prob. CRÍT / Daño CRÍT",
+      "alt": "ATQ%"
+    },
+    "substats": [
+      "Prob. CRÍT / Daño CRÍT",
+      "ATQ%",
+      "Recarga de Energía",
+      "Maestría Elemental"
+    ],
+    "setPrincipal": "Desilusión Congelada en las Sombras",
+    "sets": [
+      {
+        "es": "Desilusión Congelada en las Sombras",
+        "en": "Disenchantment in Deep Shadow",
+        "nota": "4pc: BiS en equipos de Conducción Estelar (+daño de Conducción Estelar y Prob. CRÍT); requiere un aplicador Electro off-field",
+        "best": true
+      },
+      {
+        "es": "Testimonio Escarlata",
+        "en": "Scarlet Proof",
+        "nota": "4pc: set de Torbellino Estelar que lo vuelve un DPS en campo más fuerte; necesita aplicación Anemo y Cryo en el equipo",
+        "best": false
+      },
+      {
+        "es": "Corazón Forjado",
+        "en": "Heart of the Furnace",
+        "nota": "4pc: bufa el daño de Fulgor Estelar de los aliados; solo si nadie más del equipo lo lleva (Odette suele ser mejor portadora)",
+        "best": false
+      }
+    ],
+    "armas": [
+      {
+        "es": "Hoja de Exáifanes",
+        "en": "Exaiphanes Blade",
+        "nota": "Espada 5★ GRATIS de la Misión de Arconte de Snezhnaya (7.0): Prob. CRÍT y bono de daño de Fulgor Estelar; con refinamientos altos es su mejor arma",
+        "best": true
+      },
+      {
+        "es": "Cortador de Jade Primordial",
+        "en": "Primordial Jade Cutter",
+        "nota": "Alternativa 5★ de gachapón: 44% Prob. CRÍT y ATQ, deja apilar Daño CRÍT; Reflejo de las Tinieblas también sirve",
+        "best": false
+      },
+      {
+        "es": "Fuente de Ignición",
+        "en": "Emberwell",
+        "nota": "Mejor 4★ F2P (forjable 7.0): Maestría, ATQ y daño de Fulgor Estelar al reaccionar; Colmillo Lupino (Pase de Batalla) es la opción generalista",
+        "best": false
+      }
+    ],
+    "equipos": [
+      {
+        "nombre": "Conducción Estelar",
+        "agentes": [
+          "Viajero (Cryo)",
+          "Yae Miko",
+          "Odette",
+          "Aliosha"
+        ],
+        "best": true
+      },
+      {
+        "nombre": "Torbellino Estelar Mizuki",
+        "agentes": [
+          "Yumemizuki Mizuki",
+          "Viajero (Cryo)",
+          "Odette",
+          "Sucrose"
+        ],
+        "best": false
+      }
+    ],
+    "consejo": "DPS Cryo en campo y habilitador de reacciones Estelares (convierte Superconducción en Conducción Estelar y el Torbellino Cryo en Torbellino Estelar): su Habilidad crea una Estrella Perforahielo que dispara cristales, acumula hasta 8 cargas de Resplandor Glacial y dentro del Campo Estrella Polar infunde Cryo no sobrescribible a sus ataques (+80% ATQ de daño); el Estallido consume las cargas para multiplicar su daño. Prioridad: Habilidad > Estallido > Ataque Normal. Apunta a ~2400 ATQ, 125-145% Recarga y 70/140 CRÍT. Séptimo elemento del Viajero, desbloqueado en la versión 7.0 (12 ago 2026) en la Estatua de los Siete de Snezhnaya; en 7.0 solo se obtienen hasta C2 (el resto avanza con la región).",
+    "ficha": {
+      "nombreCompleto": "Viajero — Cryo (Aether / Lumine)",
+      "faccion": "Protagonista",
+      "desc": "Resonancia obtenida en Snezhnaya con la Estatua de los Siete (versión 7.0, Capítulo VII). Con el Viajero Cryo en el equipo se pueden activar todas las reacciones de Fulgor Estelar. Su Habilidad 'Perforador de Niebla Helada' invoca la Estrella Perforahielo y su Estallido 'Jabalina Congelada' lanza jabalinas de hielo cuyo daño crece con las cargas de Resplandor Glacial (nombres ES de talentos por confirmar). Séptima y última variante elemental del Viajero.",
       "img": "https://static.wikia.nocookie.net/gensin-impact/images/a/a5/Aether_Icon.png"
     }
   },
@@ -11234,5 +11331,387 @@ const CHARACTERS = [
     "rareza": "5",
     "faccion": "Snezhnaya",
     "version": "6.7"
+  },
+  {
+    "id": "odette",
+    "estado": "completo",
+    "arena": {
+      "principal": "ATQ%",
+      "alt": "Maestría Elemental"
+    },
+    "caliz": {
+      "principal": "ATQ%",
+      "alt": "Maestría Elemental"
+    },
+    "tiara": {
+      "principal": "Prob. CRIT / Daño CRIT",
+      "alt": "ATQ%"
+    },
+    "substats": [
+      "Prob. CRIT",
+      "Daño CRIT",
+      "ATQ%",
+      "Maestría Elemental"
+    ],
+    "setPrincipal": "Corazón Forjado",
+    "sets": [
+      {
+        "es": "Corazón Forjado",
+        "en": "Heart of the Furnace",
+        "nota": "BiS (genshin-builds y KQM): sube su ATQ tras reacciones de Fulgor Estelar y da +50% de daño de Fulgor Estelar a todo el equipo, incluso off-field",
+        "best": true
+      },
+      {
+        "es": "Desilusión Congelada en las Sombras",
+        "en": "Disenchantment in Deep Shadow",
+        "nota": "Opción más ofensiva en equipos de Conducción Estelar cuando otro aliado ya lleva Corazón Forjado (+40% daño de Conducción Estelar y Prob. CRIT)",
+        "best": false
+      },
+      {
+        "es": "Tenacidad de la Geoarmada",
+        "en": "Tenacity of the Millelith",
+        "nota": "Alternativa de soporte puro (+20% ATQ al equipo) si el daño del equipo pesa más que el suyo; la Doble de Danza mantiene el buff activo",
+        "best": false
+      }
+    ],
+    "armas": [
+      {
+        "es": "Pluma Invernal Lagoblanco",
+        "en": "Whitelake Frostfeather",
+        "nota": "Arma insignia (Espada, Daño CRIT): ATQ acumulable al golpear con la Habilidad y, a 3 cargas, +50% Daño CRIT de Fulgor Estelar y recarga de Energía; funciona off-field",
+        "best": true
+      },
+      {
+        "es": "Fulgor Cerúleo",
+        "en": "Azurelight",
+        "nota": "Alternativa 5★ con Prob. CRIT y ATQ alto tras la Habilidad; cualquier espada 5★ con CRIT (Cortador de Jade Primordial, etc.) rinde parecido",
+        "best": false
+      },
+      {
+        "es": "Réquiem Abisal",
+        "en": "Finale of the Deep",
+        "nota": "Mejor 4★ F2P (forjable de Fontaine): ATQ% y +12% ATQ tras la Habilidad; con un sanador que limpie el Vínculo de Vida suma hasta 150 ATQ planos. Fuente de Ignición (Emberwell) solo la supera si el Vínculo no se limpia",
+        "best": false
+      }
+    ],
+    "equipos": [
+      {
+        "nombre": "Conducción Estelar (Sandrone)",
+        "agentes": [
+          "Odette",
+          "Yae Miko",
+          "Sandrone",
+          "Qiqi"
+        ],
+        "best": true
+      },
+      {
+        "nombre": "Conducción Estelar (Cyno)",
+        "agentes": [
+          "Odette",
+          "Cyno",
+          "Yae Miko",
+          "Aliosha"
+        ],
+        "best": false
+      },
+      {
+        "nombre": "Torbellino Estelar",
+        "agentes": [
+          "Odette",
+          "Yumemizuki Mizuki",
+          "Viajero (Cryo)",
+          "Faruzan"
+        ],
+        "best": false
+      }
+    ],
+    "consejo": "Lanzada en la versión 7.0 (12 ago 2026), Fase 1. Soporte/enabler Cryo off-field: con ella en el equipo, Superconducción pasa a ser Conducción Estelar (ES oficial: 'Superconductor Estelar') y el Torbellino Cryo a Torbellino Estelar; su Habilidad invoca una Doble de Danza (20 s) que aplica Cryo y reparte hasta +60% daño de Fulgor Estelar al equipo. Prioridad de talentos: Habilidad >> nivel 90 ≥ Estallido (el Estallido suele omitirse por su animación larga; el Ataque Normal no se sube). Apunta a ~3000 ATQ (su pasivo A4 llega al +30%) y evita el cáliz de Bonif. de Daño Cryo: no afecta al daño de Fulgor Estelar.",
+    "ficha": {
+      "nombreCompleto": "Odette Spessiva",
+      "faccion": "Compañía Korolevskiy / Fatui (Snezhnaya)",
+      "desc": "'Nieve Arremolinada', prima ballerina de la Compañía Korolevskiy y candidata favorita a heredar el asiento de Heraldo de su mentora, la Signora. Con sus Habilidades 'Adagio' y 'Presto' invoca una Doble de Danza que ataca en área, y su pasivo 'Danza de Aurore' convierte Superconducción y Torbellino Cryo en reacciones Estelares, escalando su daño base con su ATQ.",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/f/f3/Odette_Card.png/revision/latest?cb=20260703040217"
+    },
+    "elemento": "Cryo",
+    "arma": "Espada",
+    "nombre": "Odette",
+    "rareza": "5",
+    "faccion": "Snezhnaya",
+    "version": "7.0"
+  },
+  {
+    "id": "alyosha",
+    "estado": "completo",
+    "arena": {
+      "principal": "Recarga de Energía",
+      "alt": "ATQ%"
+    },
+    "caliz": {
+      "principal": "ATQ%",
+      "alt": "PV%"
+    },
+    "tiara": {
+      "principal": "ATQ%",
+      "alt": "Prob. CRIT"
+    },
+    "substats": [
+      "Recarga de Energía",
+      "ATQ%",
+      "Prob. CRIT",
+      "ATQ"
+    ],
+    "setPrincipal": "Ritual Antiguo de la Nobleza",
+    "sets": [
+      {
+        "es": "Ritual Antiguo de la Nobleza",
+        "en": "Noblesse Oblige",
+        "nota": "BiS en la práctica: +20% ATQ al equipo tras su Estallido; es lo que lleva cuando Odette u otro aliado ya usa Corazón Forjado",
+        "best": true
+      },
+      {
+        "es": "Corazón Forjado",
+        "en": "Heart of the Furnace",
+        "nota": "Set por defecto en equipos de Conducción Estelar si nadie más puede llevarlo y él dispara la reacción (necesita aura Cryo en el enemigo)",
+        "best": false
+      },
+      {
+        "es": "Final del Gladiador",
+        "en": "Gladiator's Finale",
+        "nota": "2pz +18% ATQ combinado con otro set de ATQ (Día de los Vientos Alzantes) mientras se farmea Ritual Antiguo",
+        "best": false
+      }
+    ],
+    "armas": [
+      {
+        "es": "Sinfonista de Aromas",
+        "en": "Symphonist of Scents",
+        "nota": "Mejor opción 5★: +12% ATQ (+12% extra off-field) y, al curar, +32% ATQ para él y el curado; activa el pasivo con la curación de Tugarin",
+        "best": true
+      },
+      {
+        "es": "Luz del Segador",
+        "en": "Engulfing Lightning",
+        "nota": "Alternativa 5★ con Recarga de Energía que se convierte en ATQ; resuelve sus dos necesidades de stats",
+        "best": false
+      },
+      {
+        "es": "Lanza de Favonius",
+        "en": "Favonius Lance",
+        "nota": "Mejor 4★ F2P y su opción por defecto (KQM): ATQ base alto, Recarga de Energía y partículas para todo el equipo (usa tiara de Prob. CRIT con ella). Hálito Glacial es similar pero da Energía plana y funciona contra enemigos con escudo",
+        "best": false
+      }
+    ],
+    "equipos": [
+      {
+        "nombre": "Conducción Estelar (Sandrone)",
+        "agentes": [
+          "Sandrone",
+          "Yae Miko",
+          "Odette",
+          "Aliosha"
+        ],
+        "best": true
+      },
+      {
+        "nombre": "Conducción Estelar F2P",
+        "agentes": [
+          "Viajero (Cryo)",
+          "Odette",
+          "Aliosha",
+          "Sucrose"
+        ],
+        "best": false
+      }
+    ],
+    "consejo": "Lanzado en la versión 7.0 (12 ago 2026) como 4★ Electro de Lanza, soporte/sanador off-field para Conducción Estelar: su Habilidad y su Estallido (Tugarin) aplican y activan la Marca del Cazador, que da ATQ% al personaje en campo (+20% daño de Conducción Estelar dentro del Campo Estrella Polar) y cura con Tugarin (120% de su ATQ). Usa Habilidad + Estallido antes de que entre el DPS. Prioridad de talentos: Estallido ≥ Habilidad (la Habilidad sube el buff de ATQ; el Ataque Normal no se sube). Apunta a 180-230% de Recarga de Energía y 2000-3000 ATQ; no puede activar Conducción Estelar por sí solo (necesita Odette, Sandrone o Viajero Cryo). Da un salto grande en C6 (buffs dobles y +100 Maestría Elemental).",
+    "ficha": {
+      "nombreCompleto": "Aliosha (Alyosha)",
+      "faccion": "Rókot (Snezhnaya)",
+      "desc": "'Sabueso de Paso Veloz', cazador invernal de Snezhnaya que combate junto a su perro Tugarin. Su Habilidad 'Golpe de Rayo' (toque o mantener con puntería) marca a los enemigos; su Estallido 'Avance del Cazador' invoca a Tugarin y crea un Campo de Caza de Fulgurita que provoca a los enemigos y les inflige daño Electro. Nombres ES de talentos por confirmar.",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/6/6b/Alyosha_Card.png/revision/latest?cb=20260703100303"
+    },
+    "elemento": "Electro",
+    "arma": "Lanza",
+    "nombre": "Aliosha",
+    "rareza": "4",
+    "faccion": "Snezhnaya",
+    "version": "7.0"
+  },
+  {
+    "id": "vesna",
+    "estado": "parcial",
+    "arena": {
+      "principal": "ATQ% (por confirmar)",
+      "alt": "Maestría Elemental"
+    },
+    "caliz": {
+      "principal": "Bonificación de Daño Anemo (por confirmar)",
+      "alt": "ATQ%"
+    },
+    "tiara": {
+      "principal": "Daño CRIT / Prob. CRIT (por confirmar)",
+      "alt": "ATQ%"
+    },
+    "substats": [
+      "Prob. CRIT",
+      "Daño CRIT",
+      "ATQ%",
+      "Maestría Elemental"
+    ],
+    "setPrincipal": "Por confirmar",
+    "sets": [
+      {
+        "es": "Por confirmar",
+        "en": "TBD (set 7.1 / Stellar Swirl)",
+        "nota": "El kit no está publicado en la wiki ni en genshin-builds/KQM al 17-sep-2026; su arma insignia potencia el daño de Torbellino Estelar, así que el set BiS será uno orientado a Fulgor Estelar/Anemo (por confirmar)",
+        "best": true
+      },
+      {
+        "es": "Sombra Verde Esmeralda",
+        "en": "Viridescent Venerer",
+        "nota": "Opción de respaldo típica de Anemo (baja la RES elemental con Torbellino); pendiente de confirmar si le conviene como DPS",
+        "best": false
+      },
+      {
+        "es": "Corazón Forjado",
+        "en": "Heart of the Furnace",
+        "nota": "Candidato si su daño principal es de Fulgor Estelar (Torbellino Estelar); por confirmar",
+        "best": false
+      }
+    ],
+    "armas": [
+      {
+        "es": "Beyond the Chrysalis (nombre ES por confirmar)",
+        "en": "Beyond the Chrysalis",
+        "nota": "Arma insignia 5★ (Espada, Daño CRIT, sale el 23-sep-2026): al usar Habilidad/Estallido alterna +56% Daño CRIT, +36% daño de Torbellino Estelar y recarga de Energía; se reinicia al salir del campo (indica DPS en campo)",
+        "best": true
+      },
+      {
+        "es": "Juramento por la Libertad",
+        "en": "Freedom-Sworn",
+        "nota": "Alternativa 5★ Anemo-friendly (Maestría, buff de equipo al reaccionar); pendiente de confirmar sus escalados",
+        "best": false
+      },
+      {
+        "es": "New Bough (nombre ES por confirmar)",
+        "en": "New Bough",
+        "nota": "4★ nueva del gachapón 7.1 (Daño CRIT): ATQ y Maestría tras la Habilidad, y en estado Fulgor Estelar +8% daño de Fulgor Estelar. Como F2P, Espina de Hierro (Iron Sting) es la forjable de respaldo; por confirmar",
+        "best": false
+      }
+    ],
+    "equipos": [
+      {
+        "nombre": "Torbellino Estelar (preliminar)",
+        "agentes": [
+          "Vesna",
+          "Odette",
+          "Viajero (Cryo)",
+          "Faruzan"
+        ],
+        "best": true
+      }
+    ],
+    "consejo": "ENTRADA PRELIMINAR: sale en la versión 7.1 (23 sep 2026), Fase 1, gachapón 'When Warm Winds Cavort'. 5★ Anemo de Espada, comandante de la Druzhna. Su kit oficial aún no está publicado en las fuentes consultadas; lo que se sabe por su arma insignia es que gana Daño CRIT y daño de Torbellino Estelar al usar Habilidad/Estallido y pierde el efecto al salir del campo, lo que apunta a DPS Anemo en campo con Odette como habilitadora de Torbellino Estelar. Stats, sets y prioridad de talentos por confirmar.",
+    "ficha": {
+      "nombreCompleto": "Vesna Strivozha",
+      "faccion": "Druzhna (Snezhnaya)",
+      "desc": "'Hoja Afilada del Banquete Nevado', comandante de la Druzhna y considerada la mano derecha de la Zarina, siempre a su lado junto a la jefa de doncellas Danica. Es una Vila de la casa Strivozha. Kit por confirmar.",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/f/fa/Vesna_Card.png/revision/latest?cb=20260817040457"
+    },
+    "elemento": "Anemo",
+    "arma": "Espada",
+    "nombre": "Vesna",
+    "rareza": "5",
+    "faccion": "Snezhnaya",
+    "version": "7.1"
+  },
+  {
+    "id": "vodyanitsa",
+    "estado": "parcial",
+    "arena": {
+      "principal": "PV% (por confirmar)",
+      "alt": "Recarga de Energía"
+    },
+    "caliz": {
+      "principal": "PV% (por confirmar)",
+      "alt": "Bonificación de Daño Hydro"
+    },
+    "tiara": {
+      "principal": "Bonificación de Curación / PV% (por confirmar)",
+      "alt": "Prob. CRIT"
+    },
+    "substats": [
+      "PV%",
+      "Recarga de Energía",
+      "PV",
+      "Prob. CRIT"
+    ],
+    "setPrincipal": "Por confirmar",
+    "sets": [
+      {
+        "es": "Por confirmar",
+        "en": "TBD",
+        "nota": "El kit no está publicado en la wiki ni en genshin-builds/KQM al 17-sep-2026; su arma insignia escala con PV máx. y curación, así que el BiS será un set de soporte/sanador (por confirmar)",
+        "best": true
+      },
+      {
+        "es": "Tenacidad de la Geoarmada",
+        "en": "Tenacity of the Millelith",
+        "nota": "Candidato de soporte (PV% 2pz, +20% ATQ al equipo si su Habilidad golpea); por confirmar",
+        "best": false
+      },
+      {
+        "es": "Corazón Forjado",
+        "en": "Heart of the Furnace",
+        "nota": "Candidato si participa en equipos de Fulgor Estelar (su arma menciona Congelación y Torbellino Estelar); por confirmar",
+        "best": false
+      }
+    ],
+    "armas": [
+      {
+        "es": "Hymn of the Maelstrom (nombre ES por confirmar)",
+        "en": "Hymn of the Maelstrom",
+        "nota": "Arma insignia 5★ (Catalizador, PV%, sale el 23-sep-2026): +Bonif. de Curación, y al curar sube su PV máx. y da ATQ al personaje activo según su PV sobre 40.000 (hasta +8%, 3 cargas); el buff crece +75% tras Congelación o Torbellino Estelar. Funciona off-field",
+        "best": true
+      },
+      {
+        "es": "Pergamino Celestial",
+        "en": "Skyward Atlas",
+        "nota": "Alternativa 5★ genérica (ATQ%) hasta conocer sus escalados; si escala con PV, Cuentos de Cazadores de Dragones (4★) puede ser mejor. Por confirmar",
+        "best": false
+      },
+      {
+        "es": "Prototipo Ámbar",
+        "en": "Prototype Amber",
+        "nota": "Mejor 4★ F2P probable si es sanadora (forjable: PV%, cura y regenera Energía tras el Estallido). Winter's Heavy Heart (4★ nueva 7.1, nombre ES por confirmar) da Maestría/ATQ por aliados Cryo/Electro. Por confirmar",
+        "best": false
+      }
+    ],
+    "equipos": [
+      {
+        "nombre": "Soporte Hydro Estelar (preliminar)",
+        "agentes": [
+          "Vodyanitsa",
+          "Odette",
+          "Vesna",
+          "Faruzan"
+        ],
+        "best": true
+      }
+    ],
+    "consejo": "ENTRADA PRELIMINAR: sale en la versión 7.1 (23 sep 2026), Fase 1, gachapón 'Surging Ballad'. 5★ Hydro de Catalizador, prima donna de la Compañía Korolevskiy. Su kit oficial aún no está publicado en las fuentes consultadas; su arma insignia (PV%, Bonif. de Curación, buff de ATQ al activo por PV máx. y sinergia con Congelación/Torbellino Estelar) apunta a sanadora/buffer que escala con PV. Stats, sets, equipos y prioridad de talentos por confirmar.",
+    "ficha": {
+      "nombreCompleto": "Vodyanitsa",
+      "faccion": "Compañía Korolevskiy / Rókot (Snezhnaya)",
+      "desc": "'Canto de Sirena Persistente', un Duende de Agua (Water Imp) de Snezhnaya y prima donna de la Compañía Korolevskiy, famosa por una voz hipnótica que, se dice, esconde un encanto sobrenatural capaz de embrujar a quien la escucha. Kit por confirmar.",
+      "img": "https://static.wikia.nocookie.net/gensin-impact/images/6/69/Vodyanitsa_Card.png/revision/latest?cb=20260818040249"
+    },
+    "elemento": "Hydro",
+    "arma": "Catalizador",
+    "nombre": "Vodyanitsa",
+    "rareza": "5",
+    "faccion": "Snezhnaya",
+    "version": "7.1"
   }
 ];

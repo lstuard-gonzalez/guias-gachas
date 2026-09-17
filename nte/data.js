@@ -1,6 +1,6 @@
 // ============================================================
-//  NTE Guía rápida — datos de Espers (Neverness to Everness)
-//  19 Espers. Auditado (v1.2, jul 2026).
+//  NTE Guía rápida — datos de Espers (Neverness to Everness 1.3 · preliminar 1.4)
+//  24 Espers. Auditado (17-sep-2026: v1.2 Iroi; v1.3 Zankou, Linko; v1.4 preliminar Blackbird, Akane Rin).
 // ============================================================
 const CHARACTERS = [
   {
@@ -1160,5 +1160,318 @@ const CHARACTERS = [
       }
     ],
     "consejo": "Main DPS Cosmos (Condensate, salida 8-jul-2026, banner 'Before the Dawn'). Doble postura y Definitiva 'Boiling Crimson Blood' que activa el estado Rising Crimson (~13 s) de ráfaga: abre con básicos/Habilidad para cargar, lanza la Definitiva y aprovecha la ventana de 20 s ignorando DEF de disco + Resplandor perdido ×4. Prioridad de subida (guías día 1): Pasiva &gt; Definitiva &gt; Básico &gt; Habilidad. Build recién salida: números y equipos aún en consenso."
+  },
+  {
+    "id": "zankou",
+    "nombre": "Zankou",
+    "rango": "S",
+    "elemento": "Encantamiento",
+    "rol": "Daño",
+    "version": "1.3",
+    "estado": "ok",
+    "statPriority": [
+      "Daño CRÍ",
+      "Prob. CRÍ",
+      "Daño de Encantamiento %",
+      "Intensidad de ciclo",
+      "ATQ%"
+    ],
+    "discos": [
+      {
+        "es": "Ravenous Blade",
+        "en": "Ravenous Blade",
+        "nota": "Insignia · el mejor por margen (Gas, S): 570 ATQ base y 24% Prob. CRÍ; +16% Prob. CRÍ fijo y +9% Daño CRÍ por golpe de Encantamiento hasta 7 cargas (+63%). La wiki ES lo lista como «Hoja voraz»/«Hoja insaciable» sin página propia: nombre ES por confirmar",
+        "best": true
+      },
+      {
+        "es": "Gato contemplativo",
+        "en": "Contemplative Cat",
+        "nota": "Mejor alternativa S y gratis (City Tycoon): 512 ATQ base y 44% Daño CRÍ como bastón de estadísticas (~88% de la Insignia); rinde algo mejor si la usas como sub-DPS de DoT"
+      },
+      {
+        "es": "Pelusa fina",
+        "en": "Fluff of Finesse",
+        "nota": "Pase de Batalla (serie Pelusa, tipo Gas): 512 ATQ base y +27,5% ATQ; +8% daño por Esquiva crítica hasta 3 cargas. Correcta, pero hay mejores usos del Pase"
+      },
+      {
+        "es": "¡Cuidado con la cabeza!",
+        "en": "Watch Your Heads!",
+        "nota": "Mejor disco rango A y GRATIS (jefe-pájaro del mundo abierto): 475 ATQ base y 40% Daño CRÍ, casi iguala a Gato contemplativo. Para la build de Ruptura con Despertar 5, alternativa A: Fallándote, con pesar en mi corazón (+120 Intensidad de Ruptura)"
+      }
+    ],
+    "cartuchos": [
+      {
+        "es": "Carmesí: Mariposas gemelas ×4",
+        "en": "Crimson: Twin Butterflies",
+        "nota": "4 piezas (Leyenda): +6% ATQ por cada vez que un enemigo cercano recibe daño de Encantamiento del equipo, hasta 6 cargas (+36%), activo incluso fuera de campo; sus DoT lo mantienen al 100%",
+        "best": true
+      },
+      {
+        "es": "Carmesí: Mariposas gemelas ×2",
+        "en": "Crimson: Twin Butterflies",
+        "nota": "2 piezas (Épico): +10% Daño de Encantamiento"
+      },
+      {
+        "es": "Resplandor perdido ×4",
+        "en": "Lost Radiance",
+        "nota": "Alternativa (4 piezas): ignora 25% de DEF enemiga 20 s tras la Definitiva; con sus dos Definitivas encadenadas rinde igual (100%) cuando va de sub-DPS de DoT junto a Lacrimosa"
+      }
+    ],
+    "consola": "Rasgo de consola: +16% Daño CRÍ por cada módulo Tipo III (hasta +64% con 4× Tipo III; rejilla Tipo 3, piezas II/III/III/IV). Main del cartucho: Daño CRÍ &gt; Intensidad de ciclo &gt; Daño de Encantamiento % &gt; Prob. CRÍ &gt; ATQ% (con la Insignia ya vas a ~60% de crítico). Subs: Daño CRÍ &gt; Intensidad de ciclo = Prob. CRÍ &gt; Bono de Daño Universal &gt; ATQ%; Intensidad de Ruptura solo en la build de Ruptura (A5). Meta endgame: ATQ 2000+, Prob. CRÍ 60%+, Daño CRÍ 200%+, Intensidad de ciclo 200+.",
+    "equipos": [
+      {
+        "nombre": "Premium (Scorch / doble DPS de DoT)",
+        "agentes": "Zankou · Lacrimosa · Sakiri · Haniel",
+        "best": true
+      },
+      {
+        "nombre": "Hipercarry Encantamiento",
+        "agentes": "Zankou · Daffodill · Sakiri · Haniel (Iroi, aún fuera de la guía, ocupa el puesto de Haniel en la versión de Prydwen)"
+      }
+    ],
+    "consejo": "Main DPS de Encantamiento (arma Gas) y DPS de ataques de seguimiento, salida 19-ago-2026 en la v1.3 Fase 1 (banner «Sombras seductoras»). Tiene dos formas: en Forma real carga con Fuego salvaje y usa la Habilidad Impulso sanguíneo para pasar a Forma ilusoria, donde todo cuenta como ataque de seguimiento y cada golpe aplica y propaga DoT (Tormento del corazón); en los últimos segundos de la Forma ilusoria lanza Cruce de almas para activar Olvido y la Definitiva Fantasía sangrienta, seguida gratis de Flamenco infernal potenciado. Su pasiva la mete en combate con 100 de Energía de ciclo (ciclo instantáneo) y hace apilable la Quemadura hasta 3: abre cambiando a un Esper de Chaos para aplicar Scorch y mantenlo con sus DoT. Evita cambiarla mientras está en Forma ilusoria (pierde Delirio); los huecos seguros son tras Cruce de almas y tras Fantasía sangrienta. Prioridad de subida: Definitiva = Básico &gt; Habilidad &gt; Apoyo (los DoT escalan con Básico y Definitiva). Despertares: A5 Floración sangrienta &gt; A1 Ojos del abismo &gt; A2 &gt; A4 &gt; A6 &gt; A3."
+  },
+  {
+    "id": "linko",
+    "nombre": "Linko",
+    "rango": "S",
+    "elemento": "Anima",
+    "rol": "Daño",
+    "version": "1.3",
+    "estado": "parcial",
+    "statPriority": [
+      "Prob. CRÍ",
+      "Daño CRÍ",
+      "Daño de Anima %",
+      "ATQ%",
+      "Bono de Daño Universal"
+    ],
+    "discos": [
+      {
+        "es": "Voice of the Voyager",
+        "en": "Voice of the Voyager",
+        "nota": "Insignia · el mejor (Plasma, S): 570 ATQ base y 24% Prob. CRÍ; +24% ATQ, +66% Daño CRÍ de la Habilidad de apoyo y +22% Daño CRÍ de la Definitiva por cada apoyo activado (3 cargas): escrita para sus Golpes sincronizados. La wiki ES lo lista como «Voz del viajero»/«La voz del viajero» sin página propia: nombre ES por confirmar",
+        "best": true
+      },
+      {
+        "es": "Llamas furiosas",
+        "en": "Raging Flames",
+        "nota": "Mejor opción GRATIS (jefe Jinete sin cabeza): 666 ATQ base y 24% Daño CRÍ, más +10% daño de Redirección/Definitiva tras la Definitiva (~90%). Alternativa S de gacha: Listo, listo (570 ATQ, 24% Prob. CRÍ, ~92%)"
+      },
+      {
+        "es": "Pelusa de la fortaleza",
+        "en": "Fluff of Fortitude",
+        "nota": "Pase de Batalla (serie Pelusa, tipo Plasma): 512 ATQ base y +27,5% ATQ; +22% daño (28% bajo 50% de PS). Buena si la juegas más en campo (~90–95%)"
+      },
+      {
+        "es": "¡Oraora!",
+        "en": "Oraora!",
+        "nota": "Mejor rango A y GRATIS (jefe Party Boxer): 37,5% ATQ y daño de Básico apilable; sin crítico, así que su Definitiva y Apoyo sufren"
+      }
+    ],
+    "cartuchos": [
+      {
+        "es": "Las luciérnagas y el bosque ×4",
+        "en": "Fireflies and the Forest",
+        "nota": "4 piezas (Leyenda): +8% Daño CRÍ por cada vez que un enemigo cercano recibe daño de Anima del equipo, hasta 7 cargas (+56%), activo fuera de campo; con otro Esper de Anima en el equipo se mantiene al máximo",
+        "best": true
+      },
+      {
+        "es": "Las luciérnagas y el bosque ×2",
+        "en": "Fireflies and the Forest",
+        "nota": "2 piezas (Épico): +10% Daño de Anima"
+      },
+      {
+        "es": "Erizo veloz ×4",
+        "en": "Speedy Hedgehog",
+        "nota": "Alternativa de apoyo si nadie más lo lleva: +12% Eficiencia de carga y +15% ATQ de equipo tras la Definitiva; solo pide módulos Tipo III, así que llega a 6× Tipo III (+48% Prob. CRÍ de consola). Resplandor perdido ×4 rinde ~96%"
+      }
+    ],
+    "consola": "Rasgo de consola: +8% Prob. CRÍ por cada módulo Tipo III (4× Tipo III = +32% con Las luciérnagas y el bosque, rejilla Tipo 3, piezas II/III/III/IV; 6× Tipo III = +48% con Erizo veloz). Main del cartucho: Prob. CRÍ hasta rozar el 100% (con la Insignia + consola casi no hace falta) &gt; Daño CRÍ &gt; Daño de Anima % &gt; ATQ%. Subs: Prob. CRÍ &gt; Daño CRÍ &gt; Bono de Daño Universal = ATQ% &gt; Intensidad de ciclo. Meta endgame: ATQ 2000+, Prob. CRÍ 90%+, Daño CRÍ 90%+ (antes del set).",
+    "equipos": [
+      {
+        "nombre": "Hexed Premium (Anima + Encantamiento)",
+        "agentes": "Linko · Zankou · Sakiri · Adler (Icy Veins usa a Iroi, aún fuera de la guía, en lugar de Adler)",
+        "best": true
+      },
+      {
+        "nombre": "Hexed con Nanally",
+        "agentes": "Linko · Nanally · Sakiri · Adler"
+      }
+    ],
+    "consejo": "Sub-DPS de ráfaga de Anima (arma Plasma) del Buró de Control de Anomalías (ETD-6), salida 9-sep-2026 en la v1.3 Fase 2 (banner «Surfing All Channels!»); combate junto a su Anomalía Xiaozhen. Poco tiempo en campo: entra, usa la Habilidad Full-Frequency Pulse (pausa el combate y abre una rueda para elegir al aliado que hará un Golpe sincronizado, que cuenta como ataque de seguimiento y escala con su Habilidad de apoyo) y sal. Cada Golpe sincronizado reduce 8% la resistencia del enemigo al elemento del aliado elegido durante 12 s (se acumulan elementos distintos): elige siempre al DPS principal. La Definitiva Oversync despliega un campo que convierte las Habilidades de apoyo de hasta 3 aliados en Golpes sincronizados y explota al terminar con daño que crece con el número de debuffs (hasta 5) sobre el objetivo. Su pasiva potencia Hexed (Anima + Encantamiento): 30% de daño base y +10% de daño de seguimiento recibido. Cada 8 s fuera de campo Xiaozhen marca al enemigo y responde a la Redirección de cualquier aliado. Prioridad de subida: Apoyo &gt; Definitiva &gt; Básico &gt; Habilidad (Prydwen antepone las pasivas: Apoyo &gt; Pasiva 2 &gt; Pasiva 1 &gt; Definitiva). Recién salida: números y equipos aún en consenso."
+  },
+  {
+    "id": "blackbird",
+    "nombre": "Blackbird",
+    "rango": "S",
+    "elemento": "Psyche",
+    "rol": "Daño",
+    "version": "1.4",
+    "estado": "parcial",
+    "statPriority": [
+      "Por confirmar (PRELIMINAR: kit no publicado)"
+    ],
+    "discos": [
+      {
+        "es": "Gato contemplativo",
+        "en": "Contemplative Cat",
+        "nota": "PRELIMINAR: disco S de tipo Gas compatible (verificado en la wiki); recomendación por confirmar"
+      },
+      {
+        "es": "Gran aventura del buen chico",
+        "en": "Good Boy's Grand Adventure",
+        "nota": "PRELIMINAR: disco S de tipo Gas compatible; recomendación por confirmar"
+      },
+      {
+        "es": "Pelusa fina",
+        "en": "Fluff of Finesse",
+        "nota": "PRELIMINAR: disco Gas del Pase de Batalla; recomendación por confirmar"
+      }
+    ],
+    "cartuchos": [
+      {
+        "es": "Sangre demoniacal: Maldición ×4",
+        "en": "Demon Blood: Curse",
+        "nota": "PRELIMINAR: único set de Psyche de la guía (+daño base, más contra Nova/Mancha); por confirmar hasta ver el kit"
+      },
+      {
+        "es": "Sangre demoniacal: Maldición ×2",
+        "en": "Demon Blood: Curse",
+        "nota": "PRELIMINAR: 2 piezas Daño/Daño de Psyche; por confirmar"
+      }
+    ],
+    "consola": "Por confirmar: el rasgo de consola no se ha publicado (wiki y Prydwen sin kit a 17-sep-2026).",
+    "equipos": [
+      {
+        "nombre": "Por confirmar",
+        "agentes": "Blackbird · Espers de Psyche/Chaos por confirmar (Aurelia · Haniel · Fadia como referencia de Psyche)"
+      }
+    ],
+    "consejo": "PRELIMINAR. Esper S de Psyche con arma Gas, «La Bruja» de la Corte de Yggash, hoy NPC en la Casa de la Bruja de Bridge Crossings. Llega el 30-sep-2026 en la v1.4 Fase 1 (banner «Foretold Finale», junto al rerun de Lacrimosa). Kit, despertares y rol exactos no publicados: no subir ni tirar hasta ver el kit oficial."
+  },
+  {
+    "id": "akane-rin",
+    "nombre": "Akane Rin",
+    "rango": "S",
+    "elemento": "Lakshana",
+    "rol": "Daño",
+    "version": "1.4",
+    "estado": "parcial",
+    "statPriority": [
+      "Por confirmar (PRELIMINAR: kit no publicado)"
+    ],
+    "discos": [
+      {
+        "es": "Pelusa ágil",
+        "en": "Fluff of Fleetness",
+        "nota": "PRELIMINAR: disco S de tipo Liquid del Pase de Batalla, compatible (verificado en la wiki); recomendación por confirmar"
+      },
+      {
+        "es": "Fantasía juvenil",
+        "en": "Youthful Fantasy",
+        "nota": "PRELIMINAR: disco S Liquid gratis (New Herland); recomendación por confirmar"
+      },
+      {
+        "es": "Cielos despejados",
+        "en": "Clear Skies",
+        "nota": "PRELIMINAR: disco A de tipo Liquid; recomendación por confirmar"
+      }
+    ],
+    "cartuchos": [
+      {
+        "es": "Combatiente de calle ×4",
+        "en": "Street Fighter",
+        "nota": "PRELIMINAR: set de Lakshana de la guía (Prob. CRÍ con Remora/Mancha); por confirmar hasta ver el kit"
+      },
+      {
+        "es": "Combatiente de calle ×2",
+        "en": "Street Fighter",
+        "nota": "PRELIMINAR: 2 piezas Daño de Lakshana/Prob. CRÍ; por confirmar"
+      }
+    ],
+    "consola": "Por confirmar: el rasgo de consola no se ha publicado (wiki y Prydwen sin kit a 17-sep-2026).",
+    "equipos": [
+      {
+        "nombre": "Por confirmar",
+        "agentes": "Akane Rin · Espers de Lakshana por confirmar (Hathor · Skia · Esper Zero como referencia)"
+      }
+    ],
+    "consejo": "PRELIMINAR. Esper S de Lakshana con arma Liquid; camarera de StarSign y exmiembro de LINES, banda y grupo de cazadoras de Anomalías junto a Aurelia y Suzuha. Según la wiki llega el 21-oct-2026 en la v1.4 Fase 2 (banner «Dazzling Star»), no el 30-sep. Kit y rol exactos no publicados: no subir ni tirar hasta ver el kit oficial."
+  },
+  {
+    "id": "iroi",
+    "nombre": "Iroi",
+    "rango": "S",
+    "elemento": "Anima",
+    "rol": "Apoyo",
+    "version": "1.2",
+    "estado": "ok",
+    "statPriority": [
+      "Intensidad de ciclo",
+      "ATQ%",
+      "Daño de Anima %",
+      "Daño CRÍ",
+      "Bonif. de curación"
+    ],
+    "discos": [
+      {
+        "es": "La puerta equivocada",
+        "en": "The Wrong Gate",
+        "nota": "Insignia · el mejor (Liquid, S): 570 ATQ base y +30% ATQ; +16% ATQ y, cada vez que cura, +15% daño a todo el equipo y +30% Daño de Anima propio durante 20 s (único por equipo). Vale para cualquier equipo, no solo los que escalan con ATQ",
+        "best": true
+      },
+      {
+        "es": "Fantasía juvenil",
+        "en": "Youthful Fantasy",
+        "nota": "Mejor S gratis (New Herland, ~92–95%): 570 ATQ base y +30% ATQ como bastón de estadísticas; su Tomo Negro (Chaos) apenas le sirve. Alternativa S de gacha: La última rosa (570 ATQ, 24% Prob. CRÍ, ~93%) si la juegas como DPS"
+      },
+      {
+        "es": "Pelusa ágil",
+        "en": "Fluff of Fleetness",
+        "nota": "Pase de Batalla (serie Pelusa, tipo Liquid): 512 ATQ base y 44% Daño CRÍ; su ATQ apilable exige tiempo en campo, que Iroi casi no tiene como apoyo (~92%). Hay mejores destinos para el Pase"
+      },
+      {
+        "es": "Cielos despejados",
+        "en": "Clear Skies",
+        "nota": "Mejor rango A y F2P (~92–95%): 475 ATQ base, +25% ATQ y +20% Daño de Anima de Redirección y Definitiva; a M5 supera el bono Anima de la Insignia M1 pero solo en esas dos habilidades. Días brillantes (A, 25% ATQ) rinde igual"
+      }
+    ],
+    "cartuchos": [
+      {
+        "es": "Erizo veloz ×4",
+        "en": "Speedy Hedgehog",
+        "nota": "4 piezas (Leyenda): +15% ATQ de equipo 20 s tras su Definitiva; el set universal de buffer y su mejor opción (si nadie más lo lleva). Solo pide Tipo III, así que cabe 6× Tipo III (+60% ATQ de consola)",
+        "best": true
+      },
+      {
+        "es": "Erizo veloz ×2",
+        "en": "Speedy Hedgehog",
+        "nota": "2 piezas (Épico): +12% Eficiencia de carga, más Definitivas y más curas/revives"
+      },
+      {
+        "es": "La taberna nocturna de Thea ×4",
+        "en": "Thea's Night Tavern",
+        "nota": "Build de sanadora pura (4 piezas: +20% Bonif. de curación; 2 piezas +10% PS) cuando otro Esper (p. ej. Sakiri) ya lleva Erizo veloz; también solo Tipo III"
+      },
+      {
+        "es": "Las luciérnagas y el bosque ×4",
+        "en": "Fireflies and the Forest",
+        "nota": "Build de daño (~96%): +10% Daño de Anima y hasta +56% Daño CRÍ; pide main de Prob. CRÍ y gana a Erizo veloz solo si la juegas como Main DPS con el equipo convertido en ovejas"
+      }
+    ],
+    "consola": "Rasgo de consola: +10% ATQ por cada módulo Tipo III (Erizo veloz y Taberna nocturna de Thea solo piden Tipo III: 6× Tipo III = +60% ATQ; rejilla Tipo 1). OJO: su buff de ATQ al equipo (Habilidad y A5) escala solo con su ATQ base (personaje + ATQ plano del disco), no con consola ni módulos; estos solo suben su daño y curación propios. Main del cartucho: Intensidad de ciclo &gt; Daño de Anima % &gt; ATQ% (Bonif. de curación si vas de sanadora pura; Prob. CRÍ con Las luciérnagas). Subs: Intensidad de ciclo &gt; ATQ% &gt; Daño CRÍ &gt; Bono de Daño Universal. Meta endgame: ATQ 2900+, Intensidad de ciclo 150+, Daño CRÍ 70%+.",
+    "equipos": [
+      {
+        "nombre": "Premium (Blossom)",
+        "agentes": "Iroi · Nanally · Esper Zero · Jiuyuan",
+        "best": true
+      },
+      {
+        "nombre": "Carga (Charge)",
+        "agentes": "Iroi · Shinku · Esper Zero · Hathor (variante Blossom/seguimiento: Iroi · Linko · Esper Zero · Shinku)"
+      }
+    ],
+    "consejo": "Sanadora y buffer de Anima (arma Liquid) del Buró de Control de Anomalías (CSU-2), salida 29-jul-2026 en la v1.2 Fase 2 (banner «The Lifeline» = ES «Hilo de vida»). Poco tiempo en campo: entra, lanza la Habilidad (Extensión de identidad propia: cura al equipo, +ATQ según su ATQ base y agrupa enemigos) y la Definitiva Espejismo de 3800 millones de años (cura continua; con la Imaginación llena abre la Puerta de marfil, que además pulsa daño de Anima y permite revivir temporalmente a 1 aliado caído en Regresión) y sal. Su pasiva Nervios simpáticos da 5% de ignorar DEF al equipo con cada cura, y Imagen espejo duplica el Vita Bud del Blossom (≈1,5× el daño de un Blossom base durante 13 s): monta Blossom primero y luego el DPS principal. Su Definitiva NO cuenta como DoT para la pasiva de Sakiri. Con la Habilidad mantenida convierte a 3 aliados en ovejas para jugarla como Main DPS (meme a A0; viable con A4/A6). Prioridad de subida: Habilidad &gt; Definitiva &gt; Básico &gt; Apoyo (Prydwen antepone Pasiva 1 y 2). Despertares: A5 Transparente (buff de ATQ de equipo) &gt; A1 (Imaginación fuera de campo) &gt; resto."
   }
 ];

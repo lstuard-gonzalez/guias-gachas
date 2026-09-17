@@ -342,5 +342,19 @@ const FICHAS = {
     "faccion": "Departamento de Planificación Exterior",
     "desc": "Técnica jefa del Departamento de Planificación Exterior de Roscaelifer, prodigio excéntrica de la Academia Aurelia obsesionada con los bangbús. Aturdidora Ígnea fuera de campo que despliega torretas Ehn Na, misiles y su sombrero de copa acompañante.",
     "img": "https://static.wikia.nocookie.net/zenless-zone-zero/images/1/10/Agent_Norma_Hollowell_Portrait.png"
+  },
+  "claret-flint": {
+    "nombreCompleto": "Claret Flint",
+    "faccion": "Taller Flint",
+    "rol": "Directora administrativa · jefa de la familia Flint",
+    "desc": "Actual cabeza de la familia Flint, dueña del Taller Flint y legendaria forjadora de alealumen (Porcelloy), la mayor acreedora de Roscaelifer. Primera agente de la especialidad Armero, estrenada en la 3.2: atacante Eléctrica cuyo daño de Filo escala con la DEF, acumula Gash con su hacha de sangre y lo consume para provocar Maim.",
+    "img": "https://static.wikia.nocookie.net/zenless-zone-zero/images/7/7c/Agent_Claret_Flint_Portrait.png"
+  },
+  "roxy-ifrita-pryce": {
+    "nombreCompleto": "Roxy Ifrita Pryce",
+    "faccion": "Taller Flint",
+    "rol": "Asistente suprema de Claret",
+    "desc": "La asistente «que vale por diez» de Claret Flint: meticulosa, de origen desconocido y con iniciales R.I.P. Aturdidora de atributo Aéreo (Viento) de la 3.2 (fase 2): genera tornados y Ojos del huracán con su martillo, purifica la Contaminación y reparte Daño crít al equipo según su propia Prob. crít.",
+    "img": "https://static.wikia.nocookie.net/zenless-zone-zero/images/e/e8/Agent_Roxy_Ifrita_Pryce_Portrait.png"
   }
 };

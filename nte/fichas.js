@@ -113,5 +113,35 @@ const FICHAS = {
     "faccion": "Buró de Control de Anomalías (Unidad de Contención 2)",
     "desc": "Esper Cosmos rango S del Buró de Control de Anomalías (Containment Strike Unit 2), lanzada el 8-jul-2026 en la versión 1.2 con el banner 'Before the Dawn'. Main DPS de arma Condensate con mecánica de doble postura y una Definitiva que la lleva al estado Rising Crimson para ráfagas de daño. Cabello negro con mechones carmesí, dos cuernos rojos, ojos rubí y una larga cola negra y rosa.",
     "img": "https://static.wikia.nocookie.net/neverness-to-everness/images/a/a8/Shinku_Portrait.png"
+  },
+  "zankou": {
+    "nombreCompleto": "Zankou (alias «Bella»)",
+    "faccion": "La Carta Escarlata (The Scarlet Letter)",
+    "desc": "Esper Encantamiento rango S de arma Gas, lanzada el 19-ago-2026 en la versión 1.3 con el banner «Sombras seductoras». Miembro de La Carta Escarlata, hija (adoptiva según la wiki ES) de Inanna, hermana menor de Daffodill y mayor de Poinsette; su habilidad Esper es «El Ojo del Delirio». Main DPS de ataques de seguimiento con dos formas (real e ilusoria) que aplica y propaga daño prolongado y potencia la Quemadura del equipo. Nivel 80: 14 234 PS · 577 ATQ · 834 DEF.",
+    "img": "https://static.wikia.nocookie.net/neverness-to-everness/images/0/00/Zankou_Portrait.png"
+  },
+  "linko": {
+    "nombreCompleto": "Linko",
+    "faccion": "Buró de Control de Anomalías (ETD-6)",
+    "desc": "Esper Anima rango S de arma Plasma, lanzada el 9-sep-2026 en la versión 1.3 con el banner «Surfing All Channels!». Miembro de la División Táctica de Ejecución 6 (ETD-6) del Buró, cumple años el 14 de febrero y combate junto a su Anomalía compañera Xiaozhen; su habilidad Esper es la telepatía. Sub-DPS de ráfaga y ataques de seguimiento: llama a sus aliados a realizar Golpes sincronizados, reduce resistencias elementales y potencia la reacción Hexed. La wiki ES la nombra «Lingke»/«Lingko», pero su cita oficial en español dice «Linko».",
+    "img": "https://static.wikia.nocookie.net/neverness-to-everness/images/e/ef/Linko_Portrait.png"
+  },
+  "blackbird": {
+    "nombreCompleto": "Blackbird, «La Bruja»",
+    "faccion": "Corte de Yggash (Yggash Court; nombre ES por confirmar)",
+    "desc": "PRELIMINAR. Esper Psyche rango S de arma Gas, anunciada para el 30-sep-2026 (versión 1.4, banner «Foretold Finale»). Hoy es la bruja de la Casa de la Bruja en Bridge Crossings, donde lee la fortuna y atiende las Piedras oráculo. Kit no publicado.",
+    "img": "https://static.wikia.nocookie.net/neverness-to-everness/images/8/8d/Blackbird_Portrait.png"
+  },
+  "akane-rin": {
+    "nombreCompleto": "Akane Rin",
+    "faccion": "StarSign (Señal Estelar); antes LINES / The Whoots!!!!",
+    "desc": "PRELIMINAR. Esper Lakshana rango S de arma Liquid, anunciada para la versión 1.4 (según la wiki, 21-oct-2026, banner «Dazzling Star»). Camarera de StarSign; formó parte de LINES, banda musical y grupo de cazadoras de Anomalías junto a Aurelia y Suzuha. Kit no publicado.",
+    "img": "https://static.wikia.nocookie.net/neverness-to-everness/images/4/4f/Akane_Rin_Portrait.png"
+  },
+  "iroi": {
+    "nombreCompleto": "Oneiroi «Iroi» (Teana, apodo de Mint)",
+    "faccion": "Buró de Control de Anomalías (CSU-2)",
+    "desc": "Esper Anima rango S de arma Liquid, lanzada el 29-jul-2026 en la versión 1.2 (Fase 2) con el banner «Hilo de vida»; su disco insignia «La puerta equivocada» llegó en el programa de discos Dreamgate Special. Miembro de la Unidad de Contención 2 del Buró junto a Mint y Shinku, voluntaria en la Isla Solardiente; cumple años el 21 de diciembre y su habilidad Esper es «Sueño infantil». Apoyo sanador que invoca corderos (Morpheus, Icelos, Phantasos), acumula Imaginación, transforma en ovejas a los aliados caídos (Regresión) y duplica los Vita Bud del Blossom. Nivel 80: 10 394 PS · 371 ATQ · 549 DEF.",
+    "img": "https://static.wikia.nocookie.net/neverness-to-everness/images/8/85/Iroi_Portrait.png"
   }
 };

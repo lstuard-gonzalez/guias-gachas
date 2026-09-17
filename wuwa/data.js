@@ -1,6 +1,6 @@
 // ============================================================
 //  WuWa Guía rápida — datos de personajes (Wuthering Waves)
-//  55 Resonadores. Auditado; incluye v3.5 (10-jul-2026).
+//  57 Resonadores. Auditado; incluye v3.6 (Qingxiao 20-ago-2026, Jingran 10-sep-2026).
 // ============================================================
 const CHARACTERS = [
   {
@@ -4807,5 +4807,205 @@ const CHARACTERS = [
     "arma": "Espada",
     "faccion": "Huanglong",
     "version": "3.5"
+  },
+  {
+    "id": "qingxiao",
+    "nombre": "Qingxiao",
+    "rareza": "5",
+    "elemento": "Aéreo",
+    "arma": "Espada",
+    "faccion": "Huanglong",
+    "estado": "completo",
+    "costo4": {
+      "principal": "Prob. Crítico",
+      "alt": "Daño Crítico"
+    },
+    "costo3": {
+      "principal": "Bonificación de Daño Aéreo",
+      "alt": "ATQ%"
+    },
+    "costo1": {
+      "principal": "ATQ%",
+      "alt": "ATQ%"
+    },
+    "ecoPrincipal": "Calamity Effigy (nombre ES por confirmar) (Calamity Effigy)",
+    "substats": [
+      "Regeneración de Energía",
+      "Prob. Crítico",
+      "Daño Crítico",
+      "ATQ%",
+      "Daño de Ataque Pesado"
+    ],
+    "armas": [
+      {
+        "es": "Glint of Clouds (nombre ES por confirmar)",
+        "en": "Glint of Clouds",
+        "nota": "Arma insignia (espada, subestadística Prob. Crítico); +12% ATQ y, al infligir Tensión de Tonalidad - Cambio, +11.2% Bonif. Daño Aéreo por acumulación (máx. 5); al máximo dura 30s e ignora 10% de DEF. Su mejor opción con mucha diferencia (100%).",
+        "best": true
+      },
+      {
+        "es": "Esmeralda del Génesis",
+        "en": "Emerald of Genesis",
+        "nota": "Mejor opción permanente (5★ estándar, 77.6%): ATQ base alto, Prob. Crítico y Regeneración de Energía que ahorra una subestadística. Primavera Roja (insignia de Camellya, 80.2%) es la mejor alternativa limitada.",
+        "best": false
+      },
+      {
+        "es": "Comando de Convicción",
+        "en": "Commando of Conviction",
+        "nota": "4★ F2P (64.4%): simple bastón de ATQ, solo como opción temporal. Filo de Pluma (Pase de Batalla, 69.5%) es el mejor 4★ si se tiene.",
+        "best": false
+      }
+    ],
+    "ecos": [
+      {
+        "es": "Corazón Purificador del Mal",
+        "en": "Heart of Evil's Purge",
+        "nota": "Set de 5 piezas: +10% Daño Aéreo (2 pzs) y, al infligir Tensión de Tonalidad - Cambio, +20% Daño Crítico y +30% Bonif. Daño Aéreo por 15s. Qingxiao lo activa al instante; su mejor set (100%).",
+        "best": true
+      },
+      {
+        "es": "Ventisca de Sierra",
+        "en": "Sierra Gale",
+        "nota": "Set Aéreo estándar como alternativa mientras se farmea el set nuevo: mismo +40% Daño Aéreo total pero sin el +20% de Daño Crítico.",
+        "best": false
+      }
+    ],
+    "equipos": [
+      {
+        "nombre": "Ruptura de Sintonía (Tune Strain)",
+        "agentes": [
+          "Qingxiao",
+          "Denia",
+          "Mornye"
+        ],
+        "best": true
+      },
+      {
+        "nombre": "Ruptura de Sintonía con Lynae",
+        "agentes": [
+          "Qingxiao",
+          "Lynae",
+          "Mornye"
+        ],
+        "best": false
+      },
+      {
+        "nombre": "Lynae con soporte alternativo",
+        "agentes": [
+          "Qingxiao",
+          "Lynae",
+          "Ciaccona"
+        ],
+        "best": false
+      }
+    ],
+    "consejo": "DPS principal Aéreo de Respuesta a Tensión de Tonalidad (Tune Strain Response) que combate sobre todo en el aire; v3.6 fase 1 (20-ago-2026). Rotación muy simple: Entrada, mantener Ataque Básico (Stringblade aéreo y básico) para llenar Corazón de Qin y Cadencia de Espada, Habilidad (Severing Note: Judgement), Ataque Pesado - Stringblade para entrar en Trascendencia Efímera, mantener Ataque Básico hasta el Ataque Pesado Heaven's Reckoning, Liberación, Eco y Salida. No cambies de personaje dentro de Trascendencia Efímera (pierde la mejora del Ataque Pesado). Cada acumulación de Mindlock (aplicada por Tensión de Tonalidad - Interferida) amplifica su daño hasta +65%, por lo que necesita sí o sí un híbrido de Tensión de Tonalidad: Denia + Mornye es su equipo definitivo; con Lynae puede usar Mornye, Ciaccona o Guardacostas. Objetivos: 55-80% Prob. Crítico, 255-275% Daño Crítico, 110-115% Regeneración de Energía y 40-70% Bonif. Daño Aéreo. Fortes: Circuito de Forte > Liberación > Ataque Básico > Habilidad > Entrada.",
+    "ficha": {
+      "nombreCompleto": "Qingxiao",
+      "faccion": "Huanglong",
+      "desc": "Resonadora 5 estrellas de Aéreo con Espada; espadachina reclusa con el título nominal de Xuan Paragon de los Xuanfang Wardens y maestra del qin y la espada, adscrita al Ministerio de Guerra. DPS principal de Tensión de Tonalidad cuya rotación se completa casi sola manteniendo el Ataque Básico.",
+      "img": "https://static.wikia.nocookie.net/wutheringwaves/images/1/1b/Qingxiao_Card.jpg"
+    },
+    "version": "3.6"
+  },
+  {
+    "id": "jingran",
+    "nombre": "Jingran",
+    "rareza": "5",
+    "elemento": "Fusión",
+    "arma": "Mandoble",
+    "faccion": "Huanglong",
+    "estado": "completo",
+    "costo4": {
+      "principal": "Daño Crítico",
+      "alt": "PV%"
+    },
+    "costo3": {
+      "principal": "PV% (solo si se usa 4-3-3-1-1 sin su insignia)",
+      "alt": "Bonificación de Daño Fusión"
+    },
+    "costo1": {
+      "principal": "PV%",
+      "alt": "PV%"
+    },
+    "ecoPrincipal": "Trampa Miríada: Cuerpo Fragmentado (Myriad Snare: Rustfire Chassis)",
+    "substats": [
+      "Regeneración de Energía",
+      "PV%",
+      "Prob. Crítico",
+      "Daño Crítico",
+      "Daño de Ataque Pesado"
+    ],
+    "armas": [
+      {
+        "es": "Thousandfold Deliverance (nombre ES por confirmar)",
+        "en": "Thousandfold Deliverance",
+        "nota": "Arma insignia (mandoble, subestadística PV, la única con +72% PV): +12% Bonif. Daño de todos los atributos; con Entrada o escudos acumula Daño Crítico (hasta +24%), +12% Prob. Crítico de Ataque Pesado a 6 cargas y el Ataque Pesado ignora hasta 30% DEF. Permite build 4-4-1-1-1 con 50.000 PV; imprescindible (100%).",
+        "best": true
+      },
+      {
+        "es": "Trueno de la Corona",
+        "en": "Thunderflare Dominion",
+        "nota": "Insignia de Augusta (85.1%): Daño de Ataque Pesado e ignora DEF al obtener escudo; buena alternativa, pero cuesta llegar a 50.000 PV. Cumbre Verde (82%) es similar con peor distribución de estadísticas.",
+        "best": false
+      },
+      {
+        "es": "Cenit Áureo",
+        "en": "Aureate Zenith",
+        "nota": "Mejor 4★ (Pase de Batalla, 73.1%): ATQ, Daño de Ataque Pesado y Daño Crítico con ATQ base bajo. La única opción sin gacha es Meditaciones de la Piedad (fabricable, 59.9%), muy floja.",
+        "best": false
+      }
+    ],
+    "ecos": [
+      {
+        "es": "Farol del Inframundo",
+        "en": "Lamp of Nether Road",
+        "nota": "Set de 5 piezas: +10% PV (2 pzs) y, al obtener un escudo, +5% Prob. Crítico por 5s hasta 4 acumulaciones; al máximo +15% Bonif. Daño Fusión. Jingran genera escudos constantemente; su mejor set (100%).",
+        "best": true
+      },
+      {
+        "es": "Grieta Fundida",
+        "en": "Molten Rift",
+        "nota": "Set Fusión estándar (+10% Daño Fusión y +30% tras usar la Habilidad) como alternativa mientras se farmea Farol del Inframundo; no aporta el Crítico ni el PV del set insignia.",
+        "best": false
+      }
+    ],
+    "equipos": [
+      {
+        "nombre": "Ataque Pesado con escudos",
+        "agentes": [
+          "Jingran",
+          "Iuno",
+          "Guardacostas (Shorekeeper)"
+        ],
+        "best": true
+      },
+      {
+        "nombre": "Mono Fusión",
+        "agentes": [
+          "Jingran",
+          "Mortefi",
+          "Lupa"
+        ],
+        "best": false
+      },
+      {
+        "nombre": "F2P de Ataque Pesado",
+        "agentes": [
+          "Jingran",
+          "Rebecca",
+          "Verina"
+        ],
+        "best": false
+      }
+    ],
+    "consejo": "DPS principal de Fusión de Ataque Pesado que escala con PV máximo (DEF fija en 0) y con escudos, como Augusta e Iuno; v3.6 fase 2 (10-sep-2026). Alterna las posturas Yin Vessel y Yang Font con sus Ataques Pesados de Forte (Soul Raid / Stardome Meander, 300 puntos de Qi). Rotación: Entrada (convierte Ghost Shroud en Bonif. Daño Fusión), Liberación inmediata (otorga Fire of Life, sin ella los Ataques Pesados pegan mucho menos), y luego hasta 4 Ataques Pesados de Forte encadenando básicos 2-3-4 y una cadena de Habilidad por postura, antes de la Salida; el Contraataque de Esquiva sustituye una cadena entera. Prioridad: llegar a 50.000 PV y ~110-120% Regeneración de Energía antes que Crítico; después 50%+ Prob. Crítico y 260-340% Daño Crítico. Con su insignia usa 4-4-1-1-1 (Daño Crítico / Daño Crítico / PV% x3); sin ella, dobla PV% en los 4 costos. Necesita compañeros que generen escudos: Iuno + Guardacostas es su mejor equipo; en equipos F2P el soporte lleva Halo de Resplandor Estelar con eco principal que genere escudo (Spacetrek Explorer). Fortes: Circuito de Forte > Liberación > Habilidad > Ataque Básico > Entrada.",
+    "ficha": {
+      "nombreCompleto": "Jingran",
+      "faccion": "Huanglong",
+      "desc": "Resonador 5 estrellas de Fusión con Mandoble; Nethermancer de Mengzhou que explora Reinos de Espejismo y ruinas olvidadas. DPS principal de Ataque Pesado que convierte su PV máximo en ATQ y Daño Fusión y se potencia con los escudos del equipo.",
+      "img": "https://static.wikia.nocookie.net/wutheringwaves/images/4/44/Jingran_Card.jpg"
+    },
+    "version": "3.6"
   }
 ];

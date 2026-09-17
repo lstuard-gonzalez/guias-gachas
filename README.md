@@ -4,11 +4,11 @@ Portal de consulta rápida de builds para 5 juegos gacha, con nombres oficiales 
 
 | Juego | Personajes | Sistema |
 |-------|-----------|---------|
-| **Genshin Impact** (v6.7) | 122 | Artefactos por ranura, sets, armas, equipos · Viajero ×6 variantes |
-| **Honkai: Star Rail** (v4.3) | 87 | Reliquias, Conos de Luz, equipos · Trazacaminos ×5 vías |
-| **Zenless Zone Zero** (v3.0) | 56 | Discos de partición, motores W, sets, equipos |
-| **Wuthering Waves** (v3.5) | 55 | Ecos por costo, sets Sonata, armas, equipos |
-| **Neverness to Everness** (v1.2) | 19 | Discos, Consola (Cartuchos/Módulos), equipos |
+| **Genshin Impact** (v7.0) | 127 | Artefactos por ranura, sets, armas, equipos · Viajero ×7 variantes |
+| **Honkai: Star Rail** (v4.5) | 93 | Reliquias, Conos de Luz, equipos · Trazacaminos ×5 vías |
+| **Zenless Zone Zero** (v3.2) | 59 | Discos de partición, motores W, sets, equipos |
+| **Wuthering Waves** (v3.6) | 57 | Ecos por costo, sets Sonata, armas, equipos |
+| **Neverness to Everness** (v1.3) | 24 | Discos, Consola (Cartuchos/Módulos), equipos |
 
 ## Uso local
 
